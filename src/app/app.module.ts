@@ -3,20 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { HomeComponent } from './core/modules/home/home.component';
-import { DevelopmentCardComponent } from './shared/components/development-card/development-card.component';
+import {HomeModule} from './core/modules/home/home.module';
+import { AppRoutingModule } from './app-routing.module';
+import { ClientCardComponent } from './shared/components/client-card/client-card.component';
+import { SectorComponent } from './shared/components/sector/sector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HomeComponent,
-    DevelopmentCardComponent
+    FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HomeModule,
+    AppRoutingModule
   ],
   providers: [],
+  exports: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
