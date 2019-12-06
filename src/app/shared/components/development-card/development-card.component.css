@@ -1,0 +1,17 @@
+.card {
+  padding: 30px 15px 25px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: white;
+  color: #333;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+}
+h3 {
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 0;
+  line-height: 1.2em;
+}

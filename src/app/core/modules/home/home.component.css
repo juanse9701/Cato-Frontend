@@ -1,4 +1,39 @@
-.colabora{
+/* General */
+
+.titulo {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.descripcion {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Desarrollos de autoria*/
+.desarrollos-autoria {
+  margin-bottom: 50px;
+  color: white;
+  padding: 60px 0 90px;
+  background-size: cover;
+}
+.desarrollos-autoria .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 35px;
+  width: 100%;
+}
+.desarrollos-autoria .titulo,
+.desarrollos-autoria .descripcion {
+  text-shadow: 1px 1px 1px black;
+}
+
+/*Clientes*/
+
+/* Colabora */
+.colabora {
   background: #333;
   color: white;
   display: flex;
@@ -7,14 +42,22 @@
   align-items: center;
   padding: 60px 120px 80px;
 }
-.colabora .titulo{
+.colabora .titulo {
   text-align: center;
-  margin-bottom: 50px ;
+  margin-bottom: 50px;
 }
-.colabora h3{
+.colabora .titulo h2 {
+  font-weight: 400;
+  font-size: 1.25em;
+}
+.colabora .titulo p {
+  text-transform: none;
+}
+.colabora h3 {
   margin-bottom: 15px;
+  font-weight: 400;
 }
-.colabora .botones button{
+.colabora .botones button {
   border: 2px solid white;
   border-radius: 6px;
   padding: 7px 20px;
