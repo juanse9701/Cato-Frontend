@@ -1,4 +1,38 @@
 <main>
+  <section class="perfil-capacidades" style="background-image: url('assets/img/bg-capacidades@2x.png');">
+    <h2 class="titulo">Perfil de capacidades</h2>
+    <div class="capacidades">
+      <div class="capacidad">
+        <div class="capacidad-imagen-contenedor">
+        <img src="assets/img/goggles.png" alt=""/>
+        </div>
+        <p class="capacidad-contenido">Más de <strong>200 contenidos de Realidad virtual </strong>para el departamento de Cundinamarca.</p>
+      </div>
+      <div class="capacidad">
+        <div class="capacidad-imagen-contenedor">
+          <img src="assets/img/goggles.png" alt=""/>
+        </div>
+        <p class="capacidad-contenido">Más de <strong>200 contenidos de Realidad virtual </strong>para el departamento de Cundinamarca.</p>
+      </div>
+      <div class="capacidad">
+      <div class="capacidad-imagen-contenedor">
+        <img src="assets/img/goggles.png" alt=""/>
+      </div>
+      <p class="capacidad-contenido">Más de <strong>200 contenidos de Realidad virtual </strong>para el departamento de Cundinamarca.</p>
+    </div>
+      <div class="capacidad">
+      <div class="capacidad-imagen-contenedor">
+        <img src="assets/img/goggles.png" alt=""/>
+      </div>
+      <p class="capacidad-contenido">Más de <strong>200 contenidos de Realidad virtual </strong>para el departamento de Cundinamarca.</p>
+    </div><div class="capacidad">
+      <div class="capacidad-imagen-contenedor">
+        <img src="assets/img/goggles.png" alt=""/>
+      </div>
+      <p class="capacidad-contenido">Más de <strong>200 contenidos de Realidad virtual </strong>para el departamento de Cundinamarca.</p>
+    </div>
+    </div>
+  </section>
   <section class="lineas-tecnologicas">
     <div class="lineas-descripcion-contenedor">
       <h2 class="lineas-titulo">Lineas tecnológicas</h2>
@@ -10,66 +44,7 @@
       </p>
     </div>
     <div class="lineas-contenedor">
-      <div class="linea-tecnologica">
-        <img src="assets/img/innovacion.png" alt="" />
-        <div class="linea-contenedor">
-          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
-          <p class="linea-contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
-            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
-            ducimus inventore, obcaecati tempore?
-          </p>
-        </div>
-      </div>
-      <div class="linea-tecnologica">
-        <img src="assets/img/innovacion.png" alt="" />
-        <div class="linea-contenedor">
-          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
-          <p class="linea-contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
-            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
-            ducimus inventore, obcaecati tempore?
-          </p>
-        </div>
-      </div>
-      <div class="linea-tecnologica">
-        <img src="assets/img/innovacion.png" alt="" />
-        <div class="linea-contenedor">
-          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
-          <p class="linea-contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
-            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
-            ducimus inventore, obcaecati tempore?
-          </p>
-        </div>
-      </div>
-      <div class="linea-tecnologica">
-        <img src="assets/img/innovacion.png" alt="" />
-        <div class="linea-contenedor">
-          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
-          <p class="linea-contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
-            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
-            ducimus inventore, obcaecati tempore?
-          </p>
-        </div>
-      </div>
-      <div class="linea-tecnologica">
-        <img src="assets/img/innovacion.png" alt="" />
-        <div class="linea-contenedor">
-          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
-          <p class="linea-contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
-            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
-            ducimus inventore, obcaecati tempore?
-          </p>
-        </div>
-      </div>
+      <app-tarjeta-linea-tecnologica *ngFor="let lineaTecnologica of lineasTecnologicas" [lineaTecnologica]="lineaTecnologica"></app-tarjeta-linea-tecnologica>
     </div>
   </section>
 
@@ -82,34 +57,8 @@
       Empresas que confiaron en Grupo CATO para potenciar su nivel tecnológico
     </p>
     <div class="tarjetas-caso">
-      <div class="tarjeta-caso">
-        <img src="assets/img/vivedigitalvichada.png" alt="" />
-        <h4 class="titulo-tarjeta">
-          Implementación Total de Vive Digital Regional 2015
-        </h4>
-        <p class="contenido-tarjeta">Departamento de Vichada</p>
-      </div>
-      <div class="tarjeta-caso">
-        <img src="assets/img/vivedigitalvichada.png" alt="" />
-        <h4 class="titulo-tarjeta">
-          Implementación Total de Vive Digital Regional 2015
-        </h4>
-        <p class="contenido-tarjeta">Departamento de Vichada</p>
-      </div>
-      <div class="tarjeta-caso">
-        <img src="assets/img/vivedigitalvichada.png" alt="" />
-        <h4 class="titulo-tarjeta">
-          Implementación Total de Vive Digital Regional 2015
-        </h4>
-        <p class="contenido-tarjeta">Departamento de Vichada</p>
-      </div>
-      <div class="tarjeta-caso">
-        <img src="assets/img/vivedigitalvichada.png" alt="" />
-        <h4 class="titulo-tarjeta">
-          Implementación Total de Vive Digital Regional 2015
-        </h4>
-        <p class="contenido-tarjeta">Departamento de Vichada</p>
-      </div>
+      <app-carousel [dataCasosExito]="casosDeExito"></app-carousel>
+      <!-- <app-tarjeta-caso-exito *ngFor="let caso of casosDeExito" [caso]="caso"></app-tarjeta-caso-exito>-->
     </div>
   </section>
 
@@ -123,22 +72,9 @@
         Estos son los proyectos por Grupo CATO que te invitamos a conocer
       </p>
       <div class="cards">
-        <app-development-card
-          description="Gestor de realidad virtual y aumentada"
-          client="Departamento de Cundinamarca"
-          img="assets/img/realityapp.png"
-        ></app-development-card>
-        <app-development-card
-          description="Gestor de realidad virtual y aumentada"
-          client="Departamento de Cundinamarca"
-          img="assets/img/realityapp.png"
-        ></app-development-card>
-        <app-development-card
-          description="Gestor de realidad virtual y aumentada"
-          client="Departamento de Cundinamarca"
-          img="assets/img/realityapp.png"
-        ></app-development-card>
+        <app-development-card *ngFor="let desarrollo of desarrollosDeAutoria" [desarrollo]="desarrollo"></app-development-card>
       </div>
+      <button class="mas">Ver más</button>
     </div>
   </section>
 

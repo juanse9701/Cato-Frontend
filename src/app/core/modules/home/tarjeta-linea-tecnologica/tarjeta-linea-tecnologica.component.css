@@ -1,0 +1,25 @@
+.linea-tecnologica {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+.linea-tecnologica img {
+  border-radius: 10px;
+  width: 160px;
+  min-height: 160px;
+  object-fit: cover;
+}
+.linea-contenedor {
+  width: calc(100% - 160px);
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+.linea-tecnologica .linea-titulo {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+.linea-tecnologica .linea-contenido {
+  font-size: 16px;
+  line-height: 23px;
+}

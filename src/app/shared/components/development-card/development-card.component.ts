@@ -6,10 +6,14 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./development-card.component.css"]
 })
 export class DevelopmentCardComponent implements OnInit {
-  @Input() description: string;
-  @Input() client: string;
-  @Input() img: string;
+  @Input() desarrollo: Development;
   constructor() {}
 
   ngOnInit() {}
+}
+
+interface Development {
+  description: string;
+  client: string;
+  img: string;
 }

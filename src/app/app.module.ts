@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import {HomeModule} from './core/modules/home/home.module';
+import { HomeModule } from './core/modules/home/home.module';
 import { AppRoutingModule } from './app-routing.module';
-import { ClientCardComponent } from './shared/components/client-card/client-card.component';
-import { SectorComponent } from './shared/components/sector/sector.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +14,11 @@ import { SectorComponent } from './shared/components/sector/sector.component';
   imports: [
     BrowserModule,
     HomeModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  exports: [ ],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

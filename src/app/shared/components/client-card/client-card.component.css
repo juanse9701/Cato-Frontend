@@ -13,4 +13,9 @@
 .client-card img {
   width: 100%;
   object-fit: contain;
+  filter: grayscale(1);
+  transition: all .6s ease-in;
+}
+.client-card img:hover{
+  filter: grayscale(0);
 }

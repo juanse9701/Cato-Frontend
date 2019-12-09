@@ -12,6 +12,43 @@
   text-align: center;
 }
 
+/* Perfil de capacidades*/
+.perfil-capacidades{
+  background-size: cover;
+  background-color: #FAFAFA;
+  padding: 80px 30px 150px;
+}
+.capacidades{
+  display: flex;
+  margin-top: 70px;
+  padding: 0 50px;
+}
+.capacidad{
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.capacidad-imagen-contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 63px;
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.capacidad-imagen-contenedor img{
+  width: 100%;
+}
+.capacidad-contenido{
+  font-size: 17px;
+  color: #333333;
+  width: 190px;
+}
+
 /* Lineas tecnologicas*/
 .lineas-tecnologicas {
   display: flex;
@@ -45,39 +82,15 @@
 }
 
 .lineas-contenedor::-webkit-scrollbar-track {
-  background: black; 
+  background: black;
 }
 
 .lineas-contenedor::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,.35); 
+  background: rgba(255,255,255,.35);
   border-radius: 10px;
 }
 
-.linea-tecnologica {
-  display: flex;
-  align-items: center;
-  margin: 50px 0;
-}
-.linea-tecnologica img {
-  border-radius: 10px;
-  width: 160px;
-  min-height: 160px;
-  object-fit: cover;
-}
-.linea-contenedor {
-  width: calc(100% - 160px);
-  padding: 0 25px;
-  box-sizing: border-box;
-}
-.lineas-tecnologicas .linea-titulo {
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 8px;
-}
-.lineas-tecnologicas .linea-contenido {
-  font-size: 16px;
-  line-height: 23px;
-}
+
 /* Casos de exito*/
 
 .casos-exito {
@@ -85,27 +98,8 @@
 }
 .tarjetas-caso {
   display: flex;
-  padding: 0 70px;
-}
-.tarjeta-caso {
-  background: white;
-  border: 1px solid lightgray;
-  width: 285px;
-  margin: 0 8px;
-}
-.tarjeta-caso img {
-  width: 100%;
-  object-fit: contain;
-}
-.tarjeta-caso .titulo-tarjeta {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 10px 15px 0;
-}
-.tarjeta-caso .contenido-tarjeta {
-  font-size: 14px;
-  padding: 10px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Desarrollos de autoria*/
@@ -124,6 +118,15 @@
 .desarrollos-autoria .titulo,
 .desarrollos-autoria .descripcion {
   text-shadow: 1px 1px 1px black;
+}
+.desarrollos-autoria .mas{
+  align-self: flex-end;
+  margin-top: 40px;
+  background: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 /*Clientes*/
@@ -168,4 +171,6 @@
   color: white;
   margin: 0 7px 25px;
   font-size: 18px;
+  outline: none;
+  cursor: pointer;
 }
