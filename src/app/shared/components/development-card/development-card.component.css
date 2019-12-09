@@ -10,8 +10,9 @@
   width: 100%;
   object-fit: contain;
 }
-h3 {
+.card h3 {
   font-family: "Open Sans", sans-serif;
   margin: 10px 0;
-  line-height: 1.2em;
+  line-height: 20px;
+  font-size: 17px;
 }

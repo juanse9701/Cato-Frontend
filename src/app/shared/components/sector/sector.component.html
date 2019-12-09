@@ -1,7 +1,10 @@
 <article class="sector">
-  <h3 class="titulo-sector">{{ sector }}</h3>
+  <h3 class="titulo-sector">{{ sector.nombre }}</h3>
   <div class="logos-container">
-    <app-client-card *ngFor="let cliente of clientes"  [cliente]="cliente"></app-client-card>
+    <app-client-card
+      *ngFor="let cliente of sector.clientes"
+      [cliente]="cliente"
+    ></app-client-card>
   </div>
   <button>Ver más</button>
 </article>

@@ -2,14 +2,110 @@
 
 .titulo {
   text-transform: uppercase;
-  font-size: 34pt;
+  font-size: 34px;
   margin-bottom: 15px;
   text-align: center;
 }
 .descripcion {
   margin-bottom: 30px;
-  font-size: 20pt;
+  font-size: 20px;
   text-align: center;
+}
+
+/* Lineas tecnologicas*/
+.lineas-tecnologicas {
+  display: flex;
+  color: white;
+  height: 735px;
+}
+.lineas-descripcion-contenedor {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  padding: 20px 120px;
+}
+.lineas-titulo {
+  text-transform: uppercase;
+  text-align-last: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.lineas-contenedor {
+  width: 50%;
+  background: black;
+  padding: 30px 25px;
+  overflow-y: scroll;
+}
+.lineas-contenedor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lineas-contenedor::-webkit-scrollbar-track {
+  background: black; 
+}
+
+.lineas-contenedor::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.35); 
+  border-radius: 10px;
+}
+
+.linea-tecnologica {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+.linea-tecnologica img {
+  border-radius: 10px;
+  width: 160px;
+  min-height: 160px;
+  object-fit: cover;
+}
+.linea-contenedor {
+  width: calc(100% - 160px);
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+.lineas-tecnologicas .linea-titulo {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+.lineas-tecnologicas .linea-contenido {
+  font-size: 16px;
+  line-height: 23px;
+}
+/* Casos de exito*/
+
+.casos-exito {
+  padding: 60px 0 80px;
+}
+.tarjetas-caso {
+  display: flex;
+  padding: 0 70px;
+}
+.tarjeta-caso {
+  background: white;
+  border: 1px solid lightgray;
+  width: 285px;
+  margin: 0 8px;
+}
+.tarjeta-caso img {
+  width: 100%;
+  object-fit: contain;
+}
+.tarjeta-caso .titulo-tarjeta {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 15px 0;
+}
+.tarjeta-caso .contenido-tarjeta {
+  font-size: 14px;
+  padding: 10px 15px;
 }
 
 /* Desarrollos de autoria*/
@@ -31,7 +127,7 @@
 }
 
 /*Clientes*/
-.clientes{
+.clientes {
   padding: 0 140px 60px;
 }
 
@@ -50,17 +146,17 @@
   margin-bottom: 50px;
 }
 .colabora .titulo h2 {
-  font-size: 34pt;
+  font-size: 34px;
   font-weight: 400;
 }
 .colabora .titulo p {
   text-transform: none;
-  font-size: 20pt;
+  font-size: 20px;
 }
 .colabora h3 {
   margin-bottom: 15px;
   font-weight: 400;
-  font-size: 21pt;
+  font-size: 21px;
 }
 
 .colabora .botones button {

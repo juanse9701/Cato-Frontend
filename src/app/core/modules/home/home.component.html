@@ -1,4 +1,118 @@
 <main>
+  <section class="lineas-tecnologicas">
+    <div class="lineas-descripcion-contenedor">
+      <h2 class="lineas-titulo">Lineas tecnológicas</h2>
+      <p class="lineas-contenido">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas id
+        ducimus blanditiis repellendus, enim vitae. Facilis voluptatum omnis
+        tempora, eveniet sapiente autem laudantium cum vitae officiis blanditiis
+        molestiae culpa doloremque.
+      </p>
+    </div>
+    <div class="lineas-contenedor">
+      <div class="linea-tecnologica">
+        <img src="assets/img/innovacion.png" alt="" />
+        <div class="linea-contenedor">
+          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
+          <p class="linea-contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
+            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
+            ducimus inventore, obcaecati tempore?
+          </p>
+        </div>
+      </div>
+      <div class="linea-tecnologica">
+        <img src="assets/img/innovacion.png" alt="" />
+        <div class="linea-contenedor">
+          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
+          <p class="linea-contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
+            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
+            ducimus inventore, obcaecati tempore?
+          </p>
+        </div>
+      </div>
+      <div class="linea-tecnologica">
+        <img src="assets/img/innovacion.png" alt="" />
+        <div class="linea-contenedor">
+          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
+          <p class="linea-contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
+            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
+            ducimus inventore, obcaecati tempore?
+          </p>
+        </div>
+      </div>
+      <div class="linea-tecnologica">
+        <img src="assets/img/innovacion.png" alt="" />
+        <div class="linea-contenedor">
+          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
+          <p class="linea-contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
+            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
+            ducimus inventore, obcaecati tempore?
+          </p>
+        </div>
+      </div>
+      <div class="linea-tecnologica">
+        <img src="assets/img/innovacion.png" alt="" />
+        <div class="linea-contenedor">
+          <h5 class="linea-titulo">Innovaciones y aplicaciones</h5>
+          <p class="linea-contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            pariatur aliquid incidunt quo. Assumenda sequi voluptatem id.
+            Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam
+            ducimus inventore, obcaecati tempore?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="casos-exito"
+    style="background-image:url(''); background-color:#fdfdfd"
+  >
+    <h2 class="titulo">Casos de éxito</h2>
+    <p class="descripcion">
+      Empresas que confiaron en Grupo CATO para potenciar su nivel tecnológico
+    </p>
+    <div class="tarjetas-caso">
+      <div class="tarjeta-caso">
+        <img src="assets/img/vivedigitalvichada.png" alt="" />
+        <h4 class="titulo-tarjeta">
+          Implementación Total de Vive Digital Regional 2015
+        </h4>
+        <p class="contenido-tarjeta">Departamento de Vichada</p>
+      </div>
+      <div class="tarjeta-caso">
+        <img src="assets/img/vivedigitalvichada.png" alt="" />
+        <h4 class="titulo-tarjeta">
+          Implementación Total de Vive Digital Regional 2015
+        </h4>
+        <p class="contenido-tarjeta">Departamento de Vichada</p>
+      </div>
+      <div class="tarjeta-caso">
+        <img src="assets/img/vivedigitalvichada.png" alt="" />
+        <h4 class="titulo-tarjeta">
+          Implementación Total de Vive Digital Regional 2015
+        </h4>
+        <p class="contenido-tarjeta">Departamento de Vichada</p>
+      </div>
+      <div class="tarjeta-caso">
+        <img src="assets/img/vivedigitalvichada.png" alt="" />
+        <h4 class="titulo-tarjeta">
+          Implementación Total de Vive Digital Regional 2015
+        </h4>
+        <p class="contenido-tarjeta">Departamento de Vichada</p>
+      </div>
+    </div>
+  </section>
+
   <section
     class="desarrollos-autoria"
     style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')"
@@ -34,9 +148,7 @@
       Organizaciones que confiaron en el Grupo CATO para potenciar su
       crecimiento a nivel tecnológico
     </p>
-    <app-sector sector="sector privado"></app-sector>
-    <app-sector sector="sector público"></app-sector>
-    <app-sector sector="sector ong's"></app-sector>
+    <app-sector *ngFor="let sector of clientes" [sector]="sector"></app-sector>
   </section>
   <section class="colabora">
     <div class="titulo">

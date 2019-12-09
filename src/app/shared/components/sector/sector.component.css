@@ -1,32 +1,32 @@
-.sector{
+.sector {
   display: flex;
   flex-direction: column;
 }
-.sector h3{
+.sector h3 {
   margin: 25px 0;
-  font-size: 26pt;
+  font-size: 26px;
   font-weight: normal;
   text-transform: uppercase;
 }
-.sector button{
-  color: #5691C2 ;
+.sector button {
+  color: #5691c2;
   text-transform: uppercase;
-  font-size: 15pt;
+  font-size: 15px;
   border: none;
   background: none;
   align-self: flex-end;
   margin-top: 10px;
 }
-.sector .logos-container{
+.sector .logos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding-bottom: 30px;
   border-bottom: 1px solid lightgray;
 }
-.sector .logos-container app-client-card:nth-child(2n)>div{
+.sector .logos-container app-client-card:nth-child(2n) > div {
   border-right: none !important;
 }
-.sector .logos-container  app-client-card:last-child>div{
+.sector .logos-container app-client-card:last-child > div {
   border-right: 1px solid lightgray !important;
 }
