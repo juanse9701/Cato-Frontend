@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-linea-tecnologica',
@@ -6,15 +6,17 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./tarjeta-linea-tecnologica.component.css']
 })
 export class TarjetaLineaTecnologicaComponent implements OnInit {
-
   @Input() lineaTecnologica: LineaTecnologica;
-  constructor() { }
+  @Input() index: number;
 
-  ngOnInit() {
+  constructor() {
+    console.log(this.index);
   }
+
+  ngOnInit() {}
 }
 
-interface LineaTecnologica {
+export interface LineaTecnologica {
   nombre: string;
   descripcion: string;
   imagen: string;

@@ -1,35 +1,13 @@
 <main>
-  <section
-    class="perfil-capacidades"
-    style="background-image: url('assets/img/bg-capacidades@2x.png');"
-  >
+  <section class="perfil-capacidades" style="background-image: url('assets/img/bg-capacidades@2x.png');">
     <h2 class="titulo">Perfil de capacidades</h2>
     <div class="capacidades" id="capacidades">
       <app-carousel-capacidades [data]="capacidades"></app-carousel-capacidades>
     </div>
   </section>
-  <section class="lineas-tecnologicas">
-    <div class="lineas-descripcion-contenedor">
-      <h2 class="lineas-titulo">Lineas tecnológicas</h2>
-      <p class="lineas-contenido">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas id
-        ducimus blanditiis repellendus, enim vitae. Facilis voluptatum omnis
-        tempora, eveniet sapiente autem laudantium cum vitae officiis blanditiis
-        molestiae culpa doloremque.
-      </p>
-    </div>
-    <div class="lineas-contenedor">
-      <app-tarjeta-linea-tecnologica
-        *ngFor="let lineaTecnologica of lineasTecnologicas"
-        [lineaTecnologica]="lineaTecnologica"
-      ></app-tarjeta-linea-tecnologica>
-    </div>
-  </section>
+  <app-lineas-tecnologicas [lineasTecnologicas]="lineasTecnologicas"></app-lineas-tecnologicas>
 
-  <section
-    class="casos-exito"
-    style="background-image:url(''); background-color:#fdfdfd"
-  >
+  <section class="casos-exito" style="background-image:url(''); background-color:#fdfdfd">
     <h2 class="titulo">Casos de éxito</h2>
     <p class="descripcion">
       Empresas que confiaron en Grupo CATO para potenciar su nivel tecnológico
@@ -52,6 +30,7 @@
         <app-development-card
           *ngFor="let desarrollo of desarrollosDeAutoria"
           [desarrollo]="desarrollo"
+          estilo="redondo"
         ></app-development-card>
       </div>
       <button class="mas">Ver más</button>
@@ -61,8 +40,7 @@
   <section class="clientes">
     <h2 class="titulo">Clientes</h2>
     <p class="descripcion">
-      Organizaciones que confiaron en el Grupo CATO para potenciar su
-      crecimiento a nivel tecnológico
+      Organizaciones que confiaron en el Grupo CATO para potenciar su crecimiento a nivel tecnológico
     </p>
     <app-sector *ngFor="let sector of clientes" [sector]="sector"></app-sector>
   </section>

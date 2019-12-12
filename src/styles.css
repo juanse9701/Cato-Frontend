@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", "Segoe UI", sans-serif;
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
 }
 
 .ancho-maximo-container {
@@ -29,5 +29,5 @@
 
 /*Clientes*/
 .clientes {
-  padding: 0 140px 60px;
+  padding: 0 80px 60px;
 }

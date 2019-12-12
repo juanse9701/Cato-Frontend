@@ -5,13 +5,15 @@
   background: white;
   color: #333;
 }
-
+.card.cuadrado {
+  border-radius: 0;
+}
 .card img {
   width: 100%;
   object-fit: contain;
 }
 .card h3 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 10px 0;
   line-height: 20px;
   font-size: 17px;

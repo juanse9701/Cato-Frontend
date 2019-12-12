@@ -1,4 +1,9 @@
-<div class="card">
+<div *ngIf="estilo === 'cuadrado'" class="card cuadrado">
+  <img [src]="desarrollo.img" [alt]="desarrollo.description" />
+  <h3>{{ desarrollo.description | uppercase }}</h3>
+  <p>{{ desarrollo.client }}</p>
+</div>
+<div *ngIf="estilo === 'redondo'" class="card">
   <img [src]="desarrollo.img" [alt]="desarrollo.description" />
   <h3>{{ desarrollo.description | uppercase }}</h3>
   <p>{{ desarrollo.client }}</p>

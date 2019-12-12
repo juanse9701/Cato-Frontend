@@ -7,9 +7,10 @@ import { HomeModule } from "./core/modules/home/home.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { NosotrosModule } from "./core/modules/nosotros/nosotros.module";
 import { RouterModule } from "@angular/router";
+import { GridSeeMoreComponent } from './shared/components/grid-see-more/grid-see-more.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent],
+  declarations: [AppComponent, FooterComponent, GridSeeMoreComponent],
   imports: [
     BrowserModule,
     HomeModule,

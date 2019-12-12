@@ -1,4 +1,105 @@
+<section class="nosotros">
+  <h2 class="titulo claro">Nosotros</h2>
+  <article class="items">
+    <div class="item">
+      <div class="icono-titulo-contenedor">
+        <img src="" alt="" />
+        <h2>Objetivo general</h2>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
+        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
+      </p>
+    </div>
+    <div class="item">
+      <div class="icono-titulo-contenedor">
+        <img src="" alt="" />
+        <h2>Misión</h2>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
+        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
+      </p>
+    </div>
+    <div class="item">
+      <div class="icono-titulo-contenedor">
+        <img src="" alt="" />
+        <h2>Politica de calidad</h2>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
+        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
+      </p>
+    </div>
+    <div class="item">
+      <div class="icono-titulo-contenedor">
+        <img src="" alt="" />
+        <h2>Visión</h2>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
+        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
+      </p>
+    </div>
+  </article>
+</section>
+
+<section class="valores-principios">
+  <h2 class="titulo">Valores y principios coorporativos</h2>
+  <div class="contenedor-valores-principios">
+    <div class="valor-principio">
+      <img class="red" src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg" alt="" />
+      <div class="contenido">
+        <h3 class="">Igualdad</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
+          nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
+          incidunt praesentium?
+        </p>
+      </div>
+    </div>
+    <div class="valor-principio">
+      <img class="grey" src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg" alt="" />
+      <div class="contenido">
+        <h3 class="">Igualdad</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
+          nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
+          incidunt praesentium?
+        </p>
+      </div>
+    </div>
+    <div class="valor-principio">
+      <img
+        class="yellow"
+        src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg"
+        alt=""
+      />
+      <div class="contenido">
+        <h3 class="">Igualdad</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
+          nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
+          incidunt praesentium?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="clientes">
   <h2 class="titulo">Clientes</h2>
   <app-sector *ngFor="let sector of clientes" [sector]="sector"></app-sector>
+</section>
+
+<section class="desarrollos-autoria">
+  <h2 class="titulo">Desarrollos de autoría</h2>
+  <div class="cards">
+    <app-development-card
+      *ngFor="let desarrollo of desarrollosDeAutoria"
+      [desarrollo]="desarrollo"
+      estilo="cuadrado"
+    ></app-development-card>
+  </div>
+  <button class="mas">Ver más</button>
 </section>
