@@ -1,8 +1,8 @@
 .tarjeta-caso {
   background: white;
   border: 1px solid lightgray;
-  width: 285px;
-  margin: 0 8px;
+  /* width: 285px;
+  margin: 0 8px; */
 }
 .tarjeta-caso img {
   width: 100%;
@@ -17,8 +17,4 @@
 .tarjeta-caso .contenido-tarjeta {
   font-size: 14px;
   padding: 10px 15px;
-}
-
-:host {
-
 }

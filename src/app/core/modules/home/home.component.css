@@ -1,52 +1,17 @@
-/* General */
-
-.titulo {
-  text-transform: uppercase;
-  font-size: 34px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-.descripcion {
-  margin-bottom: 30px;
-  font-size: 20px;
-  text-align: center;
-}
-
 /* Perfil de capacidades*/
-.perfil-capacidades{
+.perfil-capacidades {
   background-size: cover;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   padding: 80px 30px 150px;
 }
-.capacidades{
+#capacidades .item {
+  background: red;
+  box-shadow: none;
+}
+.capacidades {
   display: flex;
   margin-top: 70px;
-  padding: 0 50px;
-}
-.capacidad{
-  display: flex;
-  align-items: center;
-  margin: 0 20px;
-}
-
-.capacidad-imagen-contenedor{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 63px;
-  width: 63px;
-  background: white;
-  padding: 10px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-.capacidad-imagen-contenedor img{
-  width: 100%;
-}
-.capacidad-contenido{
-  font-size: 17px;
-  color: #333333;
-  width: 190px;
+  /* padding: 0 50px; */
 }
 
 /* Lineas tecnologicas*/
@@ -86,10 +51,9 @@
 }
 
 .lineas-contenedor::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,.35);
+  background: rgba(255, 255, 255, 0.35);
   border-radius: 10px;
 }
-
 
 /* Casos de exito*/
 
@@ -100,6 +64,12 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
+}
+.tile {
+  box-shadow: none !important;
+}
+.ngucarousel .ngucarousel-items {
+  justify-content: space-between;
 }
 
 /* Desarrollos de autoria*/
@@ -119,7 +89,7 @@
 .desarrollos-autoria .descripcion {
   text-shadow: 1px 1px 1px black;
 }
-.desarrollos-autoria .mas{
+.desarrollos-autoria .mas {
   align-self: flex-end;
   margin-top: 40px;
   background: transparent;
@@ -127,11 +97,6 @@
   border: none;
   text-transform: uppercase;
   font-size: 15px;
-}
-
-/*Clientes*/
-.clientes {
-  padding: 0 140px 60px;
 }
 
 /* Colabora */
