@@ -117,6 +117,58 @@ export class NosotrosComponent implements OnInit {
       img: 'assets/img/realityapp.png'
     }
   ];
+  desarrollosTecnologicos: any[] = [
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    },
+    {
+      description: 'Gestor de realidad virtual y aumentada',
+      client: 'Departamento de Cundinamarca',
+      img: 'assets/img/realityapp.png'
+    }
+  ];
   constructor() {}
 
   ngOnInit() {}

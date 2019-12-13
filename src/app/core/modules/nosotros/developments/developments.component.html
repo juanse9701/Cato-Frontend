@@ -1,0 +1,20 @@
+<section *ngIf="type === 'simple'" class="desarrollos">
+  <h2 class="titulo">{{ title }}</h2>
+  <div class="cards simple" #cards>
+    <app-development-card *ngFor="let desarrollo of desarrollos" [desarrollo]="desarrollo" estilo="cuadrado">
+    </app-development-card>
+  </div>
+  <div *ngIf="showMore" class="mas-container">
+    <button (click)="verMas(cards)" class="mas">{{ buttonText }}</button>
+  </div>
+</section>
+<section *ngIf="type === 'doble'" class="desarrollos">
+  <h2 class="titulo">{{ title }}</h2>
+  <div class="cards doble" #cards>
+    <app-development-card *ngFor="let desarrollo of desarrollos" [desarrollo]="desarrollo" estilo="cuadrado">
+    </app-development-card>
+  </div>
+  <div *ngIf="showMore" class="mas-container">
+    <button (click)="verMas(cards)" class="mas">{{ buttonText }}</button>
+  </div>
+</section>

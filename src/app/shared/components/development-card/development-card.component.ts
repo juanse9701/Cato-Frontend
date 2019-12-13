@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DevelopmentCardComponent implements OnInit {
   @Input() desarrollo: Development;
-  @Input() estilo: String;
+  @Input() estilo: string;
 
   constructor() {}
 

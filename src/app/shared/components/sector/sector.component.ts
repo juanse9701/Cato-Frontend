@@ -26,6 +26,5 @@ export class SectorComponent implements OnInit {
       }, 210);
       this.buttonText = 'Ver menos';
     }
-    console.log(elemento);
   }
 }

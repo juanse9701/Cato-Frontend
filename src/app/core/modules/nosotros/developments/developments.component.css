@@ -1,0 +1,41 @@
+/* Desarrollos */
+.desarrollos .titulo {
+  margin-bottom: 50px;
+}
+.desarrollos {
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+}
+.desarrollos .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+  padding-bottom: 30px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.desarrollos .mas-container {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid lightgray;
+}
+.desarrollos .mas {
+  color: #5691c2;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+  background: none;
+  align-self: flex-end;
+  margin-top: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.desarrollos .cards.simple {
+  max-height: 254.7px;
+}
+.desarrollos .cards.doble {
+  max-height: 510px;
+}

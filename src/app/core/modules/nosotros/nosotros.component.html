@@ -1,3 +1,5 @@
+<app-developments [desarrollos]="desarrollosTecnologicos" type="doble" title="Desarrollo tecnológicos"></app-developments>
+
 <section class="nosotros">
   <h2 class="titulo claro">Nosotros</h2>
   <article class="items">
@@ -92,14 +94,4 @@
   <app-sector *ngFor="let sector of clientes" [sector]="sector"></app-sector>
 </section>
 
-<section class="desarrollos-autoria">
-  <h2 class="titulo">Desarrollos de autoría</h2>
-  <div class="cards">
-    <app-development-card
-      *ngFor="let desarrollo of desarrollosDeAutoria"
-      [desarrollo]="desarrollo"
-      estilo="cuadrado"
-    ></app-development-card>
-  </div>
-  <button class="mas">Ver más</button>
-</section>
+<app-developments [desarrollos]="desarrollosDeAutoria" type="simple" title="Desarrollo de autoría"></app-developments>

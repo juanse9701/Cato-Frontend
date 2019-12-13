@@ -1,0 +1,6 @@
+/* Hero */
+.hero {
+  height: 50vh;
+  background: black;
+  /* clip-path: url(#svgPath); */
+}
