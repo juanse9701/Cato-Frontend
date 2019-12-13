@@ -16,6 +16,8 @@
   background: none;
   align-self: flex-end;
   margin-top: 10px;
+  outline: none;
+  cursor: pointer;
 }
 .sector .logos-container {
   display: grid;
@@ -23,6 +25,10 @@
   gap: 20px;
   padding-bottom: 35px;
   border-bottom: 1px solid lightgray;
+  padding: 20px;
+  max-height: 175px;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
 }
 .sector .logos-container app-client-card:nth-child(2n) > div {
   border-right: none !important;

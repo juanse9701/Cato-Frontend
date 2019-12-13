@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-linea-tecnologica',
@@ -8,12 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TarjetaLineaTecnologicaComponent implements OnInit {
   @Input() lineaTecnologica: LineaTecnologica;
   @Input() index: number;
+  @Output() changeActualIndex = new EventEmitter<number>();
 
-  constructor() {
-    console.log(this.index);
-  }
+  constructor() {}
 
   ngOnInit() {}
+
+  cambiarActual(indice: number) {
+    this.changeActualIndex.emit(indice);
+  }
 }
 
 export interface LineaTecnologica {

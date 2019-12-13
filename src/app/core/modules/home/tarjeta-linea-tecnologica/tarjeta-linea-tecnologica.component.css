@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   margin: 50px 0;
+  cursor: pointer;
 }
 .linea-tecnologica img {
   border-radius: 10px;

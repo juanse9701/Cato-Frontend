@@ -1,3 +1,10 @@
+/* Hero */
+.hero {
+  height: 400px;
+  background: #b61924;
+  clip-path: url(#svgPath);
+}
+
 /* Perfil de capacidades*/
 .perfil-capacidades {
   background-size: cover;
@@ -13,8 +20,6 @@
   margin-top: 70px;
   /* padding: 0 50px; */
 }
-
-
 
 /* Casos de exito*/
 

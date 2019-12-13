@@ -8,6 +8,7 @@
       *ngFor="let lineaTecnologica of lineasTecnologicas; let i = index"
       [lineaTecnologica]="lineaTecnologica"
       [index]="i"
+      (changeActualIndex)="cambiarActual($event)"
     ></app-tarjeta-linea-tecnologica>
   </div>
 </section>
