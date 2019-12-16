@@ -1,0 +1,46 @@
+.tarjeta-seccion {
+  display: flex;
+  margin: 30px 60px;
+  padding: 10px 30px;
+  border-bottom: 1px solid lightgray;
+}
+:host:last-child .tarjeta-seccion {
+  border-bottom: none;
+}
+.tarjeta-titulo {
+  color: var(--main-red);
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.tarjeta-subtitulo {
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.tarjeta-subtitulo::after {
+  margin-top: 20px;
+  display: block;
+  content: '';
+  width: 80px;
+  border-bottom: 1px solid lightgray;
+}
+.tarjeta-info {
+  width: calc(50% - 70px);
+  margin-right: 70px;
+}
+.tarjeta-imagen {
+  width: calc(50% - 40px);
+  padding: 10px 20px;
+}
+.tarjeta-imagen img {
+  width: 100%;
+}
+
+.tarjeta-seccion a {
+  display: inline-block;
+  background: var(--main-red);
+  padding: 10px 25px;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+}

@@ -38,7 +38,7 @@ export class HeroComponent implements OnInit {
         },
         line_linked: {
           enable: true,
-          distance: 50,
+          distance: 150,
           color: '#ffffff',
           opacity: 0.4,
           width: 1

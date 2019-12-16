@@ -11,6 +11,7 @@ export class DevelopmentsComponent implements OnInit {
   @Input() title: string;
   buttonText: string = 'Ver más';
   showMore: boolean = true;
+  
   @ViewChild('cards', { static: false }) cards: ElementRef;
 
   constructor() {}
@@ -19,24 +20,24 @@ export class DevelopmentsComponent implements OnInit {
     console.log(window.screen.width);
   }
 
-  ngAfterViewInit() {
-    console.log(this.cards.nativeElement.scrollHeight);
-    switch (this.type) {
-      case 'simple':
-        if (this.cards.nativeElement.scrollHeight <= 255) {
-          this.showMore = false;
-        }
-        break;
-      case 'doble':
-        if (this.cards.nativeElement.scrollHeight <= 255) {
-          this.showMore = false;
-        }
-        break;
+  // ngAfterViewInit() {
+  //   console.log(this.cards.nativeElement.scrollHeight);
+  //   switch (this.type) {
+  //     case 'simple':
+  //       if (this.cards.nativeElement.scrollHeight <= 255) {
+  //         this.showMore = false;
+  //       }
+  //       break;
+  //     case 'doble':
+  //       if (this.cards.nativeElement.scrollHeight <= 255) {
+  //         this.showMore = false;
+  //       }
+  //       break;
 
-      default:
-        break;
-    }
-  }
+  //     default:
+  //       break;
+  //   }
+  // }
 
   verMas(elemento) {
     if (elemento.style.maxHeight) {

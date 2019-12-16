@@ -1,0 +1,17 @@
+.header-page {
+  display: flex;
+  padding: 20px 80px;
+  width: 900px;
+  margin: 40px auto 10px;
+}
+.header-page-info {
+  width: 60%;
+}
+.header-page-info h1 {
+  color: var(--main-red);
+  font-size: 2em;
+}
+.header-page img {
+  width: 40%;
+  margin-left: 30px;
+}

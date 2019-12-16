@@ -1,0 +1,26 @@
+.sub-menu {
+  background: #303030;
+  padding: 0 50px;
+  height: 60px;
+}
+.sub-menu ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+.sub-menu ul li {
+  height: 100%;
+}
+.sub-menu ul li.active {
+  border-bottom: 2px solid var(--main-red);
+}
+.sub-menu ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 30px;
+}

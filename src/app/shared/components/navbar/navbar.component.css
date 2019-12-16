@@ -25,6 +25,9 @@ header .menu .menu-item a {
   text-transform: uppercase;
   font-size: 17px;
 }
+header .menu .menu-item.active a {
+  color: var(--main-red);
+}
 
 .whatsapp-container {
   background: #008b00;
