@@ -1,8 +1,13 @@
 header {
-  padding: 15px 60px;
+  padding: 0 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--bar-height);
+  z-index: 9999999;
 }
 header .logo {
   outline: none;
@@ -25,6 +30,9 @@ header .menu .menu-item a {
   text-transform: uppercase;
   font-size: 17px;
 }
+header.home .menu .menu-item a {
+  color: white;
+}
 header .menu .menu-item.active a {
   color: var(--main-red);
 }
@@ -42,4 +50,20 @@ header .menu .menu-item.active a {
 .menu-container img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+  header .menu-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
 }

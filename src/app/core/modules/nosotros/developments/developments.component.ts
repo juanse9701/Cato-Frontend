@@ -11,7 +11,7 @@ export class DevelopmentsComponent implements OnInit {
   @Input() title: string;
   buttonText: string = 'Ver más';
   showMore: boolean = true;
-  
+
   @ViewChild('cards', { static: false }) cards: ElementRef;
 
   constructor() {}

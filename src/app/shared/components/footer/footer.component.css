@@ -1,10 +1,30 @@
-footer{
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #111;
-  height: 110px;
+  min-height: 110px;
   color: white;
   font-size: 17px;
+  padding: 30px 20px;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
 }

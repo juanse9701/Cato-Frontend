@@ -1,7 +1,7 @@
 .tarjeta-seccion {
   display: flex;
-  margin: 30px 60px;
-  padding: 10px 30px;
+  background: white;
+  padding: 40px 90px;
   border-bottom: 1px solid lightgray;
 }
 :host:last-child .tarjeta-seccion {
@@ -10,12 +10,13 @@
 .tarjeta-titulo {
   color: var(--main-red);
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 27px;
 }
 .tarjeta-subtitulo {
   font-style: italic;
   font-weight: normal;
   margin-bottom: 10px;
+  font-size: 24px;
 }
 .tarjeta-subtitulo::after {
   margin-top: 20px;
@@ -43,4 +44,5 @@
   margin-top: 20px;
   color: white;
   text-decoration: none;
+  font-size: 20px;
 }

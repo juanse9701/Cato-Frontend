@@ -28,20 +28,26 @@ export class HeroComponent implements OnInit {
     this.myParams = {
       particles: {
         number: {
-          value: 150
+          value: 120
         },
         color: {
           value: '#ffffff'
         },
         shape: {
-          type: 'triangle'
+          type: 'circle'
         },
         line_linked: {
           enable: true,
-          distance: 150,
+          distance: 100,
           color: '#ffffff',
-          opacity: 0.4,
+          opacity: 0.7,
           width: 1
+        },
+        size: {
+          value: 3
+        },
+        move: {
+          speed: 2
         }
       }
     };

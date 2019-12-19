@@ -37,3 +37,39 @@
   background: transparent;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+  .lineas-tecnologicas {
+    flex-direction: column;
+    height: initial;
+  }
+  .lineas-descripcion-contenedor {
+    width: 100%;
+    padding: 60px 80px;
+  }
+  .lineas-contenedor {
+    width: 100%;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+  .lineas-descripcion-contenedor {
+    padding: 50px 40px 40px;
+  }
+}
+@media screen and (max-width: 470px) {
+}
+
+@media screen and (max-width: 375px) {
+  .lineas-descripcion-contenedor {
+    padding: 40px 25px 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+}

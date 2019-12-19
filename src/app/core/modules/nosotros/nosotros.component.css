@@ -1,6 +1,5 @@
 /* Desarollos tecnológicos */
 .desarollosTecnologicos {
-  background: #fbfbfb;
 }
 /* Nosotros */
 .nosotros {
@@ -29,6 +28,7 @@
 /* Valores y principios coorporativos */
 .valores-principios {
   padding: 60px 80px 90px;
+  background: white;
 }
 .valores-principios .titulo {
   font-size: 22px;

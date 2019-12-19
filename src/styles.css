@@ -6,6 +6,10 @@
 }
 :root {
   --main-red: #b10808;
+  --bar-height: 80px;
+}
+body {
+  padding-top: calc(var(--bar-height));
 }
 .ancho-maximo-container {
   display: flex;
@@ -31,5 +35,35 @@
 
 /*Clientes*/
 .clientes {
-  padding: 0 80px 60px;
+  padding: 50px 80px 60px;
+  background: white;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+  .ancho-maximo-container {
+    margin: 0 50px;
+  }
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+  .clientes {
+    padding: 40px 40px 50px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .ancho-maximo-container {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .clientes {
+    padding: 30px 20px 40px;
+  }
+}
+@media screen and (max-width: 320px) {
 }

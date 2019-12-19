@@ -13,7 +13,7 @@ export class InnovacionComponent implements OnInit {
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    imagen: 'https://cdn2.hubspot.net/hubfs/498832/Imported_Blog_Media/redes-informaticas-4.png',
+    imagen: 'assets/img/aplicaciones.png',
     secciones: [
       {
         nombre: 'Realidad virtual',
@@ -21,15 +21,15 @@ nostrud exerci tation.`,
         subtitulo: 'Más de 20 marcas mundiales',
         contenido:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'https://cdn2.hubspot.net/hubfs/498832/Imported_Blog_Media/redes-informaticas-4.png'
+        imagen: 'assets/img/red.png'
       },
       {
-        nombre: 'Realidad virtual',
-        id: 'realidad-virtual',
+        nombre: 'Realidad aumentada',
+        id: 'realidad-aumentada',
         subtitulo: 'Más de 20 marcas mundiales',
         contenido:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'https://cdn2.hubspot.net/hubfs/498832/Imported_Blog_Media/redes-informaticas-4.png'
+        imagen: 'assets/img/red.png'
       }
     ]
   };
