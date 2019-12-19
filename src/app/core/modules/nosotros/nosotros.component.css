@@ -79,3 +79,64 @@
   background: #f8f8f8;
   padding-top: 40px;
 }
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .valores-principios {
+    padding: 50px 70px 80px;
+  }
+  .nosotros {
+    padding: 30px 60px 60px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .contenedor-valores-principios {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .valores-principios {
+    padding: 40px 50px 70px;
+  }
+  .valores-principios .titulo {
+    margin-bottom: 40px;
+  }
+  .nosotros {
+    padding: 30px 50px 50px;
+  }
+  .nosotros > .titulo {
+    margin-bottom: 15px;
+  }
+  .nosotros .items {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 470px) {
+  .valores-principios {
+    padding: 30px 30px 50px;
+  }
+  .valores-principios .titulo {
+    margin-bottom: 25px;
+  }
+  .nosotros {
+    padding: 30px 30px 50px;
+  }
+  .nosotros > .titulo {
+    margin-bottom: 10px;
+  }
+  .valor-principio .contenido {
+    padding: 40px 35px 50px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .valor-principio .contenido {
+    padding: 30px 25px 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+}

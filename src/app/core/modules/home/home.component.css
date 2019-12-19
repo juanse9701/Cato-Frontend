@@ -18,7 +18,7 @@
 /* Casos de exito*/
 
 .casos-exito {
-  padding: 60px 0 80px;
+  padding: 60px 15px 80px;
 }
 .tarjetas-caso {
   display: flex;
@@ -127,16 +127,34 @@
   .colabora h3 {
     margin-bottom: 25px;
   }
+  .perfil-capacidades {
+    padding: 40px 30px 80px;
+  }
 }
 @media screen and (max-width: 470px) {
+  .perfil-capacidades {
+    padding: 30px 30px 50px;
+  }
   .colabora {
-    padding: 40px 40px 60px;
+    padding: 35px 25px 40px;
+  }
+  .desarrollos-autoria {
+    padding: 50px 0 60px;
   }
 }
 @media screen and (max-width: 375px) {
   .colabora {
-    padding: 40px 30px 60px;
+    padding: 35px 20px 40px;
+  }
+  .perfil-capacidades {
+    padding: 30px 20px 40px;
   }
 }
 @media screen and (max-width: 320px) {
+  .colabora {
+    padding: 35px 20px 40px;
+  }
+  .desarrollos-autoria {
+    padding: 40px 0 50px;
+  }
 }

@@ -20,25 +20,6 @@ export class DevelopmentsComponent implements OnInit {
     console.log(window.screen.width);
   }
 
-  // ngAfterViewInit() {
-  //   console.log(this.cards.nativeElement.scrollHeight);
-  //   switch (this.type) {
-  //     case 'simple':
-  //       if (this.cards.nativeElement.scrollHeight <= 255) {
-  //         this.showMore = false;
-  //       }
-  //       break;
-  //     case 'doble':
-  //       if (this.cards.nativeElement.scrollHeight <= 255) {
-  //         this.showMore = false;
-  //       }
-  //       break;
-
-  //     default:
-  //       break;
-  //   }
-  // }
-
   verMas(elemento) {
     if (elemento.style.maxHeight) {
       elemento.style.maxHeight = elemento.scrollHeight + 'px';

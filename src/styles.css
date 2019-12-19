@@ -26,6 +26,7 @@ body {
   font-size: 34px;
   margin-bottom: 15px;
   text-align: center;
+  line-height: 1.2em;
 }
 .descripcion {
   margin-bottom: 30px;
@@ -49,6 +50,9 @@ body {
 @media screen and (max-width: 959px) {
 }
 @media screen and (max-width: 768px) {
+  .clientes {
+    padding: 40px 60px 50px;
+  }
 }
 @media screen and (max-width: 568px) {
   .clientes {
@@ -59,10 +63,19 @@ body {
   .ancho-maximo-container {
     margin: 0 20px;
   }
+  .titulo {
+    font-size: 30px;
+  }
+  .clientes {
+    padding: 40px 25px 50px;
+  }
 }
 @media screen and (max-width: 375px) {
   .clientes {
-    padding: 30px 20px 40px;
+    padding: 30px 15px 40px;
+  }
+  .titulo {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 320px) {

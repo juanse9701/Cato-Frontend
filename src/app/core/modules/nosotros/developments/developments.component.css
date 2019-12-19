@@ -42,3 +42,41 @@
 .desarrollos .cards.doble {
   max-height: 510px;
 }
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .desarrollos {
+    padding: 35px 60px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .desarrollos {
+    padding: 30px 50px;
+  }
+  .desarrollos .titulo {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .desarrollos {
+    padding: 30px 30px;
+  }
+  .desarrollos .titulo {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .desarrollos {
+    padding: 35px 20px;
+  }
+  .desarrollos .titulo {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+}

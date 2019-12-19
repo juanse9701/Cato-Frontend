@@ -50,7 +50,45 @@
 .hero .contenido .titulo {
   font-size: 45px;
   text-transform: none;
+  line-height: 1em;
 }
 .hero .contenido .descripcion {
   font-size: 14px;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .hero .contenido {
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .hero .contenido {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .hero .contenido {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero .contenido {
+    width: 100%;
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hero .contenido {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

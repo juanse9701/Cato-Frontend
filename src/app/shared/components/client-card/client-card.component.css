@@ -20,3 +20,9 @@
 .client-card img:hover {
   filter: grayscale(0);
 }
+
+@media screen and (max-width: 568px) {
+  .client-card {
+    height: 145px;
+  }
+}

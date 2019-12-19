@@ -1,12 +1,48 @@
 <section class="tarjeta-seccion">
-  <div class="tarjeta-info">
-    <h3 class="tarjeta-titulo">{{ seccion.nombre }}</h3>
-    <h3 class="tarjeta-subtitulo">{{ seccion.subtitulo }}</h3>
-    <p class="tarjeta-contenido">{{ seccion.contenido }}</p>
-
-    <a href="">Más información</a>
+  <div class="tarjeta-parte-visible">
+    <div class="tarjeta-info">
+      <h3 class="tarjeta-titulo">{{ seccion.nombre }}</h3>
+      <h3 class="tarjeta-subtitulo">{{ seccion.subtitulo }}</h3>
+      <p class="tarjeta-contenido">{{ seccion.contenido }}</p>
+    </div>
+    <div class="tarjeta-imagen">
+      <img [src]="seccion.imagen" alt="" />
+    </div>
+    <div class="tarjeta-botones">
+      <div class="btn-1" (click)="verMas(desplegable)">
+        <span>Más información</span>
+        <img src="http://cdn.onlinewebfonts.com/svg/img_97521.png" alt="" />
+      </div>
+      <!-- Agregar ngFor -->
+      <div class="btn-2" style="display: none; background: #303030; color: white">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg" alt="" class="check" />
+        <span>Más información</span>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png"
+          alt=""
+          class="background"
+        />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg" alt="" class="arrow" />
+      </div>
+      <div class="btn-2" style="display: none; background: #F8F8F8; color: black">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg" alt="" class="check" />
+        <span>Más información</span>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png"
+          alt=""
+          class="background"
+        />
+        <img src="http://cdn.onlinewebfonts.com/svg/img_97521.png" alt="" class="arrow" />
+      </div>
+      <div class="btn-2" style="display: none; background: #B20A08; color: white">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg" alt="" class="check" />
+        <span>Desarollos tecnológicos</span>
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg" alt="" class="background" /> -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg" alt="" class="arrow" />
+      </div>
+    </div>
   </div>
-  <div class="tarjeta-imagen">
-    <img [src]="seccion.imagen" alt="" />
+  <div class="tarjeta-parte-no-visible" #desplegable>
+    <app-desplegable></app-desplegable>
   </div>
 </section>

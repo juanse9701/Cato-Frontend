@@ -36,3 +36,34 @@
 .sector .logos-container app-client-card:last-child > div {
   border-right: 1px solid lightgray !important;
 }
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+  .sector h3 {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  .sector .logos-container {
+    padding: 12px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .sector h3 {
+    margin: 10px 0;
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sector h3 {
+    margin: 5px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+}

@@ -10,8 +10,21 @@ export class TarjetaSeccionComponent implements OnInit {
 
   constructor() {}
   ngOnInit() {}
+  verMas(elemento) {
+    if (elemento.style.maxHeight) {
+      elemento.style.maxHeight = elemento.scrollHeight + 'px';
+      setTimeout(() => {
+        elemento.style.maxHeight = null;
+      }, 20);
+    } else {
+      elemento.style.maxHeight = elemento.scrollHeight + 'px';
+      setTimeout(() => {
+        elemento.style.maxHeight = 'initial';
+      }, 210);
+    }
+    console.log(elemento);
+  }
 }
-
 export interface Seccion {
   nombre: string;
   id: string;
