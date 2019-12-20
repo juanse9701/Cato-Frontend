@@ -11,11 +11,13 @@
 }
 .sub-menu ul::-webkit-scrollbar {
   width: 2px;
+  height: 0px;
 }
 
 .sub-menu ul::-webkit-scrollbar-track {
   background: #303030;
   width: 2px;
+  height: 0px;
 }
 
 .sub-menu ul::-webkit-scrollbar-thumb {

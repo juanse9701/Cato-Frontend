@@ -9,12 +9,26 @@ import { NosotrosModule } from './core/modules/nosotros/nosotros.module';
 import { RouterModule } from '@angular/router';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
 import { InnovacionModule } from './core/modules/innovacion/innovacion.module';
-import { TarjetaSeccionComponent } from './shared/components/tarjeta-seccion/tarjeta-seccion.component';
-import { SoftwareComponent } from './core/modules/software/software.component';
+import { SoftwareModule } from './core/modules/software/software.module';
+import { HardwareModule } from './core/modules/hardware/hardware.module';
+import { ProjectsModule } from './core/modules/projects/projects.module';
+import { TrainingModule } from './core/modules/training/training.module';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, SoftwareComponent],
-  imports: [BrowserModule, HomeModule, NosotrosModule, InnovacionModule, NavbarModule, AppRoutingModule, RouterModule],
+  declarations: [AppComponent, FooterComponent],
+  imports: [
+    BrowserModule,
+    HomeModule,
+    NosotrosModule,
+    InnovacionModule,
+    SoftwareModule,
+    HardwareModule,
+    ProjectsModule,
+    TrainingModule,
+    NavbarModule,
+    AppRoutingModule,
+    RouterModule
+  ],
   providers: [],
   exports: [],
   bootstrap: [AppComponent]

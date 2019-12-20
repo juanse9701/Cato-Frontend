@@ -9,8 +9,6 @@ import { CarouselCapacidadesModule } from './carousel-capacidades/carousel-capac
 import { SectorModule } from 'src/app/shared/components/sector/sector.module';
 import { DevelopmentCardModule } from 'src/app/shared/components/development-card/development-card.module';
 import { LineasTecnologicasModule } from './lineas-tecnologicas/lineas-tecnologicas.module';
-import { ParticlesModule } from 'ng-particle';
-import { HeroComponent } from './hero/hero.component';
 import { HeroModule } from './hero/hero.module';
 
 const routes: Routes = [

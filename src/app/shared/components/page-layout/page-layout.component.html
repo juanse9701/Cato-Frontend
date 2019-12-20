@@ -1,0 +1,9 @@
+<section class="header-page">
+  <div class="header-page-info">
+    <h1>{{ pageContent.nombre }}</h1>
+    <p>{{ pageContent.descripcion }}</p>
+  </div>
+  <img [src]="pageContent.imagen" alt="" />
+</section>
+<app-sub-menu [secciones]="pageContent.secciones"></app-sub-menu>
+<app-tarjeta-seccion *ngFor="let seccion of pageContent.secciones" [seccion]="seccion"></app-tarjeta-seccion>

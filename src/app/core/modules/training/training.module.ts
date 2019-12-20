@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InnovacionComponent } from './innovacion.component';
+import { TrainingComponent } from './training.component';
 import { PageLayoutModule } from 'src/app/shared/components/page-layout/page-layout.module';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: InnovacionComponent
+    component: TrainingComponent
   }
 ];
 @NgModule({
-  declarations: [InnovacionComponent],
+  declarations: [TrainingComponent],
   imports: [CommonModule, RouterModule.forChild(routes), PageLayoutModule],
-  exports: [InnovacionComponent]
+  exports: [TrainingComponent]
 })
-export class InnovacionModule {}
+export class TrainingModule {}

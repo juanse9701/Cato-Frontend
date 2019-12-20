@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Pagina } from 'src/app/shared/components/page-layout/page-layout.component';
 
 @Component({
-  selector: 'app-innovacion',
-  templateUrl: './innovacion.component.html',
-  styleUrls: ['./innovacion.component.css']
+  selector: 'app-hardware',
+  templateUrl: './hardware.component.html',
+  styleUrls: ['./hardware.component.css']
 })
-export class InnovacionComponent implements OnInit {
-  innovacion: Pagina = {
-    nombre: 'Innovación y aplicaciones',
+export class HardwareComponent implements OnInit {
+  hardware: Pagina = {
+    nombre: 'Hardware',
     descripcion: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis

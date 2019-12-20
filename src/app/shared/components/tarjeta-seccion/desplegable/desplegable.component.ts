@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-desplegable',
@@ -6,6 +6,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./desplegable.component.css']
 })
 export class DesplegableComponent implements OnInit {
+  @Input() informacion: any;
   constructor() {}
 
   ngOnInit() {}

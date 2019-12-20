@@ -1,101 +1,24 @@
-<div class="desplegable" #desplegable>
-  <div class="tipo-1" style="">
+<div class="desplegable" #desplegable [ngSwitch]="informacion.estilo">
+  <div *ngSwitchCase="1" class="tipo-1">
     <div class="container-img">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png"
-        alt=""
-      />
+      <img [src]="informacion.imgPrincipal" alt="" />
     </div>
-    <p>
-      <strong>Optimización en la enseñanza-aprendizaje</strong>, al lograr que la institución brinde el apoyo y
-      acompañamiento necesario a sus estudiantes a través de aulas virtuales mientras se le permite desempeñarse en sus
-      diferentes asignaturas, permitiendo así conocer las fortalezas, debilidades y competencias de su estudiantado.<br />
-      <br />
-      <strong>Medición de los resultados de desempeño</strong>, de los cuales se tomarán decisiones en acciones de
-      refuerzo educativo y preparación que propendan por el mejoramiento y la alta calidad de la institución, y así
-      potencializar el alcance de los objetivos en los estándares propuestos por las entidades reguladoras y/o
-      validadoras. <br />
-      <br />
-      <strong>Reconocimiento y Calidad</strong>, al incrementar el nivel de formación, el compromiso social y la
-      innovación en la comunidad académica, ésta será reconocida como una impulsadora de la calidad de sus procesos
-      educativos. <br /><br />
-      <strong>Optimización de gastos</strong>, la inversión económica en procesos de preparación y evaluación Pre-ICFES
-      descenderán gracias a la posibilidad de reúso y a los canales de comunicación que brinda el sistema, por ejemplo
-      para la generación de simulacros, difusión de material de apoyo, noticias, eventos, entre otros. <br />
-      <br />
-      <strong>Enfoque social</strong>, Promueve la interacción, pertenencia, inclusión y participación entre docentes y
-      estudiantes, por medio de herramientas como: calendarios de eventos, socializaciones, encuestas y notificaciones,
-      usando la tecnología para generar un ambiente amigable basado en la cultura digital global. <br />
-      <br />
-      <strong>Optimización de procesos</strong>, gestión institucional, recurso humano, administrativa y formativa, todo
-      será de una manera más eficiente y ágil.
-    </p>
+    <p [innerHTML]="informacion.contenido"></p>
   </div>
-  <div class="tipo-2" style="display: none;">
+  <div *ngSwitchCase="2" class="tipo-2">
     <div class="container-img">
-      <img src="https://conceptodefinicion.de/wp-content/uploads/2016/04/An%C3%A1lisis_de_datos.jpg" alt="" />
+      <img [src]="informacion.imgPrincipal" alt="" />
     </div>
     <div class="container-info">
-      <!-- <img 
-      src="https://www.martechforum.com/wp-content/uploads/2015/07/Uso-de-los-CRM-en-Espana.jpg" 
-      alt="" /> -->
+      <img [src]="informacion.imgSecundaria" alt="" />
       <img src="" alt="" />
-      Fórmese, entrénese y adquiera los conocimientos en temas como: <br />
-      - Productividad Organizacional Mediante TICS. <br />
-      - Estrategia y despliegue de Entornos Virtuales de Aprendizaje. <br />
-      - Sistemas de Evaluación Pre-Pruebas Saber. <br />
-      - Alfabetización Digital. <br />
-      - Marketing Digital. <br />
-      - Negocios Electrónicos. <br />
-      - Edición de recursos multimedia (texto, imagen, audio y video) mediante software libre. <br />
-      - Elaboración y publicación de contenidos digitales educativos. <br />
-      - Apropiación y uso de laboratorios Tecno-Ambientales. <br />
-      - TIC en la formación temprana de vocaciones científicas. <br />
-      - Sensibilización pedagógica en desarrollo sostenible. <br />
-      - Sensibilización en aprovechamiento de fuentes de energía no <br />
-      convencionales. - Y mucho más.
+      <p [innerHTML]="informacion.contenido"></p>
     </div>
   </div>
-  <div class="tipo-3" style="display: none;">
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
-    </div>
-    <div class="empresa">
-      <img src="https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png" alt="" />
-      <p>Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros</p>
+  <div *ngSwitchCase="3" class="tipo-3">
+    <div *ngFor="let item of informacion.items" class="empresa">
+      <img [src]="item.img" alt="" />
+      <p>{{ item.descripcion }}</p>
     </div>
   </div>
 </div>

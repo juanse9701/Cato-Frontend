@@ -1,4 +1,4 @@
-<header [ngClass]="{'home': tipo === 'home'}">
+<header [ngClass]="{ home: tipo === 'home' }">
   <img
     src="http://grupocato.co/2017/wp-content/uploads/2017/02/CATO-Logo-2017-150px.png"
     alt="Grup tecnológico CATO"
@@ -7,12 +7,12 @@
   />
   <div class="menu-container">
     <ul class="menu">
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/nosotros']">Nosotros</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/innovacion']">Innovación</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/software']">Software</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/hardware']">Hardware</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/proyectos']">Proyectos</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/formacion']">Formación</a></li>
+      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'nosotros']">Nosotros</a></li>
+      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'innovacion']">Innovación</a></li>
+      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'software']">Software</a></li>
+      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'hardware']">Hardware</a></li>
+      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'proyectos']">Proyectos</a></li>
+      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'formacion']">Formación</a></li>
     </ul>
     <div class="whatsapp-container">
       <img src="assets/img/whatsapp.svg" alt="" />
