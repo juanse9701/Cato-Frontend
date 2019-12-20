@@ -7,6 +7,20 @@
   display: flex;
   list-style: none;
   height: 100%;
+  overflow-x: scroll;
+}
+.sub-menu ul::-webkit-scrollbar {
+  width: 2px;
+}
+
+.sub-menu ul::-webkit-scrollbar-track {
+  background: #303030;
+  width: 2px;
+}
+
+.sub-menu ul::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 2px;
 }
 .sub-menu ul li {
   height: 100%;
@@ -18,9 +32,40 @@
   display: flex;
   align-items: center;
   height: 100%;
+  min-width: 100%;
   font-size: 14px;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 30px;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+  .sub-menu {
+    padding: 0 35px;
+  }
+  .sub-menu ul li a {
+    margin: 0 15px;
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 470px) {
+  .sub-menu {
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sub-menu {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 320px) {
 }

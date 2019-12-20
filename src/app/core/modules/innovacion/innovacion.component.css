@@ -1,7 +1,7 @@
 .header-page {
   display: flex;
   padding: 20px 80px;
-  width: 900px;
+  max-width: 900px;
   margin: 40px auto 10px;
 }
 .header-page-info {
@@ -10,8 +10,49 @@
 .header-page-info h1 {
   color: var(--main-red);
   font-size: 2em;
+  line-height: 1.1em;
+  margin-bottom: 10px;
 }
 .header-page img {
   width: 40%;
   margin-left: 30px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .header-page {
+    padding: 20px 60px;
+    flex-direction: column;
+  }
+  .header-page-info {
+    width: 100%;
+  }
+  .header-page img {
+    max-width: 350px;
+    width: auto;
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 568px) {
+  .header-page {
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .header-page {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header-page img {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 320px) {
 }

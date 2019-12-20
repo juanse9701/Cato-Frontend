@@ -30,6 +30,30 @@ nostrud exerci tation.`,
         contenido:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
         imagen: 'assets/img/red.png'
+      },
+      {
+        nombre: 'Realidad aumentada 2',
+        id: 'realidad-aumentada',
+        subtitulo: 'Más de 20 marcas mundiales',
+        contenido:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
+        imagen: 'assets/img/red.png'
+      },
+      {
+        nombre: 'Realidad aumentada 3',
+        id: 'realidad-aumentada',
+        subtitulo: 'Más de 20 marcas mundiales',
+        contenido:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
+        imagen: 'assets/img/red.png'
+      },
+      {
+        nombre: 'Realidad aumentada 4',
+        id: 'realidad-aumentada',
+        subtitulo: 'Más de 20 marcas mundiales',
+        contenido:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
+        imagen: 'assets/img/red.png'
       }
     ]
   };

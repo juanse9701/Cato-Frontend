@@ -52,3 +52,38 @@
 .desplegable .tipo-3 .empresa {
   text-align: center;
 }
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .desplegable {
+    padding: 40px 60px;
+  }
+  .desplegable .tipo-1 {
+    column-gap: 60px;
+  }
+  .desplegable .tipo-2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 568px) {
+  .desplegable {
+    padding: 35px 50px;
+  }
+  .desplegable .tipo-1 {
+    column-count: 1;
+  }
+}
+@media screen and (max-width: 470px) {
+  .desplegable {
+    padding: 30px 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
+}
