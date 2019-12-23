@@ -1,11 +1,11 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { SectorComponent } from "./sector.component";
-import { ClientCardModule } from "../client-card/client-card.module";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SectorComponent } from './sector.component';
+import { CardLogoModule } from '../card-logo/card-logo.module';
 
 @NgModule({
   declarations: [SectorComponent],
-  imports: [CommonModule, ClientCardModule],
+  imports: [CommonModule, CardLogoModule],
   exports: [SectorComponent]
 })
 export class SectorModule {}

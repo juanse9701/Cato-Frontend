@@ -95,9 +95,6 @@
   </div>
 </section>
 
-<section class="clientes">
-  <h2 class="titulo">Clientes</h2>
-  <app-sector *ngFor="let sector of clientes" [sector]="sector"></app-sector>
-</section>
+<app-section-with-multiple-subsection [data]="clientes" background="#F9F9F9"></app-section-with-multiple-subsection>
 
 <app-developments [desarrollos]="desarrollosDeAutoria" type="simple" title="Desarrollo de autoría"></app-developments>

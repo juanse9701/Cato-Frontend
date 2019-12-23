@@ -1,0 +1,84 @@
+:host {
+  width: 100%;
+}
+.bannerStyle h1 {
+  background-color: #ccc;
+  min-height: 300px;
+  text-align: center;
+  line-height: 300px;
+}
+.own-item {
+}
+.leftRs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  width: 20px;
+  border: none;
+  background: transparent;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.leftRs::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  box-sizing: border-box;
+  border-top: 8px solid #b10a07;
+  border-left: 8px solid #b10a07;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+.rightRs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 4px;
+  width: 20px;
+  border: none;
+  background: transparent;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.rightRs::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  box-sizing: border-box;
+  border-top: 8px solid #b10a07;
+  border-right: 8px solid #b10a07;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.myPoint {
+  list-style-type: none;
+  text-align: center;
+  padding: 12px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.myPoint li {
+  display: inline-block;
+  border-radius: 999px;
+  background: gray;
+  padding: 5px;
+  margin: 0 3px;
+  transition: 0.4s ease all;
+}
+.myPoint li.active {
+  background: black;
+  width: 10px;
+}

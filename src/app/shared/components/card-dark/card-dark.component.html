@@ -1,0 +1,8 @@
+<div class="container" (click)="cambiarActual(indice.value)">
+  <img [src]="data.imagen" alt="" />
+  <div class="info-container">
+    <h5 class="title">{{ data.nombre }}</h5>
+    <p class="description">{{ data.descripcion }}</p>
+    <input #indice type="hidden" [value]="index" />
+  </div>
+</div>

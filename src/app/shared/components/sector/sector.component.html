@@ -1,7 +1,7 @@
 <article class="sector">
   <h3 class="titulo-sector">{{ sector.nombre }}</h3>
-  <div class="logos-container" #sectorContainer>
-    <app-client-card *ngFor="let cliente of sector.clientes" [cliente]="cliente"></app-client-card>
+  <div class="logos-container" #container>
+    <app-card-logo *ngFor="let cliente of sector.clientes" [data]="cliente"></app-card-logo>
   </div>
-  <button (click)="verMas(sectorContainer)">{{ buttonText }}</button>
+  <button (click)="verMas(container)">{{ buttonText }}</button>
 </article>

@@ -34,12 +34,6 @@ body {
   text-align: center;
 }
 
-/*Clientes*/
-.clientes {
-  padding: 50px 80px 60px;
-  background: white;
-}
-
 @media screen and (max-width: 1112px) {
 }
 @media screen and (max-width: 1023px) {

@@ -1,0 +1,14 @@
+<section>
+  <div class="info-container">
+    <h2 class="title">{{ itemActual.nombre }}</h2>
+    <p class="description">{{ itemActual.descripcion }}</p>
+  </div>
+  <div class="items-container">
+    <app-card-dark
+      *ngFor="let item of data.items; let i = index"
+      [data]="item"
+      [index]="i"
+      (changeActualIndex)="cambiarActual($event)"
+    ></app-card-dark>
+  </div>
+</section>
