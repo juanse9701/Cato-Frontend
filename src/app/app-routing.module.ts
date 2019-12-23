@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { PaginaComponent } from './prueba/pagina/pagina.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'formacion',
     loadChildren: () => import('./core/modules/training/training.module').then(m => m.TrainingModule)
+  },
+  {
+    path: 'prueba',
+    component: PaginaComponent
   }
 ];
 

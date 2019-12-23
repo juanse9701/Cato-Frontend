@@ -13,9 +13,13 @@ import { SoftwareModule } from './core/modules/software/software.module';
 import { HardwareModule } from './core/modules/hardware/hardware.module';
 import { ProjectsModule } from './core/modules/projects/projects.module';
 import { TrainingModule } from './core/modules/training/training.module';
+import { PaginaComponent } from './prueba/pagina/pagina.component';
+import { Componente1Component } from './prueba/componente1/componente1.component';
+import { Componente2Component } from './prueba/componente2/componente2.component';
+import { Componente3Component } from './prueba/componente3/componente3.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent],
+  declarations: [AppComponent, FooterComponent, PaginaComponent, Componente1Component, Componente2Component, Componente3Component],
   imports: [
     BrowserModule,
     HomeModule,
