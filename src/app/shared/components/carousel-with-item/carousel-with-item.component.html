@@ -1,5 +1,5 @@
 <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="data">
-  <ngu-item class="own-item" *nguCarouselDef="let item; let i = index; let ani = animate" [@slider]="ani">
+  <ngu-item class="own-item" *nguCarouselDef="let item; let i = index; let ani = animate">
     <app-tarjeta-capacidad [capacidad]="item"></app-tarjeta-capacidad>
   </ngu-item>
 
