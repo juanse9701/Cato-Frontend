@@ -24,6 +24,7 @@ header .menu-aux {
   display: flex;
   align-items: center;
   height: 100%;
+  transition: all 0.3s ease;
 }
 header .menu {
   display: flex;
@@ -237,11 +238,49 @@ header.sticky .line3 {
 @media screen and (max-width: 1112px) {
 }
 @media screen and (max-width: 1023px) {
+  header.menu-open {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  header.sticky {
+    background: rgba(0, 0, 0, 0.95);
+  }
   header .menu-aux {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99999999;
+    height: initial;
+    background: rgba(255, 255, 255, 0.95);
+    align-items: flex-start;
+    padding: 20px 30px 40px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header.sticky .menu-aux {
+    background: rgba(0, 0, 0, 0.95);
+  }
+  header .menu {
+    flex-direction: column;
+    height: initial;
+    align-items: flex-start;
   }
   .menu-button {
     display: flex;
+  }
+  header.home .menu .menu-item a {
+    color: black;
+  }
+  header.sticky .menu .menu-item a {
+    color: white;
+  }
+  header .menu .menu-item a {
+    padding: 15px 20px;
+  }
+  .whatsapp-container {
+    margin-left: 0;
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -253,10 +292,20 @@ header.sticky .line3 {
   header {
     padding: 0 25px;
   }
+  header .menu-aux {
+    height: initial;
+    align-items: flex-start;
+    padding: 20px 20px 40px;
+  }
 }
 @media screen and (max-width: 375px) {
   header {
     padding: 0 20px;
+  }
+  header .menu-aux {
+    height: initial;
+    align-items: flex-start;
+    padding: 20px 15px 40px;
   }
 }
 @media screen and (max-width: 320px) {
