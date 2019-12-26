@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { TarjetaCapacidadModule } from './tarjeta-capacidad/tarjeta-capacidad.module';
 import { SectorModule } from 'src/app/shared/components/sector/sector.module';
 import { DevelopmentCardModule } from 'src/app/shared/components/development-card/development-card.module';
 import { HeroModule } from './hero/hero.module';
@@ -26,7 +25,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    TarjetaCapacidadModule,
     CarouselWithItemModule,
     CarouselWithTileModule,
     SectionWithCarousel1Module,

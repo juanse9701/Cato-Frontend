@@ -5,6 +5,9 @@
   justify-content: space-between;
 }
 
+main {
+  margin-top: calc(100vh - var(--bar-height));
+}
 /* Colabora */
 .colabora {
   background: #333;

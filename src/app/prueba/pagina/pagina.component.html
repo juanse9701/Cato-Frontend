@@ -1,7 +1,0 @@
-<ng-container *ngFor="let seccion of secciones">
-  <div [ngSwitch]="seccion.id">
-    <app-componente1 *ngSwitchCase="'componente1'" [data]="seccion"></app-componente1>
-    <app-componente2 *ngSwitchCase="'componente2'" [data]="seccion"></app-componente2>
-    <app-componente3 *ngSwitchCase="'componente3'" [data]="seccion"></app-componente3>
-  </div>
-</ng-container>

@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselWithTileComponent } from './carousel-with-tile.component';
 import { NguCarouselModule } from '@ngu/carousel';
-import { TarjetaCasoExitoModule } from 'src/app/core/modules/home/tarjeta-caso-exito/tarjeta-caso-exito.module';
+import { CardCarouselTileModule } from '../card-carousel-tile/card-carousel-tile.module';
 
 @NgModule({
   declarations: [CarouselWithTileComponent],
-  imports: [CommonModule, NguCarouselModule, TarjetaCasoExitoModule],
+  imports: [CommonModule, NguCarouselModule, CardCarouselTileModule],
   exports: [CarouselWithTileComponent]
 })
 export class CarouselWithTileModule {}

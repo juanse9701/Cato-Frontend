@@ -9,16 +9,24 @@
     <img src="assets/img/logo-blanco.png" alt="Grup tecnológico CATO" class="logo blanco" [routerLink]="['/']" />
   </div>
   <div class="menu-container">
-    <ul class="menu">
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'nosotros']">Nosotros</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'innovacion']">Innovación</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'software']">Software</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'hardware']">Hardware</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'proyectos']">Proyectos</a></li>
-      <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'formacion']">Formación</a></li>
-    </ul>
-    <div class="whatsapp-container">
-      <img src="assets/img/whatsapp.svg" alt="" />
+    <div class="menu-aux">
+      <ul class="menu">
+        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'nosotros']">Nosotros</a></li>
+        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'innovacion']">Innovación</a></li>
+        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'software']">Software</a></li>
+        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'hardware']">Hardware</a></li>
+        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'proyectos']">Proyectos</a></li>
+        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'formacion']">Formación</a></li>
+      </ul>
+      <div class="whatsapp-container">
+        <img src="assets/img/whatsapp.svg" alt="" />
+      </div>
+    </div>
+    <!-- <app-menu-button></app-menu-button> -->
+    <div class="menu-button" (click)="openMenu(line1, line2, line3)">
+      <div class="line1" #line1></div>
+      <div class="line2" #line2></div>
+      <div class="line3" #line3></div>
     </div>
   </div>
 </header>

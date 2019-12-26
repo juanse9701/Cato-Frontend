@@ -2,7 +2,6 @@ section {
   background-size: cover;
   background-color: #fafafa;
   padding: 80px 30px 150px;
-  margin-top: calc(100vh - var(--bar-height));
 }
 .contenedor {
   display: flex;

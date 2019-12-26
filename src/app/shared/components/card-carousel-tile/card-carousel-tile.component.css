@@ -1,20 +1,18 @@
-.tarjeta-caso {
+.card {
   background: white;
   border: 1px solid lightgray;
-  /* width: 285px;
-  margin: 0 8px; */
 }
-.tarjeta-caso img {
+.card img {
   width: 100%;
   object-fit: contain;
 }
-.tarjeta-caso .titulo-tarjeta {
+.card .title {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   padding: 10px 15px 0;
 }
-.tarjeta-caso .contenido-tarjeta {
+.card .description {
   font-size: 14px;
   padding: 10px 15px;
 }

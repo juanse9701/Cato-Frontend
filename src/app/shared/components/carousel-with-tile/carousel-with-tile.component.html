@@ -1,6 +1,7 @@
 <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="data">
   <ngu-tile class="own-item" *nguCarouselDef="let item; let i = index; let ani = animate">
-    <app-tarjeta-caso-exito [caso]="item"></app-tarjeta-caso-exito>
+    <app-card-carousel-tile [data]="item"></app-card-carousel-tile>
+    <!-- <app-tarjeta-caso-exito [caso]="item"></app-tarjeta-caso-exito> -->
   </ngu-tile>
 
   <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5 : 1"></button>

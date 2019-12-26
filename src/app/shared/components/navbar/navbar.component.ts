@@ -10,6 +10,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class NavbarComponent implements OnInit {
   tipo: string;
+  open: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
@@ -32,4 +33,23 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  openMenu(l1, l2, l3) {
+    this.open = !this.open;
+    if (this.open) {
+      l1.classList.add('menu-button-line1');
+      l2.classList.add('menu-button-line2');
+      l3.classList.add('menu-button-line3');
+      l1.classList.remove('menu-button-line1-out');
+      l2.classList.remove('menu-button-line2-out');
+      l3.classList.remove('menu-button-line3-out');
+    } else {
+      l1.classList.remove('menu-button-line1');
+      l2.classList.remove('menu-button-line2');
+      l3.classList.remove('menu-button-line3');
+      l1.classList.add('menu-button-line1-out');
+      l2.classList.add('menu-button-line2-out');
+      l3.classList.add('menu-button-line3-out');
+    }
+  }
 }

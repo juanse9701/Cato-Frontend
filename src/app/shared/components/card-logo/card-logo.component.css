@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background: white;
+  cursor: pointer;
 }
 .logo-container img {
   width: 100%;

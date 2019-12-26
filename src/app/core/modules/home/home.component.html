@@ -1,11 +1,18 @@
 <main>
   <app-hero></app-hero>
 
-  <app-section-with-carousel1 [data]="capacidades"></app-section-with-carousel1>
-  <app-section-with-scroll [data]="lineasTecnologicas"></app-section-with-scroll>
-  <app-section-with-carousel2 [data]="casosDeExito"></app-section-with-carousel2>
-  <app-section-simple [data]="desarrollosDeAutoria"></app-section-simple>
-  <app-section-with-multiple-subsection [data]="clientes"></app-section-with-multiple-subsection>
+  <ng-container *ngFor="let item of home">
+    <div [ngSwitch]="item.componentName">
+      <app-section-with-carousel1 *ngSwitchCase="'section-with-carousel1'" [data]="item"></app-section-with-carousel1>
+      <app-section-with-scroll *ngSwitchCase="'section-with-scroll'" [data]="item"></app-section-with-scroll>
+      <app-section-with-carousel2 *ngSwitchCase="'section-with-carousel2'" [data]="item"></app-section-with-carousel2>
+      <app-section-simple *ngSwitchCase="'section-simple'" [data]="item"></app-section-simple>
+      <app-section-with-multiple-subsection
+        *ngSwitchCase="'section-with-multiple-subsection'"
+        [data]="item"
+      ></app-section-with-multiple-subsection>
+    </div>
+  </ng-container>
 
   <section class="colabora">
     <div class="titulo">
