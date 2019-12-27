@@ -1,16 +1,15 @@
-<header [ngClass]="{ home: tipo === 'home' }" class="" id="header" #header>
+<header [ngClass]="{ home: tipo === 'home', 'menu-open': open }" id="header" #header>
   <div class="contenedor-logo">
     <img
       src="http://grupocato.co/2017/wp-content/uploads/2017/02/CATO-Logo-2017-150px.png"
       alt="Grup tecnológico CATO"
       class="logo negro"
       [routerLink]="['/']"
-      ngClass="open: 'menu'"
     />
     <img src="assets/img/logo-blanco.png" alt="Grup tecnológico CATO" class="logo blanco" [routerLink]="['/']" />
   </div>
   <div class="menu-container">
-    <div class="menu-aux">
+    <div [ngClass]="{ 'menu-open': open }" class="menu-aux" #menu>
       <ul class="menu">
         <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'nosotros']">Nosotros</a></li>
         <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'innovacion']">Innovación</a></li>
@@ -24,7 +23,7 @@
       </div>
     </div>
     <!-- <app-menu-button></app-menu-button> -->
-    <div class="menu-button" (click)="openMenu(line1, line2, line3)">
+    <div class="menu-button" (click)="openMenu(line1, line2, line3, menu)">
       <div class="line1" #line1></div>
       <div class="line2" #line2></div>
       <div class="line3" #line3></div>

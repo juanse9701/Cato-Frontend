@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {}
 
-  openMenu(l1, l2, l3) {
+  openMenu(l1, l2, l3, menu) {
     this.open = !this.open;
     if (this.open) {
       this.renderer.addClass(l1, 'menu-button-line1');
@@ -40,6 +40,10 @@ export class NavbarComponent implements OnInit {
       this.renderer.removeClass(l1, 'menu-button-line1-out');
       this.renderer.removeClass(l2, 'menu-button-line2-out');
       this.renderer.removeClass(l3, 'menu-button-line3-out');
+      // this.renderer.setStyle(menu, 'max-height', menu.scrollHeight);
+      // setTimeout(() => {
+      //   this.renderer.setStyle(menu, 'max-height', 'initial');
+      // }, 310);
     } else {
       this.renderer.removeClass(l1, 'menu-button-line1');
       this.renderer.removeClass(l2, 'menu-button-line2');
@@ -47,6 +51,11 @@ export class NavbarComponent implements OnInit {
       this.renderer.addClass(l1, 'menu-button-line1-out');
       this.renderer.addClass(l2, 'menu-button-line2-out');
       this.renderer.addClass(l3, 'menu-button-line3-out');
+
+      // this.renderer.setStyle(menu, 'max-height', menu.scrollHeight);
+      // setTimeout(() => {
+      //   this.renderer.setStyle(menu, 'max-height', null);
+      // }, 20);
     }
   }
 }

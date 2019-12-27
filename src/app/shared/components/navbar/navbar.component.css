@@ -88,7 +88,7 @@ header .contenedor-logo img.blanco {
 }
 
 header.sticky {
-  background-color: #303030;
+  /* background-color: #303030; */
   background-color: black;
   position: fixed;
   top: 0;
@@ -147,6 +147,16 @@ header.sticky .line3 {
   background: white;
 }
 
+header.home.menu-open .line1,
+header.home.menu-open .line2,
+header.home.menu-open .line3 {
+  background: black;
+}
+header.home.menu-open.sticky .line1,
+header.home.menu-open.sticky .line2,
+header.home.menu-open.sticky .line3 {
+  background: white;
+}
 .menu-button-line1-out {
   animation: animation-line1-out 0.4s linear forwards;
 }
@@ -242,21 +252,25 @@ header.sticky .line3 {
     background: rgba(255, 255, 255, 0.95);
   }
   header.sticky {
-    background: rgba(0, 0, 0, 0.95);
+    background: black;
   }
   header .menu-aux {
-    /* display: none; */
+    height: 100vh;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 99999999;
-    height: initial;
     background: rgba(255, 255, 255, 0.95);
     align-items: flex-start;
-    padding: 20px 30px 40px;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    overflow: hidden;
+    transform: translateX(-100%);
+    padding: 20px 30px 40px;
+  }
+  header .menu-aux.menu-open {
+    transform: translateX(0);
   }
   header.sticky .menu-aux {
     background: rgba(0, 0, 0, 0.95);
@@ -272,8 +286,12 @@ header.sticky .line3 {
   header.home .menu .menu-item a {
     color: black;
   }
+
   header.sticky .menu .menu-item a {
     color: white;
+  }
+  header.sticky .menu .menu-item.active a {
+    color: var(--main-red);
   }
   header .menu .menu-item a {
     padding: 15px 20px;
@@ -293,7 +311,6 @@ header.sticky .line3 {
     padding: 0 25px;
   }
   header .menu-aux {
-    height: initial;
     align-items: flex-start;
     padding: 20px 20px 40px;
   }
