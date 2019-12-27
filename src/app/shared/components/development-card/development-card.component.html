@@ -2,13 +2,13 @@
   <img [src]="desarrollo.img" [alt]="desarrollo.description" />
   <div class="contenido">
     <h3>{{ desarrollo.description | uppercase }}</h3>
-    <p>{{ desarrollo.client }}</p>
+    <p>{{ desarrollo.title }}</p>
   </div>
 </div>
 <div *ngIf="estilo === 'redondo'" class="card">
   <img [src]="desarrollo.img" [alt]="desarrollo.description" />
   <div class="contenido">
     <h3>{{ desarrollo.description | uppercase }}</h3>
-    <p>{{ desarrollo.client }}</p>
+    <p>{{ desarrollo.title }}</p>
   </div>
 </div>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans', 'Segoe UI', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
 :root {
   --main-red: #b10808;
   --bar-height: 80px;

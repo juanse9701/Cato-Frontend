@@ -1,5 +1,8 @@
 .tarjeta-seccion {
   background: white;
+}
+.aux {
+  margin: 0 50px;
   border-bottom: 1px solid lightgray;
 }
 :host:last-child .tarjeta-seccion {
@@ -12,7 +15,8 @@
   grid-template-areas:
     'info img'
     'botones botones';
-  padding: 40px 90px;
+  /* padding: 40px 50px; */
+  padding: 40px 0;
 }
 .tarjeta-titulo {
   color: var(--main-red);

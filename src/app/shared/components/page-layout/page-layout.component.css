@@ -19,6 +19,15 @@
   object-fit: contain;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 355px;
+  grid-template-rows: auto;
+  /* border-top: 10px solid lightgray; */
+  /* padding-top: 80px;
+  background: white; */
+}
+
 @media screen and (max-width: 1112px) {
 }
 @media screen and (max-width: 1023px) {

@@ -1,7 +1,8 @@
 <nav class="sub-menu">
+  <h3 class="title">{{ title }}</h3>
   <ul>
-    <li *ngFor="let seccion of secciones">
-      <a>{{ seccion.nombre }}</a>
+    <li *ngFor="let seccion of secciones; let i = index">
+      <a href="{{ locationName }}#{{ seccion.id }}">{{ i + 1 }}. {{ seccion.title }}</a>
     </li>
   </ul>
 </nav>

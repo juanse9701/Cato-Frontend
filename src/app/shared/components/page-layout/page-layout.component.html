@@ -1,9 +1,16 @@
 <section class="header-page">
   <div class="header-page-info">
-    <h1>{{ pageContent.nombre }}</h1>
-    <p>{{ pageContent.descripcion }}</p>
+    <h1>{{ pageContent.title }}</h1>
+    <p>{{ pageContent.description }}</p>
   </div>
-  <img [src]="pageContent.imagen" alt="" />
+  <img [src]="pageContent.img" alt="" />
 </section>
-<app-sub-menu [secciones]="pageContent.secciones"></app-sub-menu>
-<app-tarjeta-seccion *ngFor="let seccion of pageContent.secciones" [seccion]="seccion"></app-tarjeta-seccion>
+<section class="container">
+  <div>
+    <app-section-with-collapsible
+      *ngFor="let section of pageContent.sections"
+      [section]="section"
+    ></app-section-with-collapsible>
+  </div>
+  <app-sub-menu [title]="pageContent.title" [secciones]="pageContent.sections"></app-sub-menu>
+</section>

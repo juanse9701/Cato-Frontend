@@ -1,22 +1,28 @@
 .sub-menu {
-  background: #303030;
-  padding: 0 50px;
-  height: 60px;
+  background: #f7f7f7;
+  background: #eaeaea;
+  padding: 60px 40px;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+}
+
+.title {
+  color: #303030;
+  color: var(--main-red);
+  margin-bottom: 15px;
 }
 .sub-menu ul {
-  display: flex;
   list-style: none;
-  height: 100%;
-  overflow-x: scroll;
 }
 .sub-menu ul::-webkit-scrollbar {
-  width: 2px;
+  width: 0;
   height: 0px;
 }
 
 .sub-menu ul::-webkit-scrollbar-track {
   background: #303030;
-  width: 2px;
+  width: 0;
   height: 0px;
 }
 
@@ -36,10 +42,14 @@
   height: 100%;
   min-width: 100%;
   font-size: 14px;
-  color: white;
-  text-transform: uppercase;
+  color: #1a1a1a;
+  text-transform: capitalize;
   text-decoration: none;
-  margin: 0 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.sub-menu ul li a:hover {
+  color: #6d6d6d;
 }
 
 @media screen and (max-width: 1112px) {

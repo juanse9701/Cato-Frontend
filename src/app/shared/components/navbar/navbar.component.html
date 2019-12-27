@@ -1,29 +1,40 @@
 <header [ngClass]="{ home: tipo === 'home', 'menu-open': open }" id="header" #header>
   <div class="contenedor-logo">
-    <img
-      src="http://grupocato.co/2017/wp-content/uploads/2017/02/CATO-Logo-2017-150px.png"
-      alt="Grup tecnológico CATO"
-      class="logo negro"
-      [routerLink]="['/']"
-    />
-    <img src="assets/img/logo-blanco.png" alt="Grup tecnológico CATO" class="logo blanco" [routerLink]="['/']" />
+    <ng-template [ngIf]="!sticky && !open" [ngIfElse]="logoBlanco">
+      <img src="assets/img/logo.png" alt="Grup tecnológico CATO" class="logo" (click)="navigate('/')" />
+    </ng-template>
+    <ng-template #logoBlanco>
+      <img src="assets/img/logo-blanco.png" alt="Grup tecnológico CATO" class="logo" (click)="navigate('/')" />
+    </ng-template>
   </div>
   <div class="menu-container">
     <div [ngClass]="{ 'menu-open': open }" class="menu-aux" #menu>
       <ul class="menu">
-        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'nosotros']">Nosotros</a></li>
-        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'innovacion']">Innovación</a></li>
-        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'software']">Software</a></li>
-        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'hardware']">Hardware</a></li>
-        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'proyectos']">Proyectos</a></li>
-        <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/', 'formacion']">Formación</a></li>
+        <li class="menu-item" [class.active]="isActive(['nosotros'])">
+          <a (click)="navigate('nosotros')">Nosotros</a>
+        </li>
+        <li class="menu-item" [class.active]="isActive(['innovacion'])">
+          <a (click)="navigate('innovacion')">Innovación</a>
+        </li>
+        <li class="menu-item" [class.active]="isActive(['software'])">
+          <a (click)="navigate('software')">Software</a>
+        </li>
+        <li class="menu-item" [class.active]="isActive(['hardware'])">
+          <a (click)="navigate('hardware')">Hardware</a>
+        </li>
+        <li class="menu-item" [class.active]="isActive(['proyectos'])">
+          <a (click)="navigate('proyectos')">Proyectos</a>
+        </li>
+        <li class="menu-item" [class.active]="isActive(['formacion'])">
+          <a (click)="navigate('formacion')">Formación</a>
+        </li>
       </ul>
       <div class="whatsapp-container">
         <img src="assets/img/whatsapp.svg" alt="" />
       </div>
     </div>
     <!-- <app-menu-button></app-menu-button> -->
-    <div class="menu-button" (click)="openMenu(line1, line2, line3, menu)">
+    <div class="menu-button" (click)="openMenu()">
       <div class="line1" #line1></div>
       <div class="line2" #line2></div>
       <div class="line3" #line3></div>

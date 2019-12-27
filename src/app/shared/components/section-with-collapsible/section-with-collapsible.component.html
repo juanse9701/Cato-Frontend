@@ -1,0 +1,41 @@
+<section class="tarjeta-seccion" [id]="section.id">
+  <div class="aux">
+    <div class="tarjeta-parte-visible">
+      <div class="tarjeta-info">
+        <h3 class="tarjeta-titulo">{{ section.title }}</h3>
+        <h3 class="tarjeta-subtitulo">{{ section.subtitle }}</h3>
+        <p class="tarjeta-contenido">{{ section.content }}</p>
+      </div>
+      <div class="tarjeta-imagen">
+        <img [src]="section.img" alt="" />
+      </div>
+      <div class="tarjeta-botones">
+        <ng-container *ngFor="let button of section.buttons; let i = index">
+          <div
+            *ngIf="button.estilo == 1"
+            class="btn-1"
+            (click)="seeMore(desplegable, i)"
+            [ngStyle]="{ background: button.background, color: button.color }"
+          >
+            <span>{{ button.contenido }}</span>
+            <img [src]="button.imgIcono" class="arrow" alt="" />
+          </div>
+          <div
+            *ngIf="button.estilo == 2"
+            class="btn-2"
+            (click)="seeMore(desplegable, i)"
+            [ngStyle]="{ background: button.background, color: button.color }"
+          >
+            <img [src]="button.imgCheck" alt="" class="check" />
+            <span>{{ button.contenido }}</span>
+            <img [src]="button.img" alt="" class="background" />
+            <img [src]="button.imgIcono" alt="" class="arrow" />
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="tarjeta-parte-no-visible" #desplegable>
+      <app-collapsible [data]="actualData"></app-collapsible>
+    </div>
+  </div>
+</section>

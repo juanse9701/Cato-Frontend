@@ -16,6 +16,6 @@ export class DevelopmentCardComponent implements OnInit {
 
 interface Development {
   description: string;
-  client: string;
+  title: string;
   img: string;
 }

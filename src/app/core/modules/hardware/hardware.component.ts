@@ -8,21 +8,21 @@ import { Pagina } from 'src/app/shared/components/page-layout/page-layout.compon
 })
 export class HardwareComponent implements OnInit {
   hardware: Pagina = {
-    nombre: 'Hardware',
-    descripcion: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+    title: 'Hardware',
+    description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    imagen: 'assets/img/aplicaciones.png',
-    secciones: [
+    img: 'assets/img/aplicaciones.png',
+    sections: [
       {
-        nombre: 'Realidad virtual',
+        title: 'Realidad virtual',
         id: 'realidad-virtual',
-        subtitulo: 'Más de 20 marcas mundiales',
-        contenido:
+        subtitle: 'Más de 20 marcas mundiales',
+        content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'assets/img/red.png',
-        botones: [
+        img: 'assets/img/red.png',
+        buttons: [
           {
             estilo: 1,
             imgIcono: 'http://cdn.onlinewebfonts.com/svg/img_97521.png',
@@ -31,7 +31,7 @@ nostrud exerci tation.`,
             background: 'var(--main-red)'
           }
         ],
-        informacion: [
+        data: [
           {
             estilo: 1,
             imgPrincipal:
@@ -62,13 +62,13 @@ nostrud exerci tation.`,
         ]
       },
       {
-        nombre: 'Realidad aumentada',
+        title: 'Realidad aumentada',
         id: 'realidad-aumentada',
-        subtitulo: 'Más de 20 marcas mundiales',
-        contenido:
+        subtitle: 'Más de 20 marcas mundiales',
+        content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'assets/img/red.png',
-        botones: [
+        img: 'assets/img/red.png',
+        buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
@@ -120,7 +120,7 @@ nostrud exerci tation.`,
             imgCheck: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg'
           }
         ],
-        informacion: [
+        data: [
           {
             estilo: 2,
             imgPrincipal:
@@ -219,13 +219,13 @@ nostrud exerci tation.`,
         ]
       },
       {
-        nombre: 'Realidad aumentada 2',
-        id: 'realidad-aumentada',
-        subtitulo: 'Más de 20 marcas mundiales',
-        contenido:
+        title: 'Realidad aumentada 2',
+        id: 'realidad-aumentada-2',
+        subtitle: 'Más de 20 marcas mundiales',
+        content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'assets/img/red.png',
-        botones: [
+        img: 'assets/img/red.png',
+        buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
@@ -251,7 +251,7 @@ nostrud exerci tation.`,
             imgCheck: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Check_green_icon.svg'
           }
         ],
-        informacion: [
+        data: [
           {
             estilo: 3,
             items: [
@@ -345,13 +345,13 @@ hardware que brinden solución a sus necesidades`
         ]
       },
       {
-        nombre: 'Realidad aumentada 3',
-        id: 'realidad-aumentada',
-        subtitulo: 'Más de 20 marcas mundiales',
-        contenido:
+        title: 'Realidad aumentada 3',
+        id: 'realidad-aumentada-3',
+        subtitle: 'Más de 20 marcas mundiales',
+        content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'assets/img/red.png',
-        botones: [
+        img: 'assets/img/red.png',
+        buttons: [
           {
             estilo: 1,
             color: 'white',
@@ -360,7 +360,7 @@ hardware que brinden solución a sus necesidades`
             imgIcono: 'http://cdn.onlinewebfonts.com/svg/img_97521.png'
           }
         ],
-        informacion: [
+        data: [
           {
             estilo: 2,
             imgPrincipal:
@@ -377,14 +377,14 @@ hardware que brinden solución a sus necesidades`
         ]
       },
       {
-        nombre: 'Realidad virtual sin más',
-        id: 'realidad-virtual',
-        subtitulo: 'Más de 20 marcas mundiales',
-        contenido:
+        title: 'Realidad virtual sin más',
+        id: 'realidad-virtual-sin-mas',
+        subtitle: 'Más de 20 marcas mundiales',
+        content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        imagen: 'assets/img/red.png',
-        botones: [],
-        informacion: [
+        img: 'assets/img/red.png',
+        buttons: [],
+        data: [
           {
             estilo: 1,
             imgPrincipal: ''

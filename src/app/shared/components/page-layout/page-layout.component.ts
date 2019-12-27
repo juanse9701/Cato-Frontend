@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Seccion } from '../tarjeta-seccion/tarjeta-seccion.component';
+import { Section } from '../section-with-collapsible/section-with-collapsible.component';
 
 @Component({
   selector: 'app-page-layout',
@@ -14,8 +14,8 @@ export class PageLayoutComponent implements OnInit {
 }
 
 export interface Pagina {
-  nombre: string;
-  imagen: string;
-  descripcion: string;
-  secciones: Seccion[];
+  title: string;
+  img: string;
+  description: string;
+  sections: Section[];
 }

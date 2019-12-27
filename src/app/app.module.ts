@@ -13,8 +13,9 @@ import { SoftwareModule } from './core/modules/software/software.module';
 import { HardwareModule } from './core/modules/hardware/hardware.module';
 import { ProjectsModule } from './core/modules/projects/projects.module';
 import { TrainingModule } from './core/modules/training/training.module';
+import { CardColorComponent } from './shared/components/card-color/card-color.component';
 @NgModule({
-  declarations: [AppComponent, FooterComponent],
+  declarations: [AppComponent, FooterComponent, CardColorComponent],
   imports: [
     BrowserModule,
     HomeModule,
