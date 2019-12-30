@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pagina } from 'src/app/shared/components/page-layout/page-layout.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hardware',
@@ -393,7 +394,9 @@ hardware que brinden solución a sus necesidades`
       }
     ]
   };
-  constructor() {}
+  constructor(private title: Title) {
+    this.title.setTitle('Hardware');
+  }
 
   ngOnInit() {}
 }

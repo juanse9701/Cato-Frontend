@@ -5,7 +5,7 @@
     <h2 class="titulo">{{ data.title }}</h2>
     <p class="descripcion">{{ data.description }}</p>
     <div class="cards">
-      <app-development-card *ngFor="let item of data.items" [desarrollo]="item" estilo="redondo"></app-development-card>
+      <app-development-card *ngFor="let item of data.items" [data]="item" type="redondo"></app-development-card>
     </div>
     <button class="mas">Ver más</button>
   </div>

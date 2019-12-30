@@ -41,19 +41,58 @@
 }
 .hero .contenido {
   width: 60%;
+  /* opacity: 0;
+  animation: entry 1s ease forwards; */
 }
 .hero .contenido .subtitulo {
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 10x;
+  animation: entry 1.1s ease forwards;
+  opacity: 0;
 }
 .hero .contenido .titulo {
   font-size: 45px;
   text-transform: none;
   line-height: 1em;
+  animation: entry 1.2s ease 1.1s forwards;
+  /* animation: entryTitle 1.5s ease 1.5s forwards; */
+  opacity: 0;
 }
 .hero .contenido .descripcion {
   font-size: 14px;
+  animation: entry 1.2s ease 2.3s forwards;
+  /* animation: entryDescription 1.5s ease 2.3s forwards; */
+  opacity: 0;
+}
+
+@keyframes entry {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes entryTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes entryDescription {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1112px) {

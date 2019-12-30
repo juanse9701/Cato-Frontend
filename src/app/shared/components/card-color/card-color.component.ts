@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-color',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-color.component.css']
 })
 export class CardColorComponent implements OnInit {
-
-  constructor() { }
+  @Input() data: any;
+  constructor() {}
 
   ngOnInit() {
+    console.log(this.data);
   }
-
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { getLocaleEraNames } from '@angular/common';
+import { PagesService } from 'src/app/services/pages.service';
 
 @Component({
   selector: 'app-nosotros',
@@ -6,174 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
-  clientes: any = {
-    title: 'Clientes',
-    description: '',
-    items: [
-      {
-        nombre: 'sector privador',
-        clientes: [
-          {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
-          },
-          {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
-          }
-        ]
-      },
-      {
-        nombre: 'sector público',
-        clientes: [
-          {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
-          },
-          {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
-          }
-        ]
-      },
-      {
-        nombre: "ong's",
-        clientes: [
-          {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
-          },
-          {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
-          },
-          {
-            img: 'assets/img/realityapp.png',
-            nombre: 'Llanocentro'
-          }
-        ]
-      }
-    ]
-  };
-  desarrollosDeAutoria: any[] = [
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    }
-  ];
-  desarrollosTecnologicos: any[] = [
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    },
-    {
-      description: 'Gestor de realidad virtual y aumentada',
-      title: 'Departamento de Cundinamarca',
-      img: 'assets/img/realityapp.png'
-    }
-  ];
-  constructor() {}
+  nosotros: any[];
 
-  ngOnInit() {}
+  constructor(private pagesService: PagesService) {}
+
+  ngOnInit() {
+    this.nosotros = this.pagesService.getNosotros();
+  }
 }

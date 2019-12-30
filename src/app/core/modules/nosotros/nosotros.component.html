@@ -1,100 +1,19 @@
-<section class="desarollosTecnologicos">
-  <app-developments
-    [desarrollos]="desarrollosTecnologicos"
-    type="doble"
-    title="Desarrollo tecnológicos"
-  ></app-developments>
-</section>
-
-<section class="nosotros">
-  <h2 class="titulo claro">Nosotros</h2>
-  <article class="items">
-    <div class="item">
-      <div class="icono-titulo-contenedor">
-        <img src="" alt="" />
-        <h2>Objetivo general</h2>
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
-        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
-      </p>
-    </div>
-    <div class="item">
-      <div class="icono-titulo-contenedor">
-        <img src="" alt="" />
-        <h2>Misión</h2>
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
-        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
-      </p>
-    </div>
-    <div class="item">
-      <div class="icono-titulo-contenedor">
-        <img src="" alt="" />
-        <h2>Politica de calidad</h2>
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
-        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
-      </p>
-    </div>
-    <div class="item">
-      <div class="icono-titulo-contenedor">
-        <img src="" alt="" />
-        <h2>Visión</h2>
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quaerat nostrum harum ad deleniti nemo, vel eius
-        reprehenderit inventore dolorem id aperiam odit sequi dignissimos quod esse incidunt molestiae sit.
-      </p>
-    </div>
-  </article>
-</section>
-
-<section class="valores-principios">
-  <h2 class="titulo">Valores y principios coorporativos</h2>
-  <div class="contenedor-valores-principios">
-    <div class="valor-principio">
-      <img class="red" src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg" alt="" />
-      <div class="contenido">
-        <h3 class="">Igualdad</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
-          nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
-          incidunt praesentium?
-        </p>
-      </div>
-    </div>
-    <div class="valor-principio">
-      <img class="grey" src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg" alt="" />
-      <div class="contenido">
-        <h3 class="">Igualdad</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
-          nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
-          incidunt praesentium?
-        </p>
-      </div>
-    </div>
-    <div class="valor-principio">
-      <img
-        class="yellow"
-        src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg"
-        alt=""
-      />
-      <div class="contenido">
-        <h3 class="">Igualdad</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
-          nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
-          incidunt praesentium?
-        </p>
-      </div>
-    </div>
+<ng-container *ngFor="let item of nosotros">
+  <div [ngSwitch]="item.componentName">
+    <section *ngSwitchCase="'section-with-collapsible-grid'" class="desarollosTecnologicos">
+      <app-section-with-collapsible-grid [data]="item" type="doble"></app-section-with-collapsible-grid>
+    </section>
+    <app-section-tex-grid *ngSwitchCase="'section-with-text-grid'" [data]="item"></app-section-tex-grid>
+    <app-section-simple2 *ngSwitchCase="'section-simple2'" [data]="item"></app-section-simple2>
+    <app-section-with-multiple-subsection
+      *ngSwitchCase="'section-with-multiple-subsection'"
+      [data]="item"
+      background="#F9F9F9"
+    ></app-section-with-multiple-subsection>
+    <!-- <app-section-with-collapsible-grid
+      *ngSwitchCase="'section-with-collapsible-grid'"
+      [data]="item"
+      type="simple"
+    ></app-section-with-collapsible-grid> -->
   </div>
-</section>
-
-<app-section-with-multiple-subsection [data]="clientes" background="#F9F9F9"></app-section-with-multiple-subsection>
-
-<app-developments [desarrollos]="desarrollosDeAutoria" type="simple" title="Desarrollo de autoría"></app-developments>
+</ng-container>

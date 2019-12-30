@@ -1,0 +1,49 @@
+/* Valores y principios coorporativos */
+section {
+  padding: 60px 80px 90px;
+  background: white;
+}
+section .titulo {
+  font-size: 22px;
+  margin-bottom: 60px;
+}
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding: 50px 70px 80px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .container-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  section {
+    padding: 40px 50px 70px;
+  }
+  section .titulo {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 470px) {
+  section {
+    padding: 30px 30px 50px;
+  }
+  section .titulo {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
+}

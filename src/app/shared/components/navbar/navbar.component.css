@@ -62,6 +62,7 @@ header .menu .menu-item.active a {
 }
 header.sticky .menu .menu-item.active a {
   color: #fefefe;
+  color: #ea5252;
   font-weight: 500;
 }
 

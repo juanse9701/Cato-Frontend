@@ -12,6 +12,8 @@ import { SectionWithCarousel2Module } from 'src/app/shared/components/section-wi
 import { SectionWithScrollModule } from 'src/app/shared/components/section-with-scroll/section-with-scroll.module';
 import { SectionWithMultipleSubsectionModule } from 'src/app/shared/components/section-with-multiple-subsection/section-with-multiple-subsection.module';
 import { SectionSimpleModule } from 'src/app/shared/components/section-simple/section-simple.module';
+import { JoinUsComponent } from './join-us/join-us.component';
+import { JoinUsModule } from './join-us/join-us.module';
 
 const routes: Routes = [
   {
@@ -34,7 +36,8 @@ const routes: Routes = [
     SectionSimpleModule,
     SectorModule,
     DevelopmentCardModule,
-    HeroModule
+    HeroModule,
+    JoinUsModule
   ],
   exports: [HomeComponent]
 })
