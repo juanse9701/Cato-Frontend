@@ -72,6 +72,6 @@ export interface Button {
   color: string;
   background: string;
   img?: string;
-  imgIcono?: string;
-  imgCheck?: string;
+  imgIcono?: any;
+  imgCheck?: any;
 }

@@ -12,24 +12,13 @@ const routes: Routes = [
     loadChildren: () => import('./core/modules/nosotros/nosotros.module').then(m => m.NosotrosModule)
   },
   {
-    path: 'innovacion',
-    loadChildren: () => import('./core/modules/innovacion/innovacion.module').then(m => m.InnovacionModule)
+    path: ':techLine',
+    loadChildren: () => import('./core/modules/tech-lines-page/tech-lines-page.module').then(m => m.TechLinesPageModule)
   },
   {
-    path: 'software',
-    loadChildren: () => import('./core/modules/software/software.module').then(m => m.SoftwareModule)
-  },
-  {
-    path: 'hardware',
-    loadChildren: () => import('./core/modules/hardware/hardware.module').then(m => m.HardwareModule)
-  },
-  {
-    path: 'proyectos',
-    loadChildren: () => import('./core/modules/projects/projects.module').then(m => m.ProjectsModule)
-  },
-  {
-    path: 'formacion',
-    loadChildren: () => import('./core/modules/training/training.module').then(m => m.TrainingModule)
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: ''
   }
 ];
 

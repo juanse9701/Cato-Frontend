@@ -14,6 +14,7 @@ export class PageLayoutComponent implements OnInit {
 }
 
 export interface Pagina {
+  id: string;
   title: string;
   img: string;
   description: string;

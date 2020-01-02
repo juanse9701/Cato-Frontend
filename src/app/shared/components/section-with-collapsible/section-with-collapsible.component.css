@@ -1,11 +1,15 @@
 .tarjeta-seccion {
   background: white;
 }
-.aux {
-  margin: 0 50px;
+.tarjeta-seccion::after {
+  content: '';
+  height: 2px;
+  min-width: 100%;
+  padding: 0 calc(50% - 40px);
+  margin: 0 40px;
   border-bottom: 1px solid lightgray;
 }
-:host:last-child .tarjeta-seccion {
+:host:last-child .tarjeta-seccion::after {
   border-bottom: none;
 }
 .tarjeta-parte-visible {
@@ -15,8 +19,7 @@
   grid-template-areas:
     'info img'
     'botones botones';
-  /* padding: 40px 50px; */
-  padding: 40px 0;
+  padding: 40px 50px;
 }
 .tarjeta-titulo {
   color: var(--main-red);
@@ -73,6 +76,10 @@
 .tarjeta-botones .btn-1 img {
   width: 15px;
   margin-left: 15px;
+}
+.tarjeta-botones .btn-1 span,
+.tarjeta-botones .btn-2 span {
+  margin-right: 10px;
 }
 
 /* Estilos botón tipo 2*/
@@ -132,7 +139,7 @@
 }
 @media screen and (max-width: 768px) {
   .tarjeta-parte-visible {
-    padding: 40px 60px;
+    padding: 40px 30px;
     grid-template-columns: 1fr;
     grid-template-areas:
       'info'
@@ -141,6 +148,11 @@
   }
   .tarjeta-imagen {
     padding: 20px 80px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .tarjeta-parte-visible {
+    padding: 40px 40px;
   }
 }
 @media screen and (max-width: 568px) {

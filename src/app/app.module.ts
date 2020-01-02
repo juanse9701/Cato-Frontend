@@ -8,27 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NosotrosModule } from './core/modules/nosotros/nosotros.module';
 import { RouterModule } from '@angular/router';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
-import { InnovacionModule } from './core/modules/innovacion/innovacion.module';
-import { SoftwareModule } from './core/modules/software/software.module';
-import { HardwareModule } from './core/modules/hardware/hardware.module';
-import { ProjectsModule } from './core/modules/projects/projects.module';
-import { TrainingModule } from './core/modules/training/training.module';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent],
-  imports: [
-    BrowserModule,
-    HomeModule,
-    NosotrosModule,
-    InnovacionModule,
-    SoftwareModule,
-    HardwareModule,
-    ProjectsModule,
-    TrainingModule,
-    NavbarModule,
-    AppRoutingModule,
-    RouterModule
-  ],
+  imports: [BrowserModule, HomeModule, NosotrosModule, NavbarModule, AppRoutingModule, RouterModule],
   providers: [],
   exports: [],
   bootstrap: [AppComponent]

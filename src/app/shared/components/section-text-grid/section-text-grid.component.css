@@ -1,0 +1,27 @@
+/* Nosotros */
+.nosotros {
+  background: #303030;
+  padding: 40px 80px 80px;
+  color: white;
+}
+.nosotros > .titulo {
+  margin-bottom: 30px;
+}
+.nosotros .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.nosotros .items .icono-titulo-contenedor {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.nosotros .items .icono-titulo-contenedor h2 {
+  font-size: 15.5px;
+  margin-left: 7px;
+}
+.nosotros .items .item p {
+  font-size: 14px;
+}

@@ -1,6 +1,6 @@
 .desplegable {
   background: #f8f8f8;
-  padding: 40px 90px;
+  padding: 40px 50px;
   margin-bottom: 40px;
 }
 
@@ -64,10 +64,11 @@
 }
 @media screen and (max-width: 768px) {
   .desplegable {
-    padding: 40px 60px;
+    padding: 40px 40px;
   }
   .desplegable .tipo-1 {
     column-gap: 60px;
+    column-count: 1;
   }
   .desplegable .tipo-2 {
     grid-template-columns: 1fr;
@@ -78,11 +79,11 @@
 }
 @media screen and (max-width: 568px) {
   .desplegable {
-    padding: 35px 50px;
+    padding: 35px 30px;
   }
-  .desplegable .tipo-1 {
+  /* .desplegable .tipo-1 {
     column-count: 1;
-  }
+  } */
 }
 @media screen and (max-width: 470px) {
   .desplegable {
