@@ -1,8 +1,9 @@
 <ng-container *ngFor="let item of nosotros">
   <div [ngSwitch]="item.componentName">
-    <section *ngSwitchCase="'section-with-collapsible-grid'" class="desarollosTecnologicos">
-      <app-section-with-collapsible-grid [data]="item" type="doble"></app-section-with-collapsible-grid>
-    </section>
+    <app-section-with-collapsible-grid
+      *ngSwitchCase="'section-with-collapsible-grid'"
+      [data]="item"
+    ></app-section-with-collapsible-grid>
     <app-section-tex-grid *ngSwitchCase="'section-with-text-grid'" [data]="item"></app-section-tex-grid>
     <app-section-simple2 *ngSwitchCase="'section-simple2'" [data]="item"></app-section-simple2>
     <app-section-with-multiple-subsection

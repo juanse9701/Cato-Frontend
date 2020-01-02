@@ -7,7 +7,6 @@ import { Component, OnInit, Input, ElementRef, ViewChild, Renderer2 } from '@ang
 })
 export class SectionWithCollapsibleGridComponent implements OnInit {
   @Input() data: any;
-  @Input() type: string;
 
   buttonText: string = 'Ver más';
   showMore: boolean = true;

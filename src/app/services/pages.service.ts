@@ -180,6 +180,8 @@ export class PagesService {
   private desarrollosDeAutoriaHome: any = {
     componentName: 'section-simple',
     title: 'Desarrollos de autoria',
+    type: 'doble',
+    typeStyle: 'redondo',
     description: 'Estos son proyectos desarrollados por Grupo CATO que te invitamos a conocer',
     items: [
       {
@@ -338,6 +340,8 @@ export class PagesService {
   };
   private desarrollosDeAutoriaNosotros: any = {
     title: 'Desarrollos de autoria',
+    type: 'simple',
+    typeStyle: 'cuadrado',
     componentName: 'section-with-collapsible-grid',
     data: [
       {
@@ -364,6 +368,8 @@ export class PagesService {
   };
   private desarrollosTecnologicosNosotros: any = {
     title: 'Desarrollos tecnológicos',
+    type: 'doble',
+    typeStyle: 'cuadrado',
     componentName: 'section-with-collapsible-grid',
     data: [
       {

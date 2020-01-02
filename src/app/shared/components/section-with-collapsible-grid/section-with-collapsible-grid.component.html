@@ -1,16 +1,18 @@
-<section *ngIf="type === 'simple'" class="desarrollos blanco">
+<section *ngIf="data.type === 'simple'" class="desarrollos blanco">
   <h2 class="titulo">{{ data.title }}</h2>
   <div class="cards simple" #cards>
-    <app-development-card *ngFor="let item of data" [data]="item" type="cuadrado"> </app-development-card>
+    <app-development-card *ngFor="let item of data.data" [data]="item" [typeStyle]="data.typeStyle">
+    </app-development-card>
   </div>
   <div *ngIf="showMore" class="mas-container">
     <button (click)="seeMore(cards)" class="mas">{{ buttonText }}</button>
   </div>
 </section>
-<section *ngIf="type === 'doble'" class="desarrollos blanco">
+<section *ngIf="data.type === 'doble'" class="desarrollos blanco">
   <h2 class="titulo">{{ data.title }}</h2>
   <div class="cards doble" #cards>
-    <app-development-card *ngFor="let item of data" [data]="item" type="cuadrado"> </app-development-card>
+    <app-development-card *ngFor="let item of data.data" [data]="item" [typeStyle]="data.typeStyle">
+    </app-development-card>
   </div>
   <div *ngIf="showMore" class="mas-container">
     <button (click)="seeMore(cards)" class="mas">{{ buttonText }}</button>

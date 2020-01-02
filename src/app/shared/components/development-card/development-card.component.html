@@ -1,11 +1,11 @@
-<div *ngIf="type === 'cuadrado'" class="card cuadrado">
+<div *ngIf="typeStyle === 'cuadrado'" class="card cuadrado">
   <img [src]="data.img" [alt]="data.description" />
   <div class="contenido">
     <h3>{{ data.description | uppercase }}</h3>
     <p>{{ data.title }}</p>
   </div>
 </div>
-<div *ngIf="type === 'redondo'" class="card">
+<div *ngIf="typeStyle === 'redondo'" class="card">
   <img [src]="data.img" [alt]="data.description" />
   <div class="contenido">
     <h3>{{ data.description | uppercase }}</h3>
