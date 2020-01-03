@@ -20,6 +20,7 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
 
   buttonText: string = 'Ver más';
   showMore: boolean = true;
+  lineas: number;
 
   @ViewChild('cards', { static: false }) cards: ElementRef;
 
@@ -30,7 +31,19 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
 
   constructor(private renderer: Renderer2, private changeRef: ChangeDetectorRef) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    switch (this.data.type) {
+      case 'simple':
+        this.lineas = 1;
+        break;
+      case 'doble':
+        this.lineas = 2;
+        break;
+      default:
+        this.lineas = 1;
+        break;
+    }
+  }
 
   ngAfterViewChecked(): void {
     this.evaluateShowMore();
@@ -58,10 +71,10 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
     let box1 = _boxes[0];
     var colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); //Number of Column;
     var rowCnt = Math.ceil(_boxes.length / colCnt); //Number of Rows
-    if (rowCnt === 1) {
+    if (rowCnt <= this.lineas) {
       this.showMore = false;
     }
-    if (rowCnt > 1) {
+    if (rowCnt > this.lineas) {
       this.showMore = true;
     }
   }

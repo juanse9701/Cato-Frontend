@@ -1,12 +1,13 @@
-<section class="colabora">
-  <div class="titulo">
-    <h2>Colabora con nosotros</h2>
-    <p>Juntos podemos crecer</p>
-  </div>
-  <h3>En Grupo CATO estamos buscando los siguientes perfiles:</h3>
-  <div class="botones">
-    <button>Desarollo de sosftware</button>
-    <button>Producción multimedia</button>
-    <button>Equipos interdisciplinarios</button>
-  </div>
-</section>
+<div class="container">
+  <img src="https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg" class="grey" alt="" />
+  <section class="colabora">
+    <div class="titulo">
+      <h2>{{ data.title }}</h2>
+      <p>{{ data.subtitle }}r</p>
+    </div>
+    <h3>{{ data.description }}</h3>
+    <div class="botones">
+      <button *ngFor="let item of data.roles">{{ item.title }}</button>
+    </div>
+  </section>
+</div>

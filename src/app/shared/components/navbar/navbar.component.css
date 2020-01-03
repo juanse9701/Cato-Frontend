@@ -76,6 +76,7 @@ header.sticky .menu .menu-item.active a {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
+  color: white;
 }
 .menu-container img {
   width: 100%;
@@ -88,7 +89,7 @@ header .contenedor-logo img {
 }
 
 header.sticky {
-  background-color: #111;
+  background-color: var(--dark);
   position: fixed;
   top: 0;
   width: 100%;
@@ -233,10 +234,10 @@ header.menu-open .line3 {
 }
 @media screen and (max-width: 1023px) {
   header.menu-open {
-    background: black;
+    background: var(--dark);
   }
   header.sticky {
-    background: black;
+    background: var(--dark);
   }
   header .menu-aux {
     height: 100vh;
@@ -245,6 +246,7 @@ header.menu-open .line3 {
     left: 0;
     z-index: 99999999;
     background: rgba(0, 0, 0, 0.95);
+    background: var(--dark-95);
     align-items: flex-start;
     width: 100%;
     flex-direction: column;

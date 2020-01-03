@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Renderer2 } from '@angular/core';
 export class SectionWithCollapsibleComponent implements OnInit {
   @Input() section: Section;
   actualData: any;
+  actualDataIndex: number;
   show: boolean[] = [];
 
   constructor(private renderer: Renderer2) {}
@@ -42,6 +43,7 @@ export class SectionWithCollapsibleComponent implements OnInit {
       }
     }
     this.actualData = this.section.data[index];
+    this.actualDataIndex = index;
   }
   anyUnfolded(): boolean {
     for (const i in this.show) {

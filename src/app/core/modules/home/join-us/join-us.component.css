@@ -1,12 +1,27 @@
 /* Colabora */
-.colabora {
+.container {
   background: #333;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.colabora {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 70px 120px 110px;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 2;
+}
+.container img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .colabora .titulo {
   text-align: center;
@@ -32,9 +47,9 @@
   justify-content: center;
 }
 .colabora .botones button {
-  border: 2px solid white;
+  border: 1.5px solid white;
   border-radius: 6px;
-  padding: 10px 30px;
+  padding: 15px 30px;
   background: transparent;
   color: white;
   margin: 0 7px 25px;

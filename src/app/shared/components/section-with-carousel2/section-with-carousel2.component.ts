@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SectionWithCarousel2Component implements OnInit {
   @Input() data;
+
   constructor() {}
 
   ngOnInit() {}

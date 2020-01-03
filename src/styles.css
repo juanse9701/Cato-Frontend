@@ -11,6 +11,9 @@ html {
 :root {
   --main-red: #b10808;
   --bar-height: 80px;
+  --dark: #212529;
+  --dark-95: #212529fa;
+  --second-red: #e54b4b;
 }
 body {
   padding-top: calc(var(--bar-height));

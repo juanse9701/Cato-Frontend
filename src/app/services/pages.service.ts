@@ -238,11 +238,11 @@ export class PagesService {
     ]
   };
   private home: any[] = [
+    this.capacidadesHome,
     this.lineasTecnologicasHome,
     this.casosDeExitoHome,
-    this.capacidadesHome,
-    this.clientesHome,
-    this.desarrollosDeAutoriaHome
+    this.desarrollosDeAutoriaHome,
+    this.clientesHome
   ];
 
   private clientesNosotros: any = {
@@ -2731,6 +2731,32 @@ hardware que brinden solución a sus necesidades`
   };
   private techLines: Pagina[] = [this.innovacion, this.proyectos, this.software, this.hardware, this.formacion];
 
+  private menu: any[] = [
+    {
+      name: 'Innovación',
+      url: 'innovación'
+    },
+    {
+      name: 'Software',
+      url: 'software'
+    },
+    {
+      name: 'Hardware',
+      url: 'hardware'
+    },
+    {
+      name: 'Hardware',
+      url: 'hardware'
+    },
+    {
+      name: 'Proyectos',
+      url: 'proyectos'
+    },
+    {
+      name: 'Formación',
+      url: 'formacion'
+    }
+  ];
   constructor() {}
 
   getHome(): any[] {
@@ -2747,5 +2773,9 @@ hardware que brinden solución a sus necesidades`
       return response[0];
     }
     return null;
+  }
+
+  getMenu(): any[] {
+    return this.menu;
   }
 }

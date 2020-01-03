@@ -1,3 +1,4 @@
+<!-- <app-slider></app-slider> -->
 <ng-container *ngFor="let item of nosotros">
   <div [ngSwitch]="item.componentName">
     <app-section-with-collapsible-grid
@@ -11,10 +12,5 @@
       [data]="item"
       background="#F9F9F9"
     ></app-section-with-multiple-subsection>
-    <!-- <app-section-with-collapsible-grid
-      *ngSwitchCase="'section-with-collapsible-grid'"
-      [data]="item"
-      type="simple"
-    ></app-section-with-collapsible-grid> -->
   </div>
 </ng-container>

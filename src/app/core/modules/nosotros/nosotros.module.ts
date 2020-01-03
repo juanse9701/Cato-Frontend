@@ -6,6 +6,7 @@ import { SectionWithMultipleSubsectionModule } from 'src/app/shared/components/s
 import { SectionTextGridModule } from 'src/app/shared/components/section-text-grid/section-text-grid.module';
 import { SectionWithCollapsibleGridModule } from 'src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.module';
 import { SectionSimple2Module } from 'src/app/shared/components/section-simple2/section-simple2.module';
+import { SliderModule } from 'src/app/shared/components/slider/slider.module';
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
     SectionWithMultipleSubsectionModule,
     SectionTextGridModule,
     SectionWithCollapsibleGridModule,
-    SectionSimple2Module
+    SectionSimple2Module,
+    SliderModule
   ],
   exports: [NosotrosComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { PagesService } from 'src/app/services/pages.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -10,7 +11,33 @@ export class NavbarComponent implements OnInit {
   tipo: string;
   open: boolean = false;
   sticky: boolean;
-
+  // menu: any[];
+  menu: any[] = [
+    {
+      name: 'Innovación',
+      url: 'innovación'
+    },
+    {
+      name: 'Software',
+      url: 'software'
+    },
+    {
+      name: 'Hardware',
+      url: 'hardware'
+    },
+    {
+      name: 'Hardware',
+      url: 'hardware'
+    },
+    {
+      name: 'Proyectos',
+      url: 'proyectos'
+    },
+    {
+      name: 'Formación',
+      url: 'formacion'
+    }
+  ];
   @ViewChild('header', { static: false }) header: ElementRef;
   @ViewChild('line1', { static: false }) line1: ElementRef;
   @ViewChild('line2', { static: false }) line2: ElementRef;
@@ -26,10 +53,16 @@ export class NavbarComponent implements OnInit {
       this.sticky = false;
     }
   }
-  constructor(private router: Router, private location: Location, private renderer: Renderer2) {
+  constructor(
+    private router: Router,
+    private location: Location,
+    private renderer: Renderer2,
+    private pagesService: PagesService
+  ) {
+    console.log('datos menu', this.menu);
     this.router.events.subscribe(event => {
       console.log(this.location.path());
-      if (this.location.path() === '/home') {
+      if (this.location.path() === '') {
         this.tipo = 'home';
       } else {
         this.tipo = '';

@@ -23,14 +23,14 @@
   outline: none;
 }
 .leftRs::after {
-  content: "";
+  content: '';
   display: block;
   width: 20px;
   height: 20px;
   border: none;
   box-sizing: border-box;
-  border-top: 8px solid #dddddd;
-  border-left: 8px solid #dddddd;
+  border-top: 8px solid var(--main-red);
+  border-left: 8px solid var(--main-red);
   transform: rotate(-45deg);
   cursor: pointer;
 }
@@ -48,14 +48,14 @@
   outline: none;
 }
 .rightRs::after {
-  content: "";
+  content: '';
   display: block;
   width: 20px;
   height: 20px;
   border: none;
   box-sizing: border-box;
-  border-top: 8px solid #dddddd;
-  border-right: 8px solid #dddddd;
+  border-top: 8px solid var(--main-red);
+  border-right: 8px solid var(--main-red);
   transform: rotate(45deg);
   cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-join-us',
@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./join-us.component.css']
 })
 export class JoinUsComponent implements OnInit {
+  // @Input() data: any;
 
-  constructor() { }
+  data = {
+    title: 'Colabora con nosotros',
+    subtitle: 'Juntos podemos crecer',
+    description: 'En Grupo CATO estamos buscando los siguientes perfiles',
+    roles: [
+      {
+        title: 'Desarollo de sosftware'
+      },
+      {
+        title: 'Producción multimedia'
+      },
+      {
+        title: 'Equipos interdisciplinarios'
+      }
+    ]
+  };
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

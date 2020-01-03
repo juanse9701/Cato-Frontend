@@ -11,7 +11,7 @@
     <div [ngClass]="{ 'menu-open': open }" class="menu-aux" #menu>
       <ul class="menu">
         <li class="menu-item">
-          <a (click)="navigate('home')">Inicio</a>
+          <a (click)="navigate('/')">Inicio</a>
         </li>
         <li class="menu-item" [class.active]="isActive(['nosotros'])">
           <a (click)="navigate('nosotros')">Nosotros</a>
@@ -33,10 +33,9 @@
         </li>
       </ul>
       <div class="whatsapp-container">
-        <img src="assets/img/whatsapp.svg" alt="" />
+        <i class="fab fa-whatsapp"></i>
       </div>
     </div>
-    <!-- <app-menu-button></app-menu-button> -->
     <div class="menu-button" (click)="openMenu()">
       <div class="line1" #line1></div>
       <div class="line2" #line2></div>
