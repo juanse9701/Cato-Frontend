@@ -28,7 +28,8 @@ export class NavbarComponent implements OnInit {
   }
   constructor(private router: Router, private location: Location, private renderer: Renderer2) {
     this.router.events.subscribe(event => {
-      if (this.location.path() === '') {
+      console.log(this.location.path());
+      if (this.location.path() === '/home') {
         this.tipo = 'home';
       } else {
         this.tipo = '';

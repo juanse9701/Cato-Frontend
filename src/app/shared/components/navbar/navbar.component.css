@@ -52,6 +52,7 @@ header .menu .menu-item a:hover {
 }
 header.sticky .menu .menu-item a:hover {
   background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 header.home .menu .menu-item a {
@@ -87,7 +88,7 @@ header .contenedor-logo img {
 }
 
 header.sticky {
-  background-color: black;
+  background-color: #111;
   position: fixed;
   top: 0;
   width: 100%;

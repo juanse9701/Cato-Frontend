@@ -38,6 +38,20 @@ body {
   text-align: center;
 }
 
+/* Filtros colores */
+img.red {
+  filter: grayscale(100%) brightness(15%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+img.blue {
+  filter: grayscale(100%) brightness(12%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+}
+img.yellow {
+  filter: grayscale(0%) brightness(40%) sepia(62%) hue-rotate(5deg) saturate(300%) contrast(0.7);
+}
+img.grey {
+  filter: grayscale(10%) brightness(25%) contrast(0.9);
+}
+
 @media screen and (max-width: 1112px) {
 }
 @media screen and (max-width: 1023px) {

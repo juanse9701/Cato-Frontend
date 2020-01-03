@@ -1,8 +1,24 @@
 /* Nosotros */
+.container {
+  background-color: #303030;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.container img {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
 .nosotros {
-  background: #303030;
   padding: 40px 80px 80px;
   color: white;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 2;
 }
 .nosotros > .titulo {
   margin-bottom: 30px;
@@ -24,4 +40,30 @@
 }
 .nosotros .items .item p {
   font-size: 14px;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .nosotros {
+    padding: 40px 70px 80px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .nosotros {
+    padding: 40px 50px 70px;
+  }
+  .nosotros .items {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 470px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
 }

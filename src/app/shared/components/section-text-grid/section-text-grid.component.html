@@ -1,18 +1,21 @@
-<section class="nosotros">
-  <h2 class="titulo claro">{{ data.title }}</h2>
-  <article class="items">
-    <div *ngFor="let item of data.info" class="item">
-      <div class="icono-titulo-contenedor">
-        <img *ngIf="item.img.type === 'img'" [src]="item.img.source" alt="" />
-        <i
-          *ngIf="item.img.type === 'font'"
-          [ngClass]="item.img.source"
-          alt=""
-          [ngStyle]="{ color: item.img.color }"
-        ></i>
-        <h2>{{ item.title }}</h2>
+<div class="container">
+  <img src="https://exponencial.es/wp-content/uploads/2016/08/codigo-css.jpeg" alt="" class="grey" />
+  <section class="nosotros">
+    <h2 class="titulo claro">{{ data.title }}</h2>
+    <article class="items">
+      <div *ngFor="let item of data.info" class="item">
+        <div class="icono-titulo-contenedor">
+          <img *ngIf="item.img.type === 'img'" [src]="item.img.source" alt="" />
+          <i
+            *ngIf="item.img.type === 'font'"
+            [ngClass]="item.img.source"
+            alt=""
+            [ngStyle]="{ color: item.img.color }"
+          ></i>
+          <h2>{{ item.title }}</h2>
+        </div>
+        <p>{{ item.description }}</p>
       </div>
-      <p>{{ item.description }}</p>
-    </div>
-  </article>
-</section>
+    </article>
+  </section>
+</div>

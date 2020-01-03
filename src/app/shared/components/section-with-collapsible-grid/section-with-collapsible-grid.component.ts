@@ -5,8 +5,9 @@ import {
   ElementRef,
   ViewChild,
   Renderer2,
-  AfterContentInit,
-  AfterViewInit
+  HostListener,
+  ChangeDetectorRef,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 @Component({
@@ -22,22 +23,20 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
 
   @ViewChild('cards', { static: false }) cards: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      console.log(this.cards.nativeElement);
-      let _boxes = this.cards.nativeElement.children;
-      let box1 = _boxes[0];
-      var colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); //Number of Column;
-      var rowCnt = Math.ceil(_boxes.length / colCnt); //Number of Rows
-      console.log('Contador de filas', rowCnt);
-      if (rowCnt === 1) {
-        this.showMore = false;
-        console.log('entró');
-      }
-    }, 2);
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.evaluateShowMore();
   }
+
+  constructor(private renderer: Renderer2, private changeRef: ChangeDetectorRef) {}
+
+  ngOnInit(): void {}
+
+  ngAfterViewChecked(): void {
+    this.evaluateShowMore();
+    this.changeRef.detectChanges();
+  }
+
   seeMore(element) {
     if (element.style.maxHeight) {
       this.renderer.setStyle(element, 'max-height', element.scrollHeight + 'px');
@@ -52,6 +51,18 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
       }, 210);
       this.buttonText = 'Ver menos';
     }
-    console.log(element);
+  }
+
+  evaluateShowMore() {
+    let _boxes = this.cards.nativeElement.children;
+    let box1 = _boxes[0];
+    var colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); //Number of Column;
+    var rowCnt = Math.ceil(_boxes.length / colCnt); //Number of Rows
+    if (rowCnt === 1) {
+      this.showMore = false;
+    }
+    if (rowCnt > 1) {
+      this.showMore = true;
+    }
   }
 }
