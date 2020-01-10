@@ -64,6 +64,8 @@ export class NavbarComponent implements OnInit {
       console.log(this.location.path());
       if (this.location.path() === '') {
         this.tipo = 'home';
+      } else if (this.location.path() === '/contacto') {
+        this.tipo = 'contacto';
       } else {
         this.tipo = '';
       }

@@ -1,4 +1,4 @@
-<header [ngClass]="{ home: tipo === 'home', 'menu-open': open }" id="header" #header>
+<header [ngClass]="{ home: tipo === 'home', 'menu-open': open, contacto: tipo === 'contacto' }" id="header" #header>
   <div class="contenedor-logo">
     <ng-template [ngIf]="!sticky && !open" [ngIfElse]="logoBlanco">
       <img src="assets/img/logo.png" alt="Grup tecnológico CATO" class="logo" (click)="navigate('/')" />
@@ -31,10 +31,17 @@
         <li class="menu-item" [class.active]="isActive(['formacion'])">
           <a (click)="navigate('formacion')">Formación</a>
         </li>
+        <li class="menu-item" [class.active]="isActive(['contacto'])">
+          <a (click)="navigate('contacto')">Contacto</a>
+        </li>
       </ul>
       <div class="whatsapp-container">
         <i class="fab fa-whatsapp"></i>
       </div>
+      <select name="lang" id="">
+        <option value="es">Español</option>
+        <option value="en">Inglés</option>
+      </select>
     </div>
     <div class="menu-button" (click)="openMenu()">
       <div class="line1" #line1></div>

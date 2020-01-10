@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./core/modules/nosotros/nosotros.module').then(m => m.NosotrosModule)
   },
   {
+    path: 'contacto',
+    loadChildren: () => import('./core/modules/contact/contact.module').then(m => m.ContactModule)
+  },
+  {
     path: ':techLine',
     loadChildren: () => import('./core/modules/tech-lines-page/tech-lines-page.module').then(m => m.TechLinesPageModule)
   },
