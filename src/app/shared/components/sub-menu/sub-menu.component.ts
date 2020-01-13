@@ -13,6 +13,7 @@ export class SubMenuComponent implements OnInit {
   actual: string;
 
   locationName: string;
+  
   constructor(private router: Router, private location: Location) {
     this.router.events.subscribe(event => {
       console.log(this.location.path());
