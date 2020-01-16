@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { getLocaleEraNames } from '@angular/common';
 import { PagesService } from 'src/app/services/pages.service';
 import { Title } from '@angular/platform-browser';
 
@@ -10,6 +9,11 @@ import { Title } from '@angular/platform-browser';
 })
 export class NosotrosComponent implements OnInit {
   nosotros: any[];
+  data = [
+    { src: '', type: 'youtube' },
+    { src: '', type: 'image' },
+    { src: 'https://pannellum.org/images/alma.jpg', type: 'img360' }
+  ];
 
   constructor(private pagesService: PagesService, private title: Title) {
     this.title.setTitle('Acerca de nosotros');

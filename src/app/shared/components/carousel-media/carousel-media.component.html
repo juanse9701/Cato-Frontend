@@ -1,1 +1,26 @@
-<p>carousel-media works!</p>
+<div class="contenedor">
+  <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="data">
+    <ngu-item class="own-item" *nguCarouselDef="let item; let i = index; let ani = animate">
+      <div [ngSwitch]="item.type">
+        <app-youtube-video *ngSwitchCase="'youtube'"></app-youtube-video>
+        <img *ngSwitchCase="'image'" src="assets/img/code.jpg" alt="" />
+        <app-image360 *ngSwitchCase="'img360'" [data]="item"></app-image360>
+      </div>
+    </ngu-item>
+
+    <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.0 : 1">
+      <div class="circle"></div>
+    </button>
+    <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.0 : 1">
+      <div class="circle"></div>
+    </button>
+
+    <ul class="myPoint" NguCarouselPoint>
+      <li
+        *ngFor="let i of myCarousel.pointNumbers; let i = index"
+        [class.active]="i == myCarousel.activePoint"
+        (click)="myCarousel.moveTo(i)"
+      ></li>
+    </ul>
+  </ngu-carousel>
+</div>

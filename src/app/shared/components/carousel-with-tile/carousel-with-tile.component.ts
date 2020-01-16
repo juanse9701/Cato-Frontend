@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
+import 'hammerjs';
 
 @Component({
   selector: 'app-carousel-with-tile',

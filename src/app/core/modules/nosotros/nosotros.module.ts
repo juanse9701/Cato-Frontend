@@ -6,7 +6,9 @@ import { SectionWithMultipleSubsectionModule } from 'src/app/shared/components/s
 import { SectionTextGridModule } from 'src/app/shared/components/section-text-grid/section-text-grid.module';
 import { SectionWithCollapsibleGridModule } from 'src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.module';
 import { SectionSimple2Module } from 'src/app/shared/components/section-simple2/section-simple2.module';
-import { SliderModule } from 'src/app/shared/components/slider/slider.module';
+import { CarouselMediaModule } from 'src/app/shared/components/carousel-media/carousel-media.module';
+import { YoutubeVideoModule } from 'src/app/shared/components/youtube-video/youtube-video.module';
+import { Image360Module } from 'src/app/shared/components/image360/image360.module';
 
 const routes: Routes = [
   {
@@ -23,7 +25,8 @@ const routes: Routes = [
     SectionTextGridModule,
     SectionWithCollapsibleGridModule,
     SectionSimple2Module,
-    SliderModule
+    CarouselMediaModule,
+    Image360Module
   ],
   exports: [NosotrosComponent]
 })

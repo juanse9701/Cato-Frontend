@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
 import { FooterModule } from './shared/components/footer/footer.module';
-import { MapComponent } from './core/modules/contact/map/map.component';
 
 @NgModule({
   declarations: [AppComponent],
