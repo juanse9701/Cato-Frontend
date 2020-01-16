@@ -34,8 +34,9 @@ header .menu {
 }
 header .menu .menu-item {
   height: 100%;
+  position: relative;
 }
-header .menu .menu-item a {
+header .menu .menu-item > a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
@@ -48,21 +49,21 @@ header .menu .menu-item a {
   cursor: pointer;
   font-weight: 600;
 }
-header .menu .menu-item a:hover {
+header .menu .menu-item > a:hover {
   color: var(--main-red);
 }
-header.sticky .menu .menu-item a:hover {
+header.sticky .menu .menu-item > a:hover {
   background: rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.12);
 }
 
-header.home .menu .menu-item a {
+header.home .menu .menu-item > a {
   color: white;
 }
-header .menu .menu-item.active a {
+header .menu .menu-item.active > a {
   color: var(--main-red);
 }
-header.sticky .menu .menu-item.active a {
+header.sticky .menu .menu-item.active > a {
   color: red;
 }
 header.contacto {
@@ -128,7 +129,46 @@ header.sticky .whatsapp-container {
   background: #464646;
   background: #202020;
 }
-
+.sub-menu::before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: 28px;
+  /* height: 14px;
+  background: var(--dark-95);
+  width: 14px;
+  display: block;
+  transform: rotate(45deg); */
+  width: 0;
+  height: 0;
+  border-right: 14px solid transparent;
+  border-top: 14px solid transparent;
+  border-left: 14px solid transparent;
+  border-bottom: 14px solid var(--dark-95);
+}
+header .menu .menu-item:hover .sub-menu {
+  display: block;
+  opacity: 1;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  list-style: none;
+  background: var(--dark-95);
+  padding: 5px 25px;
+  transition: all 0.25 ease 0.1s;
+}
+.sub-menu .sub-menu-item {
+  margin: 10px 0;
+}
+.sub-menu .sub-menu-item > a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.95em;
+  line-height: 0.95em;
+}
 .menu-button {
   display: none;
   flex-direction: column;
