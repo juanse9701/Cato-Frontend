@@ -23,9 +23,9 @@
   display: grid;
   grid-template-columns: 1fr 355px;
   grid-template-rows: auto;
-  /* border-top: 10px solid lightgray; */
-  /* padding-top: 60px;
-  background: #303030; */
+}
+.container.full-width {
+  grid-template-columns: 1fr;
 }
 
 @media screen and (max-width: 1112px) {

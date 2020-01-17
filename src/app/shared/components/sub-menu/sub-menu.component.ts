@@ -16,10 +16,10 @@ export class SubMenuComponent implements OnInit {
   locationName: string;
 
   constructor(private router: Router, private location: Location) {
-    this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
-      console.log(this.location.path());
-      this.locationName = this.location.path();
-    });
+    // this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
+    // console.log(this.location.path());
+    this.locationName = this.location.path();
+    // });
   }
 
   ngOnInit() {

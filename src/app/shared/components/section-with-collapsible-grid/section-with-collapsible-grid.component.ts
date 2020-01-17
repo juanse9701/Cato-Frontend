@@ -66,11 +66,15 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
     }
   }
 
+  /**
+   * fsgdrga
+   *
+   */
   evaluateShowMore() {
     let _boxes = this.cards.nativeElement.children;
     let box1 = _boxes[0];
-    var colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); //Number of Column;
-    var rowCnt = Math.ceil(_boxes.length / colCnt); //Number of Rows
+    let colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); //Number of Column;
+    let rowCnt = Math.ceil(_boxes.length / colCnt); //Number of Rows
     if (rowCnt <= this.lineas) {
       this.showMore = false;
     }

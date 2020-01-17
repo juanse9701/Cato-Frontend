@@ -107,6 +107,7 @@
   padding: 5px;
   margin: 0 3px;
   transition: 0.4s ease all;
+  cursor: pointer;
 }
 .myPoint li.active {
   background: black;

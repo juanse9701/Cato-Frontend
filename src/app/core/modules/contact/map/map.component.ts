@@ -13,13 +13,13 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     mapboxgl.accessToken = this.API_KEY;
-    var map = new mapboxgl.Map({
+    let map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-73.6566408, 4.1565567],
       zoom: 17.4
     });
-    var marker = new mapboxgl.Marker({
+    const marker = new mapboxgl.Marker({
       draggable: false
     })
       .setLngLat([-73.6566408, 4.1565567])

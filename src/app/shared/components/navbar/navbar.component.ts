@@ -11,7 +11,6 @@ export class NavbarComponent implements OnInit {
   tipo: string;
   open: boolean = false;
   sticky: boolean;
-  // menu: any[];
   menu: any[] = [
     {
       name: 'Innovación',
@@ -53,7 +52,12 @@ export class NavbarComponent implements OnInit {
       this.sticky = false;
     }
   }
-  constructor(private router: Router, private location: Location, private renderer: Renderer2) {
+  constructor(
+    private router: Router,
+    private location: Location,
+    private renderer: Renderer2,
+    private route: ActivatedRoute
+  ) {
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
       console.log(this.location.path());
       if (this.location.path() === '') {
