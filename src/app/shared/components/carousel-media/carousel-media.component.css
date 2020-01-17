@@ -4,6 +4,9 @@
 .contenedor {
   background: white;
 }
+.own-item > div {
+  height: 100%;
+}
 .bannerStyle h1 {
   background-color: #ccc;
   min-height: 300px;

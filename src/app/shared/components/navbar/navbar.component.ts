@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
-import { Router } from '@angular/router';
-import { PagesService } from 'src/app/services/pages.service';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -53,14 +53,8 @@ export class NavbarComponent implements OnInit {
       this.sticky = false;
     }
   }
-  constructor(
-    private router: Router,
-    private location: Location,
-    private renderer: Renderer2,
-    private pagesService: PagesService
-  ) {
-    console.log('datos menu', this.menu);
-    this.router.events.subscribe(event => {
+  constructor(private router: Router, private location: Location, private renderer: Renderer2) {
+    this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
       console.log(this.location.path());
       if (this.location.path() === '') {
         this.tipo = 'home';
