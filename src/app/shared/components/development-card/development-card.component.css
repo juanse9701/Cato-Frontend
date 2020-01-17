@@ -4,14 +4,22 @@
   border-radius: 5px;
   background: white;
   color: #333;
+  height: 230px;
 }
-
+.card.cuadrado {
+  border-radius: 0;
+}
 .card img {
   width: 100%;
+  height: 50%;
   object-fit: contain;
 }
-h3 {
-  font-family: "Open Sans", sans-serif;
+.card .contenido {
+  height: 50%;
+}
+.card h3 {
+  font-family: 'Open Sans', sans-serif;
   margin: 10px 0;
-  line-height: 1.2em;
+  line-height: 20px;
+  font-size: 17px;
 }

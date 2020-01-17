@@ -1,0 +1,69 @@
+.sector {
+  display: flex;
+  flex-direction: column;
+}
+.sector h3 {
+  margin: 25px 0;
+  font-size: 26px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.sector button {
+  color: #5691c2;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+  background: none;
+  align-self: flex-end;
+  margin-top: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.sector .logos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+  max-height: 175px;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
+.sector .logos-container app-client-card:nth-child(2n) > div {
+  border-right: none !important;
+}
+.sector .logos-container app-client-card:last-child > div {
+  border-right: 1px solid lightgray !important;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+  .sector h3 {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  .sector .logos-container {
+    padding: 12px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .sector h3 {
+    margin: 10px 0;
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sector h3 {
+    margin: 5px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+}

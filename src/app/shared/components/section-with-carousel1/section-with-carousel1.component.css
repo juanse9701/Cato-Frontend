@@ -1,0 +1,35 @@
+section {
+  background-size: cover;
+  background-color: #fafafa;
+  padding: 80px 30px 150px;
+}
+.contenedor {
+  display: flex;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 568px) {
+  section {
+    padding: 40px 30px 80px;
+  }
+}
+@media screen and (max-width: 470px) {
+  section {
+    padding: 30px 30px 50px;
+  }
+}
+@media screen and (max-width: 375px) {
+  section {
+    padding: 30px 20px 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+}

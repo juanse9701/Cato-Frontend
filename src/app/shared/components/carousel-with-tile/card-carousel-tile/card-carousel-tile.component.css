@@ -1,0 +1,18 @@
+.card {
+  background: white;
+  border: 1px solid lightgray;
+}
+.card img {
+  width: 100%;
+  object-fit: contain;
+}
+.card .title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 15px 0;
+}
+.card .description {
+  font-size: 14px;
+  padding: 10px 15px;
+}

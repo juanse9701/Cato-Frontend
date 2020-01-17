@@ -1,5 +1,14 @@
-<div class="card">
-  <img [src]="img" [alt]="description" />
-  <h3>{{ description | uppercase }}</h3>
-  <p>{{ client }}</p>
+<div *ngIf="typeStyle === 'cuadrado'" class="card cuadrado">
+  <img [src]="data.img" [alt]="data.description" />
+  <div class="contenido">
+    <h3>{{ data.description | uppercase }}</h3>
+    <p>{{ data.title }}</p>
+  </div>
+</div>
+<div *ngIf="typeStyle === 'redondo'" class="card">
+  <img [src]="data.img" [alt]="data.description" />
+  <div class="contenido">
+    <h3>{{ data.description | uppercase }}</h3>
+    <p>{{ data.title }}</p>
+  </div>
 </div>

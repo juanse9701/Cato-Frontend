@@ -1,0 +1,190 @@
+.tarjeta-seccion {
+  background: white;
+}
+.tarjeta-seccion::after {
+  content: '';
+  height: 2px;
+  min-width: 100%;
+  padding: 0 calc(50% - 40px);
+  margin: 0 40px;
+  border-bottom: 1px solid lightgray;
+}
+:host:last-child .tarjeta-seccion::after {
+  border-bottom: none;
+}
+.tarjeta-parte-visible {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'info img'
+    'botones botones';
+  padding: 40px 50px;
+}
+.tarjeta-titulo {
+  color: var(--main-red);
+  margin-bottom: 15px;
+  font-size: 27px;
+}
+.tarjeta-subtitulo {
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.tarjeta-subtitulo::after {
+  margin-top: 20px;
+  display: block;
+  content: '';
+  width: 80px;
+  border-bottom: 1px solid lightgray;
+}
+.tarjeta-info {
+  grid-area: info;
+}
+.tarjeta-imagen {
+  grid-area: img;
+  padding: 10px 20px;
+  align-self: center;
+}
+.tarjeta-imagen img {
+  width: 100%;
+}
+
+.tarjeta-botones {
+  grid-area: botones;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.tarjeta-botones > div {
+  margin: 5px;
+  cursor: pointer;
+}
+.tarjeta-botones .btn-2.active .check,
+.tarjeta-botones .btn-1.active .check {
+  color: green;
+}
+/* Estilos botón tipo 1*/
+.tarjeta-botones .btn-1 {
+  background: var(--main-red);
+  padding: 15px 25px;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.tarjeta-botones .btn-1 img {
+  width: 15px;
+  margin-left: 15px;
+}
+.tarjeta-botones .btn-1 span,
+.tarjeta-botones .btn-2 span {
+  margin-right: 10px;
+}
+
+/* Estilos botón tipo 2*/
+.tarjeta-botones .btn-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 18px 50px 18px;
+  padding: 5px 10px;
+  border: none;
+  width: 150px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease-in;
+}
+.tarjeta-botones .btn-2.active {
+  transform: scale(1.032);
+  box-shadow: 0 2px 5px 0 rgba(35, 119, 25, 0.8), 0 4px 10px 0 rgba(26, 119, 29, 0.68);
+}
+
+.tarjeta-botones .btn-2 .check {
+  transition: color 0.25s ease-in;
+  width: 16px;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+}
+.tarjeta-botones .btn-2 span {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1em;
+}
+.tarjeta-botones .btn-2 .background {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  height: 100%;
+  justify-self: end;
+  opacity: 0.2;
+  /* filter: grayscale(100%); */
+}
+.tarjeta-botones .btn-2 .arrow {
+  width: 16px;
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  justify-self: end;
+}
+
+.tarjeta-parte-no-visible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.tarjeta-contenido {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .tarjeta-parte-visible {
+    padding: 40px 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'info'
+      'img'
+      'botones';
+  }
+  .tarjeta-imagen {
+    padding: 20px 80px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .tarjeta-parte-visible {
+    padding: 40px 40px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .tarjeta-parte-visible {
+    padding: 40px 40px;
+  }
+  .tarjeta-imagen {
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .tarjeta-parte-visible {
+    padding: 35px 30px;
+  }
+  .tarjeta-imagen {
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
+}

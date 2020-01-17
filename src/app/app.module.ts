@@ -2,21 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
-import { HomeComponent } from './core/modules/home/home.component';
-import { DevelopmentCardComponent } from './shared/components/development-card/development-card.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { NavbarModule } from './shared/components/navbar/navbar.module';
+import { FooterModule } from './shared/components/footer/footer.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    HomeComponent,
-    DevelopmentCardComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, FooterModule, NavbarModule, AppRoutingModule, RouterModule],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

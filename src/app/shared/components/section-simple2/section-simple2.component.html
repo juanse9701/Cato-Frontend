@@ -1,0 +1,6 @@
+<section>
+  <h2 class="titulo">{{ data.title }}</h2>
+  <div class="container-grid">
+    <app-card-color *ngFor="let item of data.data" [data]="item"></app-card-color>
+  </div>
+</section>

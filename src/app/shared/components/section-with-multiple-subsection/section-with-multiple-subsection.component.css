@@ -1,0 +1,33 @@
+section {
+  padding: 50px 80px 60px;
+  background: white;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 60px 50px;
+  }
+}
+@media screen and (max-width: 568px) {
+  section {
+    padding: 40px 40px 50px;
+  }
+}
+@media screen and (max-width: 470px) {
+  section {
+    padding: 40px 25px 50px;
+  }
+}
+@media screen and (max-width: 375px) {
+  section {
+    padding: 30px 15px 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+}

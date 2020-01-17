@@ -1,0 +1,38 @@
+<main>
+  <div class="media">
+    <img src="assets/img/code.jpg" alt="" />
+  </div>
+  <div class="info">
+    <h2>Datos de contacto</h2>
+    <div class="item">
+      <p class="item-name"><i class="fas fa-location-arrow"></i>Dirección</p>
+      <p class="item-value">CL. 45A # 53-51 Villavicencio – Meta - Colombia</p>
+    </div>
+    <div class="item">
+      <p class="item-name"><i class="fas fa-phone-alt"></i>Teléfono</p>
+      <p class="item-value">Tel: (57) (8) 6741115 Cel: 3144816215 - 3102836520</p>
+    </div>
+    <div class="item">
+      <p class="item-name"><i class="fas fa-envelope"></i>Correo electrónico</p>
+      <p class="item-value">contacto@grupocato.co</p>
+    </div>
+  </div>
+  <form action="">
+    <h2>Comunicate con nosotros</h2>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <label for="email">Correo electrónico</label>
+    <input type="email" name="email" placeholder="usario@usario.com" />
+    <label for="asunto">Asunto</label>
+    <select name="asunto" id="asunto">
+      <option value="peticion">Petición</option>
+      <option value="queja">Queja</option>
+    </select>
+    <label for="contenido">Sugerencia y/o petición (Máximo 1000 palabras)</label>
+    <textarea name="contenido" id="contenido" cols="30" rows="5"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <div class="map">
+    <app-map></app-map>
+  </div>
+</main>

@@ -1,0 +1,5 @@
+<section [ngStyle]="{ background: background }">
+  <h2 class="titulo">{{ data.title }}</h2>
+  <p class="descripcion">{{ data.description }}</p>
+  <app-sector *ngFor="let item of data.items" [sector]="item"></app-sector>
+</section>
