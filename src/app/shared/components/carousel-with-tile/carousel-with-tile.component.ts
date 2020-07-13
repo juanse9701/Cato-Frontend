@@ -1,13 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import 'hammerjs';
 
 @Component({
   selector: 'app-carousel-with-tile',
   templateUrl: './carousel-with-tile.component.html',
-  styleUrls: ['./carousel-with-tile.component.css']
+  styleUrls: ['./carousel-with-tile.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CarouselWithTileComponent implements OnInit {
+export class CarouselWithTileComponent implements OnInit, AfterViewInit {
   @Input() data: any[];
 
   carouselTileConfig: NguCarouselConfig = {
@@ -21,7 +22,11 @@ export class CarouselWithTileComponent implements OnInit {
     interval: { timing: 4500 },
     animation: 'lazy'
   };
-  constructor() {}
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {}
+
+  ngAfterViewInit() {
+    this.cdr.detectChanges();
+  }
 }

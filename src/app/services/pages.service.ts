@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Pagina } from '../shared/components/page-layout/page-layout.component';
+import { Apollo } from 'apollo-angular';
+import { QUERYGENERAL } from '../core/graphql/Query';
+import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+import { Page } from '../core/interface/page.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -2757,10 +2762,22 @@ hardware que brinden solución a sus necesidades`
       url: 'formacion'
     }
   ];
-  constructor() {}
+  constructor(private apollo: Apollo) {}
 
   getHome(): any[] {
     return this.home;
+  }
+
+  getPage(slug: string, lang: string = 'ES'): Observable<Page> {
+    return this.apollo.query({
+      query: QUERYGENERAL,
+      variables: {
+        slug,
+        lang
+      }
+    }).pipe(
+      map( (response: any) => response.data.page)
+    );
   }
 
   getNosotros(): any[] {

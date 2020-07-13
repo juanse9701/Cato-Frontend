@@ -15,5 +15,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.home = this.pagesService.getHome();
+    this.getHome();
+  }
+
+  getHome() {
+    this.pagesService.getPage('inicio', 'ES').subscribe();
   }
 }

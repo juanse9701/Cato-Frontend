@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  uri: 'https://gqlcato.herokuapp.com/graphql'
+  uri: 'https://gqlcato.herokuapp.com/graphql/'
 };
