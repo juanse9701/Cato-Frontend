@@ -1,6 +1,6 @@
 <section>
   <h2 class="titulo">{{ section?.title || '' }}</h2>
-  <p class="descripcion">{{ section?.subtitle }}</p>
+  <p class="descripcion">{{ section?.description }}</p>
   <div class="contenedor">
     <app-carousel-with-tile [posts]="section?.posts"></app-carousel-with-tile>
   </div>

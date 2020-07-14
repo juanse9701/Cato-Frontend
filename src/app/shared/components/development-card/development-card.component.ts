@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-development-card',
@@ -6,16 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./development-card.component.css']
 })
 export class DevelopmentCardComponent implements OnInit {
-  @Input() data: Development;
+  @Input() post: Post;
   @Input() typeStyle: string;
 
   constructor() {}
 
   ngOnInit() {}
-}
-
-interface Development {
-  description: string;
-  title: string;
-  img: string;
 }

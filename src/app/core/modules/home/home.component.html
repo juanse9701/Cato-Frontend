@@ -3,7 +3,7 @@
 
   <ng-container *ngFor="let item of home">
     <div [ngSwitch]="item.componentName">
-      <app-section-simple *ngSwitchCase="'section-simple'" [data]="item"></app-section-simple>
+      <!-- <app-section-simple *ngSwitchCase="'section-simple'" [data]="item"></app-section-simple> -->
       <app-section-with-multiple-subsection
         *ngSwitchCase="'section-with-multiple-subsection'"
         [data]="item"
@@ -16,8 +16,8 @@
       <app-section-with-carousel1 *ngSwitchCase="'section-with-carousel1'" [section]="section"></app-section-with-carousel1>
       <app-section-with-scroll *ngSwitchCase="'section-with-scroll'" [section]="section"></app-section-with-scroll>
       <app-section-with-carousel2 *ngSwitchCase="'section-with-carousel2'" [section]="section"></app-section-with-carousel2>
-      <!-- <app-section-simple *ngSwitchCase="'section-simple'" [data]="item"></app-section-simple>
-      <app-section-with-multiple-subsection
+      <app-section-simple *ngSwitchCase="'section-simple'" [section]="section"></app-section-simple>
+      <!-- <app-section-with-multiple-subsection
         *ngSwitchCase="'section-with-multiple-subsection'"
         [data]="item"
       ></app-section-with-multiple-subsection> -->
