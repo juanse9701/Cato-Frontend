@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PagesService } from 'src/app/services/pages.service';
+import { Page } from '../../interface/page.interface';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { PagesService } from 'src/app/services/pages.service';
 })
 export class HomeComponent implements OnInit {
   home: any[];
+  Home: Page;
   constructor(private title: Title, private pagesService: PagesService) {
     this.title.setTitle('Grupo CATO');
   }
@@ -18,7 +20,12 @@ export class HomeComponent implements OnInit {
     this.getHome();
   }
 
-  getHome() {
-    this.pagesService.getPage('inicio', 'ES').subscribe();
+  async getHome() {
+    try {
+      this.Home = await this.pagesService.getPage('inicio', 'ES').toPromise();
+      console.log(this.Home);
+    } catch (e) {
+      console.log('error: ' + e);
+    }
   }
 }

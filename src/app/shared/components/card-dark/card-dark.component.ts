@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-card-dark',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./card-dark.component.css']
 })
 export class CardDarkComponent implements OnInit {
-  @Input() data;
+  @Input() post: Post;
   @Input() index: number;
   @Output() changeActualIndex = new EventEmitter<number>();
   constructor() {}

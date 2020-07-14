@@ -1,11 +1,9 @@
 <div class="card">
   <div class="card-img-container">
-    <img [src]="data.img" alt="" />
+    <img [src]="post?.image || data.img" alt="" />
   </div>
   <div>
-    <h4>{{ data.title }}</h4>
-    <p class="content">
-      {{ data.description }}
-    </p>
+    <h4>{{ post?.title || data.title }}</h4>
+    <p [innerHTML]="post?.description || data.description" class="content"></p>
   </div>
 </div>

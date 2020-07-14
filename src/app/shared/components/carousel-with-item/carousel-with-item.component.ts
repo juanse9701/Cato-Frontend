@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import 'hammerjs';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-carousel-with-item',
@@ -9,6 +10,7 @@ import 'hammerjs';
 })
 export class CarouselWithItemComponent implements OnInit {
   @Input() data: any[];
+  @Input() posts: Post[];
 
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },

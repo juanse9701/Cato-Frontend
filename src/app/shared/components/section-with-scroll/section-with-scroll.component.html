@@ -1,11 +1,11 @@
 <section class="">
   <div class="info-container">
-    <h2 class="title">{{ itemActual.title }}</h2>
-    <p class="description">{{ itemActual.description }}</p>
+    <h2 class="title">{{ itemActual?.title }}</h2>
+    <p [innerHTML]="itemActual?.description" class="description"></p>
   </div>
   <div class="items-container">
-    <div class="card-container" *ngFor="let item of data.items; let i = index">
-      <app-card-dark [data]="item" [index]="i" (changeActualIndex)="cambiarActual($event)"></app-card-dark>
+    <div class="card-container" *ngFor="let post of section?.posts; let i = index">
+      <app-card-dark [post]="post" [index]="i" (changeActualIndex)="cambiarActual($event)"></app-card-dark>
     </div>
   </div>
 </section>

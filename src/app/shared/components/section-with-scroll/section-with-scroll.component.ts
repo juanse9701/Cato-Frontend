@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Section } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-section-with-scroll',
@@ -6,15 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section-with-scroll.component.css']
 })
 export class SectionWithScrollComponent implements OnInit {
-  @Input() data: any;
+  @Input() section: Section;
   itemActual: any;
 
   constructor() {}
 
   ngOnInit() {
-    this.itemActual = this.data.items[0];
+    this.itemActual = this.section.posts[0] || {};
   }
+
   cambiarActual(index: number) {
-    this.itemActual = this.data.items[index];
+    this.itemActual = this.section.posts[index];
   }
+
 }
