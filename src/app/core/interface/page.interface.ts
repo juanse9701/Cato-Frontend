@@ -20,6 +20,7 @@ export interface Section {
     color: string;
     posts: Post[];
     title: string;
+    subtitle: string;
     created: string;
     updated: string;
     component: string;

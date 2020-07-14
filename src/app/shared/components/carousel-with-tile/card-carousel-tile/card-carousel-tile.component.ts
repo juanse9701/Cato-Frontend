@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-card-carousel-tile',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card-carousel-tile.component.css']
 })
 export class CardCarouselTileComponent implements OnInit {
-  @Input() data;
+  @Input() post: Post;
   constructor() {}
 
   ngOnInit() {}
