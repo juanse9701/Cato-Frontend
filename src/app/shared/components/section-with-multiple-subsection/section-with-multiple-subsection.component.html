@@ -1,5 +1,5 @@
 <section [ngStyle]="{ background: background }">
-  <h2 class="titulo">{{ data.title }}</h2>
-  <p class="descripcion">{{ data.description }}</p>
-  <app-sector *ngFor="let item of data.items" [sector]="item"></app-sector>
+  <h2 class="titulo">{{ section?.title }}</h2>
+  <p class="descripcion">{{ section?.description }}</p>
+  <app-sector *ngFor="let post of section?.posts" [sector]="post"></app-sector>
 </section>

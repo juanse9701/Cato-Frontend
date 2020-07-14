@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-join-us',
@@ -6,25 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./join-us.component.css']
 })
 export class JoinUsComponent implements OnInit {
-  // @Input() data: any;
 
-  data = {
-    title: 'Colabora con nosotros',
-    subtitle: 'Juntos podemos crecer',
-    description: 'En Grupo CATO estamos buscando los siguientes perfiles',
-    roles: [
-      {
-        title: 'Desarollo de sosftware'
-      },
-      {
-        title: 'Producción multimedia'
-      },
-      {
-        title: 'Equipos interdisciplinarios'
-      }
-    ]
-  };
-  constructor() {}
+  @Input() title: string;
+  @Input() description: string;
+  @Input() posts: Post[];
+  constructor() {
+    this.title = 'Esperando un titulo...';
+    this.description = 'Esperando una descripción...';
+    this.posts = [];
+  }
 
   ngOnInit() {}
 }

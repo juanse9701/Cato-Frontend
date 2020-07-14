@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Renderer2 } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-sector',
@@ -6,8 +7,8 @@ import { Component, Input, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./sector.component.css']
 })
 export class SectorComponent implements OnInit {
-  @Input() sector: any;
-  buttonText: string = 'Ver más';
+  @Input() sector: Post;
+  buttonText = 'Ver más';
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {}

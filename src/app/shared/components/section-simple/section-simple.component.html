@@ -6,7 +6,7 @@
     <p class="descripcion">{{ section?.description }}</p>
     <div class="cards">
       <app-development-card
-        *ngFor="let post of section.posts"
+        *ngFor="let post of section?.posts"
         [post]="post"
         [typeStyle]="'redondo'"
       ></app-development-card>

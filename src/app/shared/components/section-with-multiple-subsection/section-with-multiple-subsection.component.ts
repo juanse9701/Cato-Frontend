@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Section } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-section-with-multiple-subsection',
@@ -6,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section-with-multiple-subsection.component.css']
 })
 export class SectionWithMultipleSubsectionComponent implements OnInit {
-  @Input() data;
-  @Input() background;
+  @Input() section: Section;
+  @Input() background: string;
   constructor() {}
 
   ngOnInit() {}
