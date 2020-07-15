@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PagesService } from 'src/app/services/pages.service';
 import { Page } from '../../interface/page.interface';
+import { NabvarService } from 'src/app/shared/components/navbar/nabvar.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +13,11 @@ import { Page } from '../../interface/page.interface';
 export class HomeComponent implements OnInit {
   home: any[];
   Home: Page;
-  constructor(private title: Title, private pagesService: PagesService) {
+  language: string;
+
+  constructor(private title: Title, private pagesService: PagesService, private navbarService: NabvarService) {
     this.title.setTitle('Grupo CATO');
+    this.navbarService.language$.pipe(take(1)).subscribe( lang => this.language = lang);
   }
 
   ngOnInit() {
@@ -22,8 +27,7 @@ export class HomeComponent implements OnInit {
 
   async getHome() {
     try {
-      this.Home = await this.pagesService.getPage('inicio', 'ES').toPromise();
-      console.log(this.Home);
+      this.Home = await this.pagesService.getPage('inicio', this.language).toPromise();
     } catch (e) {
       console.log('error: ' + e);
     }

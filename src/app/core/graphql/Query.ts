@@ -5,3 +5,12 @@ export const QUERYGENERAL = gql`
         page(slug: $slug, lang: $lang )
     }
 `;
+
+export const QUERYLANGUAGES = gql`
+    query getLanguages {
+        languages {
+            name
+            abbreviation
+        }
+    }
+`;

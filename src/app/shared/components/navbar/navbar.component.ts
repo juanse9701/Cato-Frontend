@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { filter, take } from 'rxjs/operators';
 import { NabvarService } from './nabvar.service';
 import { FormControl } from '@angular/forms';
+import { Languages } from 'src/app/core/interface/language.interface';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -13,6 +14,7 @@ export class NavbarComponent implements OnInit {
   tipo: string;
   open: boolean = false;
   sticky: boolean;
+  languages: Languages;
   language: FormControl;
   menu: any[] = [
     {
@@ -62,7 +64,6 @@ export class NavbarComponent implements OnInit {
     private route: ActivatedRoute,
     private navbarService: NabvarService
   ) {
-    this.getLanguage();
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
       console.log(this.location.path());
       if (this.location.path() === '') {
@@ -76,6 +77,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getLanguages();
+    this.getLanguage();
   }
   isActive(instruction: any[]): boolean {
     // Set the second parameter to true if you want to require an exact match.
@@ -111,6 +114,14 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  async getLanguages() {
+    try {
+      this.languages = await this.navbarService.getLanguages().toPromise();
+    } catch (e) {
+      console.log('error: ' + e);
+    }
+  }
+
   async getLanguage() {
     this.navbarService.language$.pipe(
       take(1)
@@ -118,6 +129,7 @@ export class NavbarComponent implements OnInit {
       this.language = new FormControl(lang || 'ES');
     });
   }
+
 
   setLanguage() {
     this.navbarService.changeLanguage(this.language.value);
