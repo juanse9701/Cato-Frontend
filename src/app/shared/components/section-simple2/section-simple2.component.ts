@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Section } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-section-simple2',
@@ -6,8 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section-simple2.component.css']
 })
 export class SectionSimple2Component implements OnInit {
-  @Input() data: any;
+  @Input() section: Section;
+  style = {};
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.style = {
+      'background-color': this.section.color
+    };
+  }
 }

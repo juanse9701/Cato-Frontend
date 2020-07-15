@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Section } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-section-text-grid',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section-text-grid.component.css']
 })
 export class SectionTextGridComponent implements OnInit {
-  @Input() data: any;
+  @Input() section: Section;
   constructor() {}
 
   ngOnInit() {}

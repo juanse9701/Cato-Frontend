@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-card-color',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card-color.component.css']
 })
 export class CardColorComponent implements OnInit {
-  @Input() data: any;
+  @Input() post: Post;
   constructor() {}
 
   ngOnInit() {}

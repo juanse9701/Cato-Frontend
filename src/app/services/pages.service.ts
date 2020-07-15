@@ -4,371 +4,130 @@ import { Apollo } from 'apollo-angular';
 import { QUERYGENERAL } from '../core/graphql/Query';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { Page } from '../core/interface/page.interface';
+import { Page, Section } from '../core/interface/page.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PagesService {
-  // Información del home
-  private clientesHome: any = {
-    componentName: 'section-with-multiple-subsection',
-    title: 'Clientes',
-    description: 'Organizaciones que confiaron en Grupo CATO para potenciar su creciemiento a nivel tecnológico.',
-    items: [
-      {
-        nombre: 'sector privador',
-        clientes: [
-          {
-            img: 'assets/img/unicentro.png',
-            title: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            title: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            title: 'Llanocentro'
-          },
-          {
-            img: 'assets/img/unicentro.png',
-            title: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            title: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            title: 'Llanocentro'
-          }
-        ]
-      },
-      {
-        nombre: 'sector público',
-        clientes: [
-          {
-            img: 'assets/img/unicentro.png',
-            title: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            title: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            title: 'Llanocentro'
-          },
-          {
-            img: 'assets/img/unicentro.png',
-            title: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            title: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            title: 'Llanocentro'
-          }
-        ]
-      },
-      {
-        nombre: "ong's",
-        clientes: [
-          {
-            img: 'assets/img/unicentro.png',
-            title: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            title: 'Congente'
-          },
-          {
-            img: 'assets/img/llanocentro.png',
-            title: 'Llanocentro'
-          },
-          {
-            img: 'assets/img/unicentro.png',
-            title: 'Unicentro'
-          },
-          {
-            img: 'assets/img/congente.png',
-            title: 'Congente'
-          },
-          {
-            img: 'assets/img/realityapp.png',
-            title: 'Llanocentro'
-          }
-        ]
-      }
-    ]
-  };
-  private casosDeExitoHome: any = {
-    componentName: 'section-with-carousel2',
-    title: 'Casos de exito',
-    description: 'Empresas que confiaron en Grupo CATO para potenciar su creciemiento nivel tecnológico.',
-    items: [
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Vichada',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Vichada',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Vichada',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Vichada',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Guainia',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Meta',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Cundinamarca',
-        img: 'assets/img/vivedigitalvichada.png'
-      },
-      {
-        title: 'Implementación total de vive digital 2015',
-        description: 'Departamento del Atlantico',
-        img: 'assets/img/vivedigitalvichada.png'
-      }
-    ]
-  };
-  private lineasTecnologicasHome: any = {
-    componentName: 'section-with-scroll',
-    title: 'Lineas Tecnológicas',
-    description: '',
-    items: [
-      {
-        title: 'Innovaciones y aplicaciones',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur aliquid incidunt quo. Assumenda sequi voluptatem id. Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam ducimus inventore, obcaecati tempore?',
-        img: 'assets/img/innovacion.png'
-      },
-      {
-        title: 'Fábrica de software',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur aliquid incidunt quo. Assumenda sequi voluptatem id. Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam ducimus inventore, obcaecati tempore?',
-        img: 'assets/img/pc.png'
-      },
-      {
-        title: 'Distribución de hardware',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur aliquid incidunt quo. Assumenda sequi voluptatem id. Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam ducimus inventore, obcaecati tempore?',
-        img: 'assets/img/hardware.png'
-      },
-      {
-        title: 'Gestión de proyectos',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur aliquid incidunt quo. Assumenda sequi voluptatem id. Incidunt, blanditiis architecto at doloribus id quasi ipsum, ipsam ducimus inventore, obcaecati tempore?',
-        img: 'assets/img/gestion.png'
-      }
-    ]
-  };
-  private desarrollosDeAutoriaHome: any = {
-    componentName: 'section-simple',
-    title: 'Desarrollos de autoria',
-    type: 'doble',
-    typeStyle: 'redondo',
-    description: 'Estos son proyectos desarrollados por Grupo CATO que te invitamos a conocer',
-    items: [
-      {
-        description: 'Gestor de realidad virtual y aumentada',
-        title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
-      },
-      {
-        description: 'Gestor de realidad virtual y aumentada',
-        title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
-      },
-      {
-        description: 'Gestor de realidad virtual y aumentada',
-        title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
-      }
-    ]
-  };
-  private capacidadesHome: any = {
-    componentName: 'section-with-carousel1',
-    title: 'Perfil de capacidades',
-    description: '',
-    items: [
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      },
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      },
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      },
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      },
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      },
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      },
-      {
-        img: 'assets/img/goggles.png',
-        description: 'Más de 200 contenidos de Realidad Virtual para el departamento de Cundinamarca.'
-      }
-    ]
-  };
-  private home: any[] = [
-    this.capacidadesHome,
-    this.lineasTecnologicasHome,
-    this.casosDeExitoHome,
-    this.desarrollosDeAutoriaHome,
-    this.clientesHome
-  ];
 
-  private clientesNosotros: any = {
+  private clientesNosotros: Section = {
     title: 'Clientes',
     description: '',
-    componentName: 'section-with-multiple-subsection',
-    items: [
+    component: 'section-with-multiple-subsection',
+    posts: [
       {
-        nombre: 'sector privador',
-        clientes: [
+        title: 'sector privador',
+        extraposts: [
           {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
+            image: 'assets/img/unicentro.png',
+            title: 'Unicentro'
           },
           {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
+            image: 'assets/img/congente.png',
+            title: 'Congente'
           },
           {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
+            image: 'assets/img/llanocentro.png',
+            title: 'Llanocentro'
           },
           {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
+            image: 'assets/img/unicentro.png',
+            title: 'Unicentro'
           },
           {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
+            image: 'assets/img/congente.png',
+            title: 'Congente'
           },
           {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
+            image: 'assets/img/llanocentro.png',
+            title: 'Llanocentro'
           }
         ]
       },
       {
-        nombre: 'sector público',
-        clientes: [
+        title: 'sector público',
+        extraposts: [
           {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
+            image: 'assets/img/unicentro.png',
+            title: 'Unicentro'
           },
           {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
+            image: 'assets/img/congente.png',
+            title: 'Congente'
           },
           {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
+            image: 'assets/img/llanocentro.png',
+            title: 'Llanocentro'
           },
           {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
+            image: 'assets/img/unicentro.png',
+            title: 'Unicentro'
           },
           {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
+            image: 'assets/img/congente.png',
+            title: 'Congente'
           },
           {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
+            image: 'assets/img/llanocentro.png',
+            title: 'Llanocentro'
           }
         ]
       },
       {
-        nombre: "ong's",
-        clientes: [
+        title: "ong's",
+        extraposts: [
           {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
+            image: 'assets/img/unicentro.png',
+            title: 'Unicentro'
           },
           {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
+            image: 'assets/img/congente.png',
+            title: 'Congente'
           },
           {
-            img: 'assets/img/llanocentro.png',
-            nombre: 'Llanocentro'
+            image: 'assets/img/llanocentro.png',
+            title: 'Llanocentro'
           },
           {
-            img: 'assets/img/unicentro.png',
-            nombre: 'Unicentro'
+            image: 'assets/img/unicentro.png',
+            title: 'Unicentro'
           },
           {
-            img: 'assets/img/congente.png',
-            nombre: 'Congente'
+            image: 'assets/img/congente.png',
+            title: 'Congente'
           },
           {
-            img: 'assets/img/realityapp.png',
-            nombre: 'Llanocentro'
+            image: 'assets/img/realityapp.png',
+            title: 'Llanocentro'
           }
         ]
       }
     ]
   };
-  private desarrollosDeAutoriaNosotros: any = {
+  private desarrollosDeAutoriaNosotros: Section = {
     title: 'Desarrollos de autoria',
-    type: 'simple',
-    typeStyle: 'cuadrado',
-    componentName: 'section-with-collapsible-grid',
-    data: [
+    component: 'section-with-collapsible-grid',
+    posts: [
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       }
     ]
   };
@@ -376,94 +135,92 @@ export class PagesService {
     title: 'Desarrollos tecnológicos',
     type: 'doble',
     typeStyle: 'cuadrado',
-    componentName: 'section-with-collapsible-grid',
-    data: [
+    component: 'section-with-collapsible-grid',
+    posts: [
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       },
       {
         description: 'Gestor de realidad virtual y aumentada',
         title: 'Departamento de Cundinamarca',
-        img: 'assets/img/realityapp.png'
+        image: 'assets/img/realityapp.png'
       }
     ]
   };
-  private valoresNosotros: any = {
+  private valoresNosotros: Section = {
     title: 'Valores y principios coorporativos',
-    componentName: 'section-simple2',
-    data: [
+    component: 'section-simple2',
+    color: '#1414141',
+    posts: [
       {
         title: 'Igualdad',
         description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
           nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
           incidunt praesentium?`,
-        img: 'https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg',
-        color: 'grey'
+        image: 'https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg',
       },
       {
         title: 'Igualdad',
         description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
           nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
           incidunt praesentium?`,
-        img: 'https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg',
-        color: 'red'
+        image: 'https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg',
       },
       {
         title: 'Igualdad',
         description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magnam totam sed at eveniet, numquam
           nesciunt adipisci minima! Iusto nam, ratione dicta quis consequatur porro dignissimos blanditiis reiciendis
           incidunt praesentium?`,
-        img: 'https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg',
-        color: 'yellow'
+        image: 'https://fierros.com.co/wp-content/uploads/2018/06/trabajo-en-equipo-1500x800.jpg',
       }
     ]
   };
-  private nosotrosNosotros: any = {
+  private nosotrosNosotros: Section = {
     title: 'Nosotros',
-    componentName: 'section-with-text-grid',
-    info: [
+    component: 'section-with-text-grid',
+    posts: [
       {
         title: 'Objetivo general',
         description: `Contribuir de manera integral con la edificación del ecosistema social del cual
@@ -471,11 +228,6 @@ hagamos parte, promoviendo siempre el conocimiento, la innovación y el uso
 de tecnologías que sirvan como impulsores para que nuestro equipo humano,
 clientes y usuarios incrementen sus niveles de prosperidad, satisfacción
 individual y bienestar colectivo.`,
-        img: {
-          type: 'font',
-          source: 'fas fa-bullseye',
-          color: 'var(--main-red)'
-        }
       },
       {
         title: 'Misión',
@@ -486,11 +238,6 @@ productivo y la generación de conocimiento a través de la integración de un
 equipo humano innovador, calificado y altamente comprometido en la
 consecución del logro de resultados y la generación de modelos colaborativos
 óptimos para la satisfacción del cliente.`,
-        img: {
-          type: 'font',
-          source: 'fas fa-map-signs',
-          color: 'var(--main-red)'
-        }
       },
       {
         title: 'Política de calidad',
@@ -499,11 +246,6 @@ calidad es la satisfacción total del cliente, por esta razón integramos al mej
 equipo humano capaz de liderar grandes retos que involucren diversas áreas
 del conocimiento y múltiples parámetros y estándares de calidad que
 garanticen la consecución del éxito.`,
-        img: {
-          type: 'font',
-          source: 'fas fa-award',
-          color: 'var(--main-red)'
-        }
       },
       {
         title: 'Visión',
@@ -513,11 +255,6 @@ modelos de negocios innovadores de alto impacto social, tecnológico y
 económico, capaces de impactar todo tipo de ecosistemas sociales los cuales
 cada vez demandan mayor calidad, confiabilidad, sencillez y limpieza en sus
 procesos del día a día.`,
-        img: {
-          type: 'font',
-          source: 'far fa-eye',
-          color: 'var(--main-red)'
-        }
       }
     ]
   };
@@ -529,14 +266,14 @@ procesos del día a día.`,
     this.desarrollosTecnologicosNosotros
   ];
 
-  private innovacion: Pagina = {
+  private innovacion: any = {
     id: 'innovacion',
     title: 'Innovación y aplicaciones',
     description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    img: 'assets/img/aplicaciones.png',
+    image: 'assets/img/aplicaciones.png',
     sections: [
       {
         title: 'Realidad virtual',
@@ -544,7 +281,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -593,15 +330,14 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
             background: '#303030',
             color: 'white',
-            img:
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
+            image:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
               source: 'fas fa-angle-double-right'
@@ -616,7 +352,7 @@ nostrud exerci tation.`,
             contenido: 'aplisaber',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -632,7 +368,7 @@ nostrud exerci tation.`,
             contenido: 'sasda',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -648,7 +384,7 @@ nostrud exerci tation.`,
             contenido: 'sitgan',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -664,7 +400,7 @@ nostrud exerci tation.`,
             contenido: 'electus',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -780,7 +516,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
@@ -830,48 +566,48 @@ nostrud exerci tation.`,
             estilo: 3,
             items: [
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               }
             ]
@@ -924,7 +660,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -959,7 +695,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [],
         data: [
           {
@@ -970,14 +706,14 @@ hardware que brinden solución a sus necesidades`
       }
     ]
   };
-  private proyectos: Pagina = {
+  private proyectos: any = {
     id: 'proyectos',
     title: 'Gestión de proyectos',
     description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    img: 'assets/img/aplicaciones.png',
+    image: 'assets/img/aplicaciones.png',
     sections: [
       {
         title: 'Realidad virtual',
@@ -985,7 +721,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -1034,14 +770,14 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
             background: '#303030',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1057,7 +793,7 @@ nostrud exerci tation.`,
             contenido: 'aplisaber',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1073,7 +809,7 @@ nostrud exerci tation.`,
             contenido: 'sasda',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1089,7 +825,7 @@ nostrud exerci tation.`,
             contenido: 'sitgan',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1105,7 +841,7 @@ nostrud exerci tation.`,
             contenido: 'electus',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1221,7 +957,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
@@ -1271,48 +1007,48 @@ nostrud exerci tation.`,
             estilo: 3,
             items: [
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               }
             ]
@@ -1365,7 +1101,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -1400,7 +1136,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [],
         data: [
           {
@@ -1411,14 +1147,14 @@ hardware que brinden solución a sus necesidades`
       }
     ]
   };
-  private software: Pagina = {
+  private software: any = {
     id: 'software',
     title: 'Fábrica de software',
     description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    img: 'assets/img/aplicaciones.png',
+    image: 'assets/img/aplicaciones.png',
     sections: [
       {
         title: 'Realidad virtual',
@@ -1426,7 +1162,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -1475,14 +1211,14 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
             background: '#303030',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1498,7 +1234,7 @@ nostrud exerci tation.`,
             contenido: 'aplisaber',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1514,7 +1250,7 @@ nostrud exerci tation.`,
             contenido: 'sasda',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1530,7 +1266,7 @@ nostrud exerci tation.`,
             contenido: 'sitgan',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1546,7 +1282,7 @@ nostrud exerci tation.`,
             contenido: 'electus',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1662,7 +1398,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
@@ -1712,48 +1448,48 @@ nostrud exerci tation.`,
             estilo: 3,
             items: [
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               }
             ]
@@ -1806,7 +1542,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -1841,7 +1577,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [],
         data: [
           {
@@ -1852,14 +1588,14 @@ hardware que brinden solución a sus necesidades`
       }
     ]
   };
-  private hardware: Pagina = {
+  private hardware: any = {
     id: 'hardware',
     title: 'Hardware',
     description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    img: 'assets/img/aplicaciones.png',
+    image: 'assets/img/aplicaciones.png',
     sections: [
       {
         title: 'Realidad virtual',
@@ -1867,7 +1603,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -1916,14 +1652,14 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
             background: '#303030',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1939,7 +1675,7 @@ nostrud exerci tation.`,
             contenido: 'aplisaber',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1955,7 +1691,7 @@ nostrud exerci tation.`,
             contenido: 'sasda',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1971,7 +1707,7 @@ nostrud exerci tation.`,
             contenido: 'sitgan',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -1987,7 +1723,7 @@ nostrud exerci tation.`,
             contenido: 'electus',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -2103,7 +1839,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
@@ -2153,48 +1889,48 @@ nostrud exerci tation.`,
             estilo: 3,
             items: [
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               }
             ]
@@ -2247,7 +1983,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -2282,7 +2018,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [],
         data: [
           {
@@ -2293,14 +2029,14 @@ hardware que brinden solución a sus necesidades`
       }
     ]
   };
-  private formacion: Pagina = {
+  private formacion: any = {
     id: 'formacion',
     title: 'Formación',
     description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 diam nonummy nibh euismod tincidunt ut laoreet dolore
 magna aliquam erat volutpat.Ut wisi enim ad veniam, quis
 nostrud exerci tation.`,
-    img: 'assets/img/aplicaciones.png',
+    image: 'assets/img/aplicaciones.png',
     sections: [
       {
         title: 'Realidad virtual',
@@ -2308,7 +2044,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -2357,14 +2093,14 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
             contenido: 'Reality app',
             background: '#303030',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -2380,7 +2116,7 @@ nostrud exerci tation.`,
             contenido: 'aplisaber',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -2396,7 +2132,7 @@ nostrud exerci tation.`,
             contenido: 'sasda',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -2412,7 +2148,7 @@ nostrud exerci tation.`,
             contenido: 'sitgan',
             background: '#F8F8F8',
             color: 'black',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -2428,7 +2164,7 @@ nostrud exerci tation.`,
             contenido: 'electus',
             background: 'var(--main-red)',
             color: 'white',
-            img:
+            image:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png',
             imgIcono: {
               type: 'font',
@@ -2544,7 +2280,7 @@ nostrud exerci tation.`,
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 2,
@@ -2594,48 +2330,48 @@ nostrud exerci tation.`,
             estilo: 3,
             items: [
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               },
               {
-                img: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
+                image: 'https://www.solucionesorion.com/wp-content/uploads/2018/08/p-micro.png',
                 descripcion:
                   'Licenciamiento Microsoft: Windows, Office, Win server, SQL server, .Net framework, entre otros.'
               },
               {
-                img: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
+                image: 'https://i.blogs.es/9547d8/oracle-logo/450_1000.png',
                 descripcion: 'Licenciamiento Oracle: Base de datos, servidor web, Virtualizador, Java, entre otros. '
               }
             ]
@@ -2688,7 +2424,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [
           {
             estilo: 1,
@@ -2723,7 +2459,7 @@ hardware que brinden solución a sus necesidades`
         subtitle: 'Más de 20 marcas mundiales',
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo at modi, dolorem explicabo ratione doloribus adipisci ex, distinctio pariatur facere? Cupiditate aperiam repellendus architecto? Ipsa vitae accusantium amet ex.',
-        img: 'assets/img/red.png',
+        image: 'assets/img/red.png',
         buttons: [],
         data: [
           {
@@ -2765,7 +2501,7 @@ hardware que brinden solución a sus necesidades`
   constructor(private apollo: Apollo) {}
 
   getHome(): any[] {
-    return this.home;
+    return [];
   }
 
   getPage(slug: string, lang: string = 'ES'): Observable<Page> {

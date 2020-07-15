@@ -1,15 +1,15 @@
 <app-carousel-media [data]="data"></app-carousel-media>
-<ng-container *ngFor="let item of nosotros">
-  <div [ngSwitch]="item.componentName">
+<ng-container *ngFor="let section of nosotros">
+  <div [ngSwitch]="section?.component">
     <app-section-with-collapsible-grid
       *ngSwitchCase="'section-with-collapsible-grid'"
-      [data]="item"
+      [data]="section"
     ></app-section-with-collapsible-grid>
-    <app-section-text-grid *ngSwitchCase="'section-with-text-grid'" [data]="item"></app-section-text-grid>
-    <app-section-simple2 *ngSwitchCase="'section-simple2'" [data]="item"></app-section-simple2>
+    <app-section-text-grid *ngSwitchCase="'section-with-text-grid'" [section]="section"></app-section-text-grid> 
+    <app-section-simple2 *ngSwitchCase="'section-simple2'" [section]="section"></app-section-simple2>
     <app-section-with-multiple-subsection
       *ngSwitchCase="'section-with-multiple-subsection'"
-      [data]="item"
+      [section]="section"
       background="#F9F9F9"
     ></app-section-with-multiple-subsection>
   </div>

@@ -5,9 +5,7 @@ import {
   ElementRef,
   ViewChild,
   Renderer2,
-  HostListener,
-  ChangeDetectorRef,
-  ChangeDetectionStrategy
+  HostListener
 } from '@angular/core';
 
 @Component({
@@ -18,18 +16,18 @@ import {
 export class SectionWithCollapsibleGridComponent implements OnInit {
   @Input() data: any;
 
-  buttonText: string = 'Ver más';
-  showMore: boolean = true;
+  buttonText = 'Ver más';
+  showMore = true;
   lineas: number;
 
   @ViewChild('cards', { static: false }) cards: ElementRef;
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  onResize() {
     this.evaluateShowMore();
   }
 
-  constructor(private renderer: Renderer2, private changeRef: ChangeDetectorRef) {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
     switch (this.data.type) {
@@ -45,12 +43,7 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
     }
   }
 
-  ngAfterViewChecked(): void {
-    this.evaluateShowMore();
-    this.changeRef.detectChanges();
-  }
-
-  seeMore(element) {
+  seeMore(element: any) {
     if (element.style.maxHeight) {
       this.renderer.setStyle(element, 'max-height', element.scrollHeight + 'px');
       setTimeout(() => {
@@ -66,20 +59,18 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
     }
   }
 
-  /**
-   * fsgdrga
-   *
-   */
   evaluateShowMore() {
-    let _boxes = this.cards.nativeElement.children;
-    let box1 = _boxes[0];
-    let colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); //Number of Column;
-    let rowCnt = Math.ceil(_boxes.length / colCnt); //Number of Rows
-    if (rowCnt <= this.lineas) {
-      this.showMore = false;
-    }
-    if (rowCnt > this.lineas) {
-      this.showMore = true;
+    if (this.cards) {
+      const boxes = this.cards.nativeElement.children;
+      const box1 = boxes[0];
+      const colCnt = Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); // Number of Column;
+      const rowCnt = Math.ceil(boxes.length / colCnt); // Number of Rows
+      if (rowCnt <= this.lineas) {
+        this.showMore = false;
+      }
+      if (rowCnt > this.lineas) {
+        this.showMore = true;
+      }
     }
   }
 }

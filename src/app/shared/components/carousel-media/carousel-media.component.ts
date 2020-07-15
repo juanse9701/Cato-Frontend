@@ -1,13 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 // import 'hammerjs';
 
 @Component({
   selector: 'app-carousel-media',
   templateUrl: './carousel-media.component.html',
-  styleUrls: ['./carousel-media.component.css']
+  styleUrls: ['./carousel-media.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CarouselMediaComponent implements OnInit {
+export class CarouselMediaComponent implements AfterViewInit {
   @Input() data: any[];
 
   carouselTileConfig: NguCarouselConfig = {
@@ -21,7 +22,9 @@ export class CarouselMediaComponent implements OnInit {
     interval: { timing: 4500 },
     animation: 'lazy'
   };
-  constructor() {}
+  constructor(private cdr: ChangeDetectorRef) {}
 
-  ngOnInit() {}
+  ngAfterViewInit() {
+    this.cdr.detectChanges();
+  }
 }

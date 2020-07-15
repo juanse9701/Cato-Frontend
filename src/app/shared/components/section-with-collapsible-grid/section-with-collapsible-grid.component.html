@@ -1,7 +1,7 @@
 <section *ngIf="data.type === 'simple'" class="desarrollos blanco">
   <h2 class="titulo">{{ data.title }}</h2>
   <div class="cards simple" #cards>
-    <app-development-card *ngFor="let item of data.data" [data]="item" [typeStyle]="data.typeStyle">
+    <app-development-card *ngFor="let item of data.posts" [post]="item" [typeStyle]="data.typeStyle">
     </app-development-card>
   </div>
   <div *ngIf="showMore" class="mas-container">
@@ -11,7 +11,7 @@
 <section *ngIf="data.type === 'doble'" class="desarrollos blanco">
   <h2 class="titulo">{{ data.title }}</h2>
   <div class="cards doble" #cards>
-    <app-development-card *ngFor="let item of data.data" [data]="item" [typeStyle]="data.typeStyle">
+    <app-development-card *ngFor="let item of data.posts" [post]="item" [typeStyle]="data.typeStyle">
     </app-development-card>
   </div>
   <div *ngIf="showMore" class="mas-container">

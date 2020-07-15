@@ -4,26 +4,26 @@ export interface Tag {
 }
 
 export interface Post {
-    tags: Tag[];
-    type: string;
-    image: string;
+    tags?: Tag[];
+    type?: string;
+    image?: string;
     title: string;
-    created: string;
-    gallery: any[];
-    updated: string;
-    subtitle: string;
-    description: string;
+    created?: string;
+    gallery?: any[];
+    updated?: string;
+    subtitle?: string;
+    description?: string;
     external_url?: any;
-    extraposts: Post[];
+    extraposts?: Post[];
 }
 
 export interface Section {
-    color: string;
+    color?: string;
     posts: Post[];
     title: string;
-    description: string;
-    created: string;
-    updated: string;
+    description?: string;
+    created?: string;
+    updated?: string;
     component: string;
 }
 
