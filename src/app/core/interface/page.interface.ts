@@ -25,6 +25,7 @@ export interface Section {
     created?: string;
     updated?: string;
     component: string;
+    background_image?: string;
 }
 
 export interface Page {

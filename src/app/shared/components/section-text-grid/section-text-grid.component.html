@@ -1,7 +1,7 @@
 <div class="container">
-  <img src="assets/img/code.jpg" alt="" class="grey" />
+  <img [src]="section?.background_image" alt="" class="grey" />
   <section class="nosotros">
-    <h2 class="titulo claro">{{ section.title }}</h2>
+    <h2 class="titulo claro">{{ section?.title }}</h2>
     <article class="items">
       <div *ngFor="let item of section.posts" class="item">
         <div class="icono-titulo-contenedor">
@@ -14,7 +14,7 @@
           ></i> -->
           <h2>{{ item?.title }}</h2>
         </div>
-        <p>{{ item?.description }}</p>
+        <p [innerHTML]="item?.description"></p>
       </div>
     </article>
   </section>

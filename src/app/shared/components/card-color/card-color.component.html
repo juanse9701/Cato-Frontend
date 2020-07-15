@@ -16,7 +16,7 @@
     alt=""
   />
   <div class="contenido">
-    <h3 class="">{{ post.title }}</h3>
-    <p>{{ post.description }}</p>
+    <h3 class="">{{ post?.title }}</h3>
+    <p [innerHTML]="post?.description"></p>
   </div>
 </div>
