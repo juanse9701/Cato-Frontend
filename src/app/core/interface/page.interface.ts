@@ -14,6 +14,7 @@ export interface Post {
     subtitle: string;
     description: string;
     external_url?: any;
+    extraposts: Post[];
 }
 
 export interface Section {

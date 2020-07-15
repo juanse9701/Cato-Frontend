@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-card-logo',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card-logo.component.css']
 })
 export class CardLogoComponent implements OnInit {
-  @Input() data: any;
+  @Input() extrapost: Post;
 
   constructor() {}
 

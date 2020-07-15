@@ -43,9 +43,9 @@
       <div class="whatsapp-container">
         <i class="fab fa-whatsapp"></i>
       </div>
-      <select name="lang" id="">
-        <option value="es">Español</option>
-        <option value="en">Inglés</option>
+      <select (change)="setLanguage()" [formControl]="language" id="">
+        <option value="ES">Español</option>
+        <option value="EN">Inglés</option>
       </select>
     </div>
     <div class="menu-button" (click)="openMenu()">

@@ -1,7 +1,9 @@
 <article class="sector">
   <h3 class="titulo-sector">{{ sector.title }}</h3>
   <div class="logos-container" #container>
-    <!-- <app-card-logo *ngFor="let cliente of sector.clientes" [data]="cliente"></app-card-logo> -->
+    <ng-container *ngIf="sector?.extraposts">
+      <app-card-logo *ngFor="let cliente of sector?.extraposts" [extrapost]="cliente"></app-card-logo>
+    </ng-container>
   </div>
   <button (click)="seeMore(container)">{{ buttonText }}</button>
 </article>

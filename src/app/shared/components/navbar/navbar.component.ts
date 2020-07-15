@@ -1,7 +1,9 @@
 import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { filter, take } from 'rxjs/operators';
+import { NabvarService } from './nabvar.service';
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,6 +13,7 @@ export class NavbarComponent implements OnInit {
   tipo: string;
   open: boolean = false;
   sticky: boolean;
+  language: FormControl;
   menu: any[] = [
     {
       name: 'Innovación',
@@ -56,8 +59,10 @@ export class NavbarComponent implements OnInit {
     private router: Router,
     private location: Location,
     private renderer: Renderer2,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private navbarService: NabvarService
   ) {
+    this.getLanguage();
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
       console.log(this.location.path());
       if (this.location.path() === '') {
@@ -70,7 +75,8 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
   isActive(instruction: any[]): boolean {
     // Set the second parameter to true if you want to require an exact match.
     return this.router.isActive(this.router.createUrlTree(instruction), false);
@@ -103,5 +109,17 @@ export class NavbarComponent implements OnInit {
       this.renderer.addClass(this.line2.nativeElement, 'menu-button-line2-out');
       this.renderer.addClass(this.line3.nativeElement, 'menu-button-line3-out');
     }
+  }
+
+  async getLanguage() {
+    this.navbarService.language$.pipe(
+      take(1)
+    ).subscribe( lang => {
+      this.language = new FormControl(lang || 'ES');
+    });
+  }
+
+  setLanguage() {
+    this.navbarService.changeLanguage(this.language.value);
   }
 }

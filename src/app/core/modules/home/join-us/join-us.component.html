@@ -6,7 +6,7 @@
     </div>
     <h3>{{ description }}</h3>
     <div class="botones">
-      <button *ngFor="let post of posts">{{ post?.title }}</button>
+      <button *ngFor="let post of posts"><a [href]="post?.external_url"  target="blank">{{ post?.title }}</a></button>
     </div>
   </section>
 </div>

@@ -12,7 +12,10 @@
         [section]="section"
         [background]="section?.color"
       ></app-section-with-multiple-subsection>
-      <app-join-us *ngSwitchCase="'section-stacks'"></app-join-us>
+      <app-join-us *ngSwitchCase="'section-stacks'" 
+        [posts]="section?.posts" 
+        [title]="section?.title" 
+        [description]="section?.description"></app-join-us>
     </div>
   </ng-container>
 
