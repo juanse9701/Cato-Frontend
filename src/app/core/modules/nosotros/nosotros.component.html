@@ -3,7 +3,7 @@
   <div [ngSwitch]="section?.component">
     <app-section-with-collapsible-grid
       *ngSwitchCase="'section-with-collapsible-grid'"
-      [data]="section"
+      [section]="section"
     ></app-section-with-collapsible-grid>
     <app-section-text-grid *ngSwitchCase="'section-text-grid'" [section]="section"></app-section-text-grid> 
     <app-section-simple2 *ngSwitchCase="'section-simple2'" [section]="section"></app-section-simple2>

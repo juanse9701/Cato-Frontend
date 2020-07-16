@@ -28,7 +28,6 @@ export class NosotrosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.nosotros = this.pagesService.getNosotros();
     this.getPage();
   }
 

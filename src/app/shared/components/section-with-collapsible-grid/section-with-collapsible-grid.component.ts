@@ -5,16 +5,19 @@ import {
   ElementRef,
   ViewChild,
   Renderer2,
-  HostListener
+  HostListener,
+  AfterViewInit,
+  ChangeDetectorRef
 } from '@angular/core';
+import { Section } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-section-with-collapsible-grid',
   templateUrl: './section-with-collapsible-grid.component.html',
   styleUrls: ['./section-with-collapsible-grid.component.css']
 })
-export class SectionWithCollapsibleGridComponent implements OnInit {
-  @Input() data: any;
+export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewInit {
+  @Input() section: Section;
 
   buttonText = 'Ver más';
   showMore = true;
@@ -27,20 +30,15 @@ export class SectionWithCollapsibleGridComponent implements OnInit {
     this.evaluateShowMore();
   }
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    switch (this.data.type) {
-      case 'simple':
-        this.lineas = 1;
-        break;
-      case 'doble':
-        this.lineas = 2;
-        break;
-      default:
-        this.lineas = 1;
-        break;
-    }
+    this.lineas = this.section.posts.length > 5 ? 2 : 1;
+  }
+
+  ngAfterViewInit() {
+    this.evaluateShowMore();
+    this.cdr.detectChanges();
   }
 
   seeMore(element: any) {
