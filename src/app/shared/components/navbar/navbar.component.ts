@@ -14,8 +14,6 @@ export class NavbarComponent implements OnInit {
   tipo: string;
   open = false;
   sticky: boolean;
-  languages: Languages;
-  language: FormControl;
   menus = [
     {
       name: 'Inicio',
@@ -92,8 +90,6 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getLanguages();
-    this.getLanguage();
   }
  /*  isActive(instruction: any[]): boolean {
     // Set the second parameter to true if you want to require an exact match.
@@ -129,24 +125,4 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  async getLanguages() {
-    try {
-      this.languages = await this.navbarService.getLanguages().toPromise();
-    } catch (e) {
-      console.log('error: ' + e);
-    }
-  }
-
-  async getLanguage() {
-    this.navbarService.language$.pipe(
-      take(1)
-    ).subscribe( lang => {
-      this.language = new FormControl(lang || 'ES');
-    });
-  }
-
-
-  setLanguage() {
-    this.navbarService.changeLanguage(this.language.value);
-  }
 }

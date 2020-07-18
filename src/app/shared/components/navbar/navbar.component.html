@@ -48,18 +48,9 @@
       <div class="whatsapp-container">
         <i class="fab fa-whatsapp"></i>
       </div>
-      <select (change)="setLanguage()" [formControl]="language" id="">
-        
-        <ng-container *ngIf="languages; else notLanguages">
-          <option *ngFor="let lang of languages" [value]="lang?.abbreviation">{{lang?.name}}</option>
-        </ng-container>
 
-        <ng-template #notLanguages>
-          <option value="ES">Español</option>
-          <option value="EN">Inglés</option>
-        </ng-template>
-
-      </select>
+      <app-select-language [sticky]="sticky" [menu]="open"></app-select-language>
+      
     </div>
     <div class="menu-button" (click)="openMenu()">
       <div class="line1" #line1></div>

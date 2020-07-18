@@ -69,29 +69,6 @@ header.sticky .menu .menu-item > a.active {
 header.contacto {
   background: white;
 }
-header select {
-  background: none;
-  border-radius: 5px;
-  border: 1px solid black;
-  color: black;
-  padding: 4px;
-  margin-left: 12px;
-  background: none;
-  outline: none;
-}
-header.home select {
-  color: white;
-  border: 1px solid white;
-}
-header.menu-open select {
-  margin: 10px 20px;
-}
-header.sticky select,
-header.menu-open select {
-  color: white;
-  background: var(--dark);
-  border: 1px solid white;
-}
 
 .whatsapp-container {
   background: #008b00;

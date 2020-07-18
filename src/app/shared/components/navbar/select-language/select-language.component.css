@@ -1,0 +1,25 @@
+select {
+    background: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    padding: 4px;
+    margin-left: 12px;
+    background: none;
+    outline: none;
+}
+.home #select {
+    color: white;
+    border: 1px solid white;
+}
+
+#select.menu-open  {
+    margin: 10px 20px;
+}
+
+#select.sticky,
+#select.menu-open {
+    color: white;
+    background: var(--dark);
+    border: 1px solid white;
+}
