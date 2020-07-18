@@ -1,16 +1,16 @@
 <header [ngClass]="{ home: tipo === 'home', 'menu-open': open, contacto: tipo === 'contacto' }" id="header" #header>
   <div class="contenedor-logo">
     <ng-template [ngIf]="!sticky && !open" [ngIfElse]="logoBlanco">
-      <img src="assets/img/logo.png" alt="Grup tecnológico CATO" class="logo" (click)="navigate('/')" />
+      <img src="assets/img/logo.png" alt="Grup tecnológico CATO" class="logo" routerLink="/inicio" />
     </ng-template>
     <ng-template #logoBlanco>
-      <img src="assets/img/logo-blanco.png" alt="Grup tecnológico CATO" class="logo" (click)="navigate('/')" />
+      <img src="assets/img/logo-blanco.png" alt="Grup tecnológico CATO" class="logo" routerLink="/inicio" />
     </ng-template>
   </div>
   <div class="menu-container">
     <div [ngClass]="{ 'menu-open': open }" class="menu-aux" #menu>
       <ul class="menu">
-        <li class="menu-item">
+        <!-- <li class="menu-item">
           <a (click)="navigate('/')" routerLink="/">Inicio</a>
         </li>
         <li class="menu-item" [class.active]="isActive(['nosotros'])">
@@ -30,15 +30,20 @@
         </li>
         <li class="menu-item" [class.active]="isActive(['formacion'])">
           <a (click)="navigate('formacion')">Formación</a>
-        </li>
-        <li class="menu-item" [class.active]="isActive(['contacto'])">
-          <a (click)="navigate('contacto')">Contacto</a>
-          <ul class="sub-menu">
-            <li class="sub-menu-item"><a>Desarrollo de software</a></li>
-            <li class="sub-menu-item"><a>Producción multimedia</a></li>
-            <li class="sub-menu-item"><a>Equipos interdisciplinarios</a></li>
-          </ul>
-        </li>
+        </li> -->
+        <ng-container *ngFor="let item of menus">
+          <li class="menu-item">
+            <ng-container *ngIf="item?.children; else notChildren">
+              <a [routerLink]="item?.url" routerLinkActive="active">{{item?.name}}</a>
+              <ul class="sub-menu">
+                <li *ngFor="let child of item?.children" class="sub-menu-item"><a>{{child?.name}}</a></li>
+              </ul>
+            </ng-container>
+            <ng-template #notChildren>
+              <a [routerLink]="item?.url" routerLinkActive="active">{{item?.name}}</a>
+            </ng-template>
+          </li>
+        </ng-container>
       </ul>
       <div class="whatsapp-container">
         <i class="fab fa-whatsapp"></i>

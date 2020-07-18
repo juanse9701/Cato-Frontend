@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { filter, take } from 'rxjs/operators';
 import { NabvarService } from './nabvar.service';
 import { FormControl } from '@angular/forms';
@@ -12,22 +12,26 @@ import { Languages } from 'src/app/core/interface/language.interface';
 })
 export class NavbarComponent implements OnInit {
   tipo: string;
-  open: boolean = false;
+  open = false;
   sticky: boolean;
   languages: Languages;
   language: FormControl;
-  menu: any[] = [
+  menus = [
+    {
+      name: 'Inicio',
+      url: 'inicio'
+    },
+    {
+      name: 'Nosotros',
+      url: 'nosotros'
+    },
     {
       name: 'Innovación',
-      url: 'innovación'
+      url: 'innovacion'
     },
     {
       name: 'Software',
       url: 'software'
-    },
-    {
-      name: 'Hardware',
-      url: 'hardware'
     },
     {
       name: 'Hardware',
@@ -40,6 +44,18 @@ export class NavbarComponent implements OnInit {
     {
       name: 'Formación',
       url: 'formacion'
+    },
+    {
+      name: 'Contacto',
+      url: 'contacto',
+      children: [
+        {
+          name: 'Desarrollo de software'
+        },
+        {
+          name: 'Producción de multimedia'
+        }
+      ]
     }
   ];
   @ViewChild('header', { static: false }) header: ElementRef;
@@ -61,10 +77,9 @@ export class NavbarComponent implements OnInit {
     private router: Router,
     private location: Location,
     private renderer: Renderer2,
-    private route: ActivatedRoute,
     private navbarService: NabvarService
   ) {
-    this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
+    this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
       console.log(this.location.path());
       if (this.location.path() === '') {
         this.tipo = 'home';
@@ -80,7 +95,7 @@ export class NavbarComponent implements OnInit {
     this.getLanguages();
     this.getLanguage();
   }
-  isActive(instruction: any[]): boolean {
+ /*  isActive(instruction: any[]): boolean {
     // Set the second parameter to true if you want to require an exact match.
     return this.router.isActive(this.router.createUrlTree(instruction), false);
   }
@@ -93,7 +108,7 @@ export class NavbarComponent implements OnInit {
     this.renderer.addClass(this.line1.nativeElement, 'menu-button-line1-out');
     this.renderer.addClass(this.line2.nativeElement, 'menu-button-line2-out');
     this.renderer.addClass(this.line3.nativeElement, 'menu-button-line3-out');
-  }
+  } */
 
   openMenu() {
     this.open = !this.open;

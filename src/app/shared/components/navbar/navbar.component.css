@@ -60,10 +60,10 @@ header.sticky .menu .menu-item > a:hover {
 header.home .menu .menu-item > a {
   color: white;
 }
-header .menu .menu-item.active > a {
+header .menu .menu-item > a.active {
   color: var(--main-red);
 }
-header.sticky .menu .menu-item.active > a {
+header.sticky .menu .menu-item > a.active {
   color: red;
 }
 header.contacto {
@@ -334,7 +334,7 @@ header.menu-open .line3 {
   header.menu-open .menu .menu-item a {
     color: white;
   }
-  header.menu-open .menu .menu-item.active > a {
+  header.menu-open .menu .menu-item > a.active {
     color: var(--main-red);
   }
   header .menu .menu-item a {
