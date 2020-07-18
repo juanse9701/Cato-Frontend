@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter, take } from 'rxjs/operators';
@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   tipo: string;
   open = false;
   sticky: boolean;
+  @Input() lang: string;
   menus = [
     {
       name: 'Inicio',

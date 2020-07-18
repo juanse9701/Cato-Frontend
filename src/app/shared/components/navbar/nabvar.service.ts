@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Apollo } from 'apollo-angular';
 import { Languages } from 'src/app/core/interface/language.interface';
-import { QUERYLANGUAGES } from 'src/app/core/graphql/Query';
+import { QUERYLANGUAGES, QUERYINFOGENERAL } from 'src/app/core/graphql/Query';
 import { map } from 'rxjs/operators';
+import { GeneralInfo } from 'src/app/core/interface/general_info.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,14 @@ export class NabvarService {
       query: QUERYLANGUAGES
     }).pipe(
       map( (response: any) => response.data.languages)
+    );
+  }
+
+  getInfoGeneral(): Observable<GeneralInfo> {
+    return this.apollo.query({
+      query: QUERYINFOGENERAL
+    }).pipe(
+      map( (response: any) => response.data.general_info)
     );
   }
 }

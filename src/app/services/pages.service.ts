@@ -2216,7 +2216,7 @@ hardware que brinden solución a sus necesidades`
   };
   private techLines: Pagina[] = [this.innovacion, this.proyectos, this.software, this.hardware, this.formacion];
 
-  private menu: any[] = [
+ /*  private menu: any[] = [
     {
       name: 'Innovación',
       url: 'innovación'
@@ -2241,7 +2241,7 @@ hardware que brinden solución a sus necesidades`
       name: 'Formación',
       url: 'formacion'
     }
-  ];
+  ]; */
   constructor(private apollo: Apollo) {}
 
   getHome(): any[] {
@@ -2268,7 +2268,7 @@ hardware que brinden solución a sus necesidades`
     return null;
   }
 
-  getMenu(): any[] {
+  /* getMenu(): any[] {
     return this.menu;
-  }
+  } */
 }

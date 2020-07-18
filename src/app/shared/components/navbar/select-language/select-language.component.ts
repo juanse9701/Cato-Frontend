@@ -12,6 +12,7 @@ import { Languages } from 'src/app/core/interface/language.interface';
 export class SelectLanguageComponent implements OnInit {
   @Input() sticky: boolean;
   @Input() menu: boolean;
+  @Input() lang: string;
 
   languages: Languages;
   language: FormControl;
@@ -32,11 +33,12 @@ export class SelectLanguageComponent implements OnInit {
   }
 
   async getLanguage() {
-    this.navbarService.language$.pipe(
+    /* this.navbarService.language$.pipe(
       take(1)
     ).subscribe( lang => {
       this.language = new FormControl(lang || 'ES');
-    });
+    }); */
+    this.language = new FormControl(this.lang || 'ES');
   }
 
 
