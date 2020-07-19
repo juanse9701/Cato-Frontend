@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NabvarService } from './shared/components/navbar/nabvar.service';
-import { Observable } from 'rxjs';
 import { GeneralInfo } from './core/interface/general_info.interface';
+import { take } from 'rxjs/operators';
 
 
 @Component({
@@ -11,11 +11,11 @@ import { GeneralInfo } from './core/interface/general_info.interface';
 })
 export class AppComponent implements OnInit {
   title = 'ejercicio-uno';
-  lang$: Observable<string>;
+  lang: string;
   infoGeneral: GeneralInfo;
 
   constructor(private navbarService: NabvarService) {
-    this.lang$ = this.navbarService.language$;
+    this.navbarService.language$.pipe(take(1)).subscribe( lang => this.lang = lang);
   }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 
   async getInfoGeneral() {
     try {
-      this.infoGeneral = await this.navbarService.getInfoGeneral().toPromise();
+      this.infoGeneral = await this.navbarService.getInfoGeneral(this.lang).toPromise();
     } catch (e) {
       console.log('Error: ' + e);
     }

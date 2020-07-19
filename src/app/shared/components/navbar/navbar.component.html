@@ -34,13 +34,25 @@
         <ng-container *ngFor="let item of menus">
           <li class="menu-item">
             <ng-container *ngIf="item?.children; else notChildren">
-              <a [routerLink]="item?.url" routerLinkActive="active">{{item?.name}}</a>
+              <a  *ngIf="!item.external_url; else external" [routerLink]="item?.url" routerLinkActive="active">{{item?.name}}</a>
+              <ng-template #external>
+                <a [href]="item?.url" routerLinkActive="active">{{item?.name}}</a>
+              </ng-template>
+
               <ul class="sub-menu">
-                <li *ngFor="let child of item?.children" class="sub-menu-item"><a>{{child?.name}}</a></li>
+                <ng-container  *ngFor="let child of item?.children">
+                  <li class="sub-menu-item">
+                    <a [routerLink]="child?.url" *ngIf="!child?.external_url; else externalChild">{{child?.name}}</a>
+                  </li>
+                  <ng-template #externalChild>
+                      <a [href]="child?.url">{{child?.name}}</a>
+                  </ng-template>
+                </ng-container>
               </ul>
+
             </ng-container>
             <ng-template #notChildren>
-              <a [routerLink]="item?.url" routerLinkActive="active">{{item?.name}}</a>
+              <a *ngIf="!item.external_url; else external" [routerLink]="item?.url" routerLinkActive="active">{{item?.name}}</a>
             </ng-template>
           </li>
         </ng-container>

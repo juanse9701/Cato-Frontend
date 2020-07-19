@@ -1,10 +1,8 @@
 import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter, take } from 'rxjs/operators';
-import { NabvarService } from './nabvar.service';
-import { FormControl } from '@angular/forms';
-import { Languages } from 'src/app/core/interface/language.interface';
+import { filter } from 'rxjs/operators';
+import { Menu } from 'src/app/core/interface/general_info.interface';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -15,48 +13,8 @@ export class NavbarComponent implements OnInit {
   open = false;
   sticky: boolean;
   @Input() lang: string;
-  menus = [
-    {
-      name: 'Inicio',
-      url: 'inicio'
-    },
-    {
-      name: 'Nosotros',
-      url: 'nosotros'
-    },
-    {
-      name: 'Innovación',
-      url: 'innovacion'
-    },
-    {
-      name: 'Software',
-      url: 'software'
-    },
-    {
-      name: 'Hardware',
-      url: 'hardware'
-    },
-    {
-      name: 'Proyectos',
-      url: 'proyectos'
-    },
-    {
-      name: 'Formación',
-      url: 'formacion'
-    },
-    {
-      name: 'Contacto',
-      url: 'contacto',
-      children: [
-        {
-          name: 'Desarrollo de software'
-        },
-        {
-          name: 'Producción de multimedia'
-        }
-      ]
-    }
-  ];
+  @Input() menus: Menu[];
+
   @ViewChild('header', { static: false }) header: ElementRef;
   @ViewChild('line1', { static: false }) line1: ElementRef;
   @ViewChild('line2', { static: false }) line2: ElementRef;
@@ -76,7 +34,6 @@ export class NavbarComponent implements OnInit {
     private router: Router,
     private location: Location,
     private renderer: Renderer2,
-    private navbarService: NabvarService
   ) {
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
       console.log(this.location.path());

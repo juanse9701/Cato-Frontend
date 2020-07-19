@@ -1,11 +1,13 @@
 export interface Child {
     url: string;
     name: string;
+    external_url: boolean;
 }
 
 export interface Menu {
     url: string;
     name: string;
+    external_url: boolean;
     children: Child[];
 }
 

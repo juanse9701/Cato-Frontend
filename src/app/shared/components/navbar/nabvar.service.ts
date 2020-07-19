@@ -30,9 +30,12 @@ export class NabvarService {
     );
   }
 
-  getInfoGeneral(): Observable<GeneralInfo> {
+  getInfoGeneral(lang?: string): Observable<GeneralInfo> {
     return this.apollo.query({
-      query: QUERYINFOGENERAL
+      query: QUERYINFOGENERAL,
+      variables: {
+        lang
+      }
     }).pipe(
       map( (response: any) => response.data.general_info)
     );

@@ -17,7 +17,7 @@ export const QUERYLANGUAGES = gql`
 
 /* cambiar a recibir lenguaje dinamico */
 export const QUERYINFOGENERAL = gql`
-    query getInfoGeneral {
-        general_info(lang: "ES")
+    query getInfoGeneral($lang: String) {
+        general_info(lang: $lang)
     }
 `;
