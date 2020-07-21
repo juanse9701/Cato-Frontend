@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Section } from '../section-with-collapsible/section-with-collapsible.component';
+import { Page } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-page-layout',
@@ -8,6 +9,8 @@ import { Section } from '../section-with-collapsible/section-with-collapsible.co
 })
 export class PageLayoutComponent implements OnInit {
   @Input() pageContent: Pagina;
+  @Input() title: string;
+  @Input() page: Page;
   constructor() {}
 
   ngOnInit() {}

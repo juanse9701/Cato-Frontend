@@ -1,28 +1,33 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { Location } from '@angular/common';
-import { filter } from 'rxjs/operators';
+import { Component, Input, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Menu } from 'src/app/core/interface/general_info.interface';
 
 @Component({
   selector: 'app-sub-menu',
   templateUrl: './sub-menu.component.html',
   styleUrls: ['./sub-menu.component.css']
 })
-export class SubMenuComponent implements OnInit {
-  @Input() secciones: any[];
+export class SubMenuComponent implements AfterViewInit {
   @Input() title: string;
-  actual: string;
+  @Input() menuContent: Menu[];
 
-  locationName: string;
-
-  constructor(private router: Router, private location: Location) {
-    // this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
-    // console.log(this.location.path());
-    this.locationName = this.location.path();
-    // });
+  constructor(private activateRoute: ActivatedRoute, private router: Router) {
   }
 
-  ngOnInit() {
-    this.actual = this.secciones[0].nombre;
+  ngAfterViewInit() {
+    this.activateRoute.fragment.subscribe(fragment => {
+      this.scrollToAnchor(fragment);
+      this.router.navigate([], {fragment});
+    });
+  }
+
+
+  scrollToAnchor(location: string, wait = 0): void {
+    const element = document.querySelector('#' + location);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({block: 'start', behavior: 'smooth', inline: 'nearest'});
+      }, wait);
+    }
   }
 }

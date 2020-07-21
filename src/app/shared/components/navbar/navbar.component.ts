@@ -36,7 +36,7 @@ export class NavbarComponent implements OnInit {
     private renderer: Renderer2,
   ) {
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
-      console.log(this.location.path());
+      /* console.log(this.location.path()); */
       if (this.location.path() === '') {
         this.tipo = 'home';
       } else if (this.location.path() === '/contacto') {

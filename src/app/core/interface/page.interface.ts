@@ -1,3 +1,5 @@
+import { Menu } from './general_info.interface';
+
 export interface Tag {
     name: string;
     slug: string;
@@ -8,6 +10,7 @@ export interface Post {
     type?: string;
     image?: string;
     title: string;
+    menu?: Menu[];
     created?: string;
     gallery?: any[];
     updated?: string;

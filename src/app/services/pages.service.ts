@@ -2216,32 +2216,6 @@ hardware que brinden solución a sus necesidades`
   };
   private techLines: Pagina[] = [this.innovacion, this.proyectos, this.software, this.hardware, this.formacion];
 
- /*  private menu: any[] = [
-    {
-      name: 'Innovación',
-      url: 'innovación'
-    },
-    {
-      name: 'Software',
-      url: 'software'
-    },
-    {
-      name: 'Hardware',
-      url: 'hardware'
-    },
-    {
-      name: 'Hardware',
-      url: 'hardware'
-    },
-    {
-      name: 'Proyectos',
-      url: 'proyectos'
-    },
-    {
-      name: 'Formación',
-      url: 'formacion'
-    }
-  ]; */
   constructor(private apollo: Apollo) {}
 
   getHome(): any[] {

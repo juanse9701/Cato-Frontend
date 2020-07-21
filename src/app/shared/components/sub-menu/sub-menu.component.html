@@ -1,8 +1,8 @@
 <nav class="sub-menu oscuro">
   <h3 class="title">{{ title }}</h3>
   <ul>
-    <li *ngFor="let seccion of secciones; let i = index">
-      <a href="{{ locationName }}#{{ seccion.id }}">{{ i + 1 }}. {{ seccion.title }}</a>
+    <li *ngFor="let menu of menuContent; let i = index">
+      <a [routerLink]="" [fragment]="menu?.url">{{ i + 1 }}. {{ menu?.name }}</a>
     </li>
   </ul>
 </nav>

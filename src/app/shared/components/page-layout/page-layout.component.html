@@ -1,6 +1,6 @@
 <section class="header-page">
   <div class="header-page-info">
-    <h1>{{ pageContent?.title }}</h1>
+    <h1>{{ title | uppercase }}</h1>
     <p>{{ pageContent?.description }}</p>
   </div>
   <img [src]="pageContent?.img" alt="" />
@@ -12,5 +12,5 @@
       [section]="section"
     ></app-section-with-collapsible>
   </div>
-  <app-sub-menu [title]="pageContent?.title" [secciones]="pageContent?.sections"></app-sub-menu>
+  <app-sub-menu [title]="title" [menuContent]="page?.menu"></app-sub-menu>
 </section>
