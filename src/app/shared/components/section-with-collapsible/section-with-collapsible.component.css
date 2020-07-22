@@ -21,6 +21,11 @@
     'botones botones';
   padding: 40px 50px;
 }
+
+div.tarjeta-parte-visible.singleRow {
+  grid-template-columns: 1fr;
+}
+
 .tarjeta-titulo {
   color: var(--main-red);
   margin-bottom: 15px;
@@ -49,6 +54,7 @@
 }
 .tarjeta-imagen img {
   width: 100%;
+  max-width: 500px;
 }
 
 .tarjeta-botones {
@@ -146,7 +152,11 @@
 }
 @media screen and (max-width: 1112px) {
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1026px) {
+  .tarjeta-imagen img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 @media screen and (max-width: 959px) {
 }

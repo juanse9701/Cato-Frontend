@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Section } from '../section-with-collapsible/section-with-collapsible.component';
 import { Page } from 'src/app/core/interface/page.interface';
 
 @Component({
@@ -21,5 +20,4 @@ export interface Pagina {
   title: string;
   img: string;
   description: string;
-  sections: Section[];
 }

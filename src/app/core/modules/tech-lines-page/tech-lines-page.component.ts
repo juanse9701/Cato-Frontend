@@ -29,16 +29,15 @@ export class TechLinesPageComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.pageContent = this.pagesService.getTechLine(params.techLine);
       this.getPage(params.techLine, this.language);
-      if (!this.pageContent) {
-        this.router.navigate(['']);
-      }
-      this.title.setTitle(this.pageContent.title);
     });
   }
 
   async getPage(techline: string, language: string) {
     this.page = await this.pagesService.getPage(techline, language).toPromise();
+    if (!this.page) {
+      this.router.navigate(['']);
+    }
+    this.title.setTitle(this.page.title);
   }
 }

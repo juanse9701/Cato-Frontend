@@ -29,6 +29,7 @@ export interface Section {
     updated?: string;
     component: string;
     background_image?: string;
+    slug: string;
 }
 
 export interface Page {
@@ -39,4 +40,5 @@ export interface Page {
     created: string;
     updated: string;
     sections: Section[];
+    description?: string;
 }

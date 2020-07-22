@@ -1,16 +1,17 @@
 <section class="header-page">
   <div class="header-page-info">
     <h1>{{ title | uppercase }}</h1>
-    <p>{{ pageContent?.description }}</p>
+    <p [innerHTML]="page?.description"></p>
   </div>
-  <img [src]="pageContent?.img" alt="" />
 </section>
 <section class="container">
   <div>
     <app-section-with-collapsible
-      *ngFor="let section of pageContent?.sections"
+      *ngFor="let section of page?.sections"
       [section]="section"
     ></app-section-with-collapsible>
   </div>
-  <app-sub-menu [title]="title" [menuContent]="page?.menu"></app-sub-menu>
+  <ng-container *ngIf="page?.menu">
+    <app-sub-menu [title]="title" [menuContent]="page?.menu"></app-sub-menu>
+  </ng-container>
 </section>

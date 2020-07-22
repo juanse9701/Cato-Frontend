@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Renderer2 } from '@angular/core';
+import { Section, Post } from 'src/app/core/interface/page.interface';
 
 @Component({
   selector: 'app-section-with-collapsible',
@@ -7,15 +8,17 @@ import { Component, OnInit, Input, Renderer2 } from '@angular/core';
 })
 export class SectionWithCollapsibleComponent implements OnInit {
   @Input() section: Section;
-  actualData: any;
+  extraposts: Post[];
+  actualData: Post;
   actualDataIndex: number;
   show: boolean[] = [];
 
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.actualData = this.section.data[0];
-    for (const i in this.section.data) {
+    this.extraposts = this.section.posts && this.section.posts[0].extraposts;
+    this.actualData = this.extraposts && this.extraposts[0];
+    for (const i in this.extraposts) {
       this.show.push(false);
     }
   }
@@ -42,7 +45,7 @@ export class SectionWithCollapsibleComponent implements OnInit {
         this.show[i] = false;
       }
     }
-    this.actualData = this.section.data[index];
+    this.actualData = this.extraposts[index];
     this.actualDataIndex = index;
   }
   anyUnfolded(): boolean {
@@ -54,26 +57,7 @@ export class SectionWithCollapsibleComponent implements OnInit {
     return false;
   }
   changeActualData(index) {
-    this.actualData = this.section.data[index];
+    this.actualData = this.extraposts[index];
   }
 }
 
-export interface Section {
-  title: string;
-  id: string;
-  subtitle: string;
-  content: string;
-  img: string;
-  buttons: Button[];
-  data: Object[];
-}
-
-export interface Button {
-  estilo: number;
-  contenido: string;
-  color: string;
-  background: string;
-  img?: string;
-  imgIcono?: any;
-  imgCheck?: any;
-}

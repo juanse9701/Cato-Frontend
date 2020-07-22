@@ -1,24 +1,8 @@
-<div class="desplegable" #desplegable [ngSwitch]="data.estilo">
-  <div *ngSwitchCase="1" class="tipo-1">
+<div class="desplegable" #desplegable>
+  <div class="tipo-1">
     <div class="container-img">
-      <img [src]="data.imgPrincipal" alt="" />
+      <img [src]="post?.image" [alt]="post?.title" />
     </div>
-    <p [innerHTML]="data.contenido"></p>
-  </div>
-  <div *ngSwitchCase="2" class="tipo-2">
-    <div class="container-img">
-      <img [src]="data.imgPrincipal" alt="" />
-    </div>
-    <div class="container-info">
-      <img [src]="data.imgSecundaria" alt="" />
-      <img src="" alt="" />
-      <p [innerHTML]="data.contenido"></p>
-    </div>
-  </div>
-  <div *ngSwitchCase="3" class="tipo-3">
-    <div *ngFor="let item of data.items" class="empresa">
-      <img [src]="item.img" alt="" />
-      <p>{{ item.descripcion }}</p>
-    </div>
+    <p [innerHTML]="post?.description"></p>
   </div>
 </div>
