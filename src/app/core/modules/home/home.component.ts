@@ -11,7 +11,6 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  home: any[];
   Home: Page;
   language: string;
 
@@ -21,7 +20,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.home = this.pagesService.getHome();
     this.getHome();
   }
 

@@ -1,36 +1,25 @@
 <main>
   <div class="media">
-    <img src="assets/img/code.jpg" alt="" />
+    <img [src]="contact?.background" [alt]="contact?.title" />
   </div>
   <div class="info">
-    <h2>Datos de contacto</h2>
-    <div class="item">
-      <p class="item-name"><i class="fas fa-location-arrow"></i>Dirección</p>
-      <p class="item-value">CL. 45A # 53-51 Villavicencio – Meta - Colombia</p>
-    </div>
-    <div class="item">
-      <p class="item-name"><i class="fas fa-phone-alt"></i>Teléfono</p>
-      <p class="item-value">Tel: (57) (8) 6741115 Cel: 3144816215 - 3102836520</p>
-    </div>
-    <div class="item">
-      <p class="item-name"><i class="fas fa-envelope"></i>Correo electrónico</p>
-      <p class="item-value">contacto@grupocato.co</p>
-    </div>
+    <p [innerHTML]="contact?.data"></p>
   </div>
-  <form action="">
-    <h2>Comunicate con nosotros</h2>
-    <label for="nombre">Nombre</label>
+  <form>
+    <h2>{{contact?.form?.title}}</h2>
+    <label for="nombre">{{contact?.form?.name}}</label>
     <input type="text" name="nombre" placeholder="Nombre" />
-    <label for="email">Correo electrónico</label>
+    <label for="email">{{contact?.form?.mail}}</label>
     <input type="email" name="email" placeholder="usario@usario.com" />
-    <label for="asunto">Asunto</label>
+    <label for="asunto">{{contact?.form?.subject?.title}}</label>
     <select name="asunto" id="asunto">
-      <option value="peticion">Petición</option>
-      <option value="queja">Queja</option>
+      <ng-container *ngFor="let asunto of contact?.form?.subject?.options">
+        <option [value]="asunto">{{asunto}}</option>
+      </ng-container>
     </select>
-    <label for="contenido">Sugerencia y/o petición (Máximo 1000 palabras)</label>
-    <textarea name="contenido" id="contenido" cols="30" rows="5"></textarea>
-    <button type="submit">Enviar</button>
+    <label for="contenido">{{contact?.form?.body}}</label>
+    <textarea name="contenido" [placeholder]="contact?.form?.subtitle" id="contenido" cols="30" rows="5"></textarea>
+    <button type="submit">{{contact?.form?.text_button}}</button>
   </form>
   <div class="map">
     <app-map></app-map>

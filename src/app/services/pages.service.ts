@@ -12,10 +12,6 @@ export class PagesService {
 
   constructor(private apollo: Apollo) {}
 
-  getHome(): any[] {
-    return [];
-  }
-
   getPage(slug: string, lang: string = 'ES'): Observable<Page> {
     return this.apollo.query({
       query: QUERYGENERAL,
