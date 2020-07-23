@@ -10,7 +10,7 @@ import { Gallery } from 'src/app/core/interface/page.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselMediaComponent implements AfterViewInit {
-  @Input() data: Gallery[];
+  @Input() gallery: Gallery[];
 
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },

@@ -12,6 +12,6 @@
       [section]="section"
       background="#F9F9F9"
     ></app-section-with-multiple-subsection>
-    <app-carousel-media *ngSwitchCase="'carousel-media'" [data]="section?.posts[0].gallery"></app-carousel-media>
+    <app-carousel-media *ngSwitchCase="'carousel-media'" [gallery]="section?.posts[0].gallery"></app-carousel-media>
   </div>
 </ng-container>

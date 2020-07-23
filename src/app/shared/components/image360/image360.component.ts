@@ -11,7 +11,8 @@ declare var pannellum: any;
 })
 export class Image360Component implements AfterViewInit {
   @ViewChild('img360', { static: true }) img: ElementRef;
-  @Input() data: Gallery;
+
+  @Input() img360: Gallery;
 
   constructor() {}
 
@@ -23,7 +24,7 @@ export class Image360Component implements AfterViewInit {
     pannellum
       .viewer(this.img.nativeElement, {
         type: 'equirectangular',
-        panorama: this.data.image,
+        panorama: this.img360.image,
         autoLoad: true,
         autoRotate: -2
       })

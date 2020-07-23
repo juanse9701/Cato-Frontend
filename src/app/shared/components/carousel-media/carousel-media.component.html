@@ -1,10 +1,10 @@
 <div class="contenedor">
-  <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="data">
+  <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="gallery">
     <ngu-item class="own-item" *nguCarouselDef="let item; let i = index; let ani = animate">
       <div [ngSwitch]="item?.type">
         <app-youtube-video [video]="item?.video_url" *ngSwitchCase="'youtube'"></app-youtube-video>
         <img *ngSwitchCase="'image'" [src]="item?.image || 'assets/img/code.jpg'" alt="" />
-        <app-image360 *ngSwitchCase="'img360'" [data]="item"></app-image360>
+        <app-image360 *ngSwitchCase="'img360'" [img360]="item"></app-image360>
       </div>
     </ngu-item>
 
