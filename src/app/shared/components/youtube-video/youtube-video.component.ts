@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./youtube-video.component.css']
 })
 export class YoutubeVideoComponent implements OnInit {
-  video: any = { src: 'https://www.youtube.com/embed/ZRCdORJiUgU' };
+  @Input() video: string;
   constructor() {}
 
   ngOnInit() {}

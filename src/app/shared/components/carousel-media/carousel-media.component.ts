@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
+import { Gallery } from 'src/app/core/interface/page.interface';
 // import 'hammerjs';
 
 @Component({
@@ -9,7 +10,7 @@ import { NguCarouselConfig } from '@ngu/carousel';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselMediaComponent implements AfterViewInit {
-  @Input() data: any[];
+  @Input() data: Gallery[];
 
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },

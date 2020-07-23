@@ -1,4 +1,4 @@
-<app-carousel-media [data]="data"></app-carousel-media>
+<!-- <app-carousel-media [data]="data"></app-carousel-media> -->
 <ng-container *ngFor="let section of page?.sections">
   <div [ngSwitch]="section?.component">
     <app-section-with-collapsible-grid
@@ -12,5 +12,6 @@
       [section]="section"
       background="#F9F9F9"
     ></app-section-with-multiple-subsection>
+    <app-carousel-media *ngSwitchCase="'carousel-media'" [data]="section?.posts[0].gallery"></app-carousel-media>
   </div>
 </ng-container>

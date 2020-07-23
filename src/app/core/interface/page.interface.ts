@@ -1,5 +1,12 @@
 import { Menu } from './general_info.interface';
 
+export interface Gallery {
+    type: string;
+    image?: string;
+    title: string;
+    video_url?: string;
+}
+
 export interface Tag {
     name: string;
     slug: string;
@@ -12,7 +19,7 @@ export interface Post {
     title: string;
     menu?: Menu[];
     created?: string;
-    gallery?: any[];
+    gallery?: Gallery[];
     updated?: string;
     subtitle?: string;
     description?: string;
