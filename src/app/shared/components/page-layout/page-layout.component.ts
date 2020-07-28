@@ -7,17 +7,9 @@ import { Page } from 'src/app/core/interface/page.interface';
   styleUrls: ['./page-layout.component.css']
 })
 export class PageLayoutComponent implements OnInit {
-  @Input() pageContent: Pagina;
   @Input() title: string;
   @Input() page: Page;
   constructor() {}
 
   ngOnInit() {}
-}
-
-export interface Pagina {
-  id: string;
-  title: string;
-  img: string;
-  description: string;
 }

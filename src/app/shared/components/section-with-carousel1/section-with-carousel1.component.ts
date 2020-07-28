@@ -11,6 +11,7 @@ import { Section } from 'src/app/core/interface/page.interface';
 export class SectionWithCarousel1Component implements AfterViewInit {
   @Input() data;
   @Input() section: Section;
+  @Input() menu: boolean;
 
   style = {};
 

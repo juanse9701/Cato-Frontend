@@ -25,6 +25,10 @@ const routes: Routes = [
     loadChildren: () => import('./core/modules/tech-lines-page/tech-lines-page.module').then(m => m.TechLinesPageModule)
   },
   {
+    path: 'cato',
+    loadChildren: () => import('./core/modules/cato/cato.module').then(m => m.CatoModule)
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: ''

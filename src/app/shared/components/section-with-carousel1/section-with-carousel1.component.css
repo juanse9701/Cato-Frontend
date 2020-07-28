@@ -3,22 +3,38 @@ section {
   background-color: #fafafa;
   padding: 80px 30px 150px;
 }
+
 .contenedor {
   display: flex;
+  max-width: calc(100vw - (60px));
   margin-top: 70px;
 }
 
-@media screen and (max-width: 1112px) {
+.contenedor.menu {
+  max-width: calc(100vw - (355px + 60px));
 }
+
 @media screen and (max-width: 1023px) {
+  .contenedor.menu {
+    max-width: calc(100vw - (270px + 60px));
+  }
 }
 @media screen and (max-width: 959px) {
+  .contenedor.menu {
+    max-width: calc(100vw - (260px + 60px));
+  }
 }
 @media screen and (max-width: 768px) {
+  .contenedor.menu {
+    max-width: calc(100vw - (220px + 60px));
+  }
 }
 @media screen and (max-width: 568px) {
   section {
     padding: 40px 30px 80px;
+  }
+  .contenedor.menu {
+    max-width: calc(100vw - 60px);
   }
 }
 @media screen and (max-width: 470px) {

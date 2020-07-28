@@ -1,0 +1,42 @@
+
+<section class="header-page">
+        <div class="header-page-info">
+          <h1>{{ page?.title | uppercase }}</h1>
+          <p [innerHTML]="page?.description"></p>
+        </div>
+</section>
+<section class="container" [ngClass]="{'full-width': !page?.menu}">
+        <div>
+            <ng-container *ngFor="let section of page?.sections">
+                <ng-container [ngSwitch]="section?.component">
+                  <app-section-with-carousel1 *ngSwitchCase="'section-with-carousel1'" [section]="section" [menu]="page?.menu"></app-section-with-carousel1>
+                  <app-section-with-scroll *ngSwitchCase="'section-with-scroll'" [section]="section"></app-section-with-scroll>
+                  <app-section-with-carousel2 *ngSwitchCase="'section-with-carousel2'" [section]="section" [menu]="page?.menu"></app-section-with-carousel2>
+                  <app-section-simple *ngSwitchCase="'section-simple'" [section]="section"></app-section-simple>
+                  <app-section-with-multiple-subsection
+                    *ngSwitchCase="'section-with-multiple-subsection'"
+                    [section]="section"
+                    [background]="section?.color"
+                  ></app-section-with-multiple-subsection>
+                  <app-join-us *ngSwitchCase="'section-stacks'" 
+                    [posts]="section?.posts" 
+                    [title]="section?.title" 
+                    [description]="section?.description"></app-join-us>
+                    <app-section-with-collapsible-grid
+                    *ngSwitchCase="'section-with-collapsible-grid'"
+                    [section]="section"
+                  ></app-section-with-collapsible-grid>
+                  <app-section-text-grid *ngSwitchCase="'section-text-grid'" [section]="section"></app-section-text-grid> 
+                  <app-section-simple2 *ngSwitchCase="'section-simple2'" [section]="section"></app-section-simple2>
+                  <app-carousel-media *ngSwitchCase="'carousel-media'" [gallery]="section?.posts[0].gallery"></app-carousel-media>
+                  <app-section-with-collapsible
+                      *ngSwitchCase="'section-with-collapsible'"
+                      [section]="section"
+                  ></app-section-with-collapsible>
+                </ng-container>
+              </ng-container>
+        </div>
+        <ng-container *ngIf="page?.menu">
+            <app-sub-menu [title]="page?.title" [menuContent]="page?.menu"></app-sub-menu>
+        </ng-container>
+</section>

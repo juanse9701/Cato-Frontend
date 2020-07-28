@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PagesService } from 'src/app/services/pages.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pagina } from 'src/app/shared/components/page-layout/page-layout.component';
 import { Title } from '@angular/platform-browser';
 import { Page } from '../../interface/page.interface';
 import { NabvarService } from 'src/app/shared/components/navbar/nabvar.service';
@@ -13,7 +12,6 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./tech-lines-page.component.css']
 })
 export class TechLinesPageComponent implements OnInit {
-  pageContent: Pagina;
   page: Page;
   language: string;
 

@@ -8,6 +8,7 @@ import { Section } from 'src/app/core/interface/page.interface';
 })
 export class SectionWithCarousel2Component implements OnInit {
   @Input() section: Section;
+  @Input() menu: boolean;
 
   constructor() {}
 

@@ -1,7 +1,7 @@
-<section>
+<section class="contenedor" [ngClass]="{menu: menu}">
   <h2 class="titulo">{{ section?.title || '' }}</h2>
   <p class="descripcion">{{ section?.description }}</p>
-  <div class="contenedor">
+  <div>
     <app-carousel-with-tile [posts]="section?.posts"></app-carousel-with-tile>
   </div>
 </section>
