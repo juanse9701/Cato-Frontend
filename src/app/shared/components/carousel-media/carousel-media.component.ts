@@ -1,8 +1,13 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef, AfterViewInit } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { Gallery } from 'src/app/core/interface/page.interface';
 // import 'hammerjs';
 
+/**
+ * Carousel Media
+ *
+ * Componente que renderiza un carousel, la caracteristica principal es que puede renderizar imagenes, imagenes 360 y videos de youtube.
+ */
 @Component({
   selector: 'app-carousel-media',
   templateUrl: './carousel-media.component.html',
@@ -12,6 +17,9 @@ import { Gallery } from 'src/app/core/interface/page.interface';
 export class CarouselMediaComponent implements AfterViewInit {
   @Input() gallery: Gallery[];
 
+  /**
+   * Variable de tipo @see NguCarouselConfig la cual permite agregar configuraciones al carousel.
+   */
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
     speed: 250,
@@ -23,8 +31,11 @@ export class CarouselMediaComponent implements AfterViewInit {
     interval: { timing: 4500 },
     animation: 'lazy'
   };
+
+  /** @ignore */
   constructor(private cdr: ChangeDetectorRef) {}
 
+  /** @ignore */
   ngAfterViewInit() {
     this.cdr.detectChanges();
   }

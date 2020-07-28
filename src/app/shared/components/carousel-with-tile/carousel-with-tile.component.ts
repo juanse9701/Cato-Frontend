@@ -3,6 +3,13 @@ import { NguCarouselConfig } from '@ngu/carousel';
 import 'hammerjs';
 import { Post } from 'src/app/core/interface/page.interface';
 
+/**
+ * Carousel with Tile
+ *
+ * Componente encargado de renderizar un carousel de post, los cuales
+ * son representados en forma de tarjetas que llegan en una lista de tipo {@link Post},
+ * estas tarjetas no tiene algun estilo en particular, de hecho no contiene sombras y/o contornos.
+ */
 @Component({
   selector: 'app-carousel-with-tile',
   templateUrl: './carousel-with-tile.component.html',
@@ -12,6 +19,9 @@ import { Post } from 'src/app/core/interface/page.interface';
 export class CarouselWithTileComponent implements OnInit, AfterViewInit {
   @Input() posts: Post[];
 
+  /**
+   * Variable de tipo @see NguCarouselConfig la cual permite agregar configuraciones al carousel.
+   */
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },
     speed: 250,
@@ -23,8 +33,10 @@ export class CarouselWithTileComponent implements OnInit, AfterViewInit {
     interval: { timing: 4500 },
     animation: 'lazy'
   };
+
   constructor(private cdr: ChangeDetectorRef) {}
 
+  /** @ignore */
   ngOnInit() {}
 
   ngAfterViewInit() {
