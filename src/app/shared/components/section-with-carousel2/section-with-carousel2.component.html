@@ -1,4 +1,4 @@
-<section class="contenedor" [ngClass]="{menu: menu}">
+<section [id]="section?.slug"  class="contenedor" [ngClass]="{menu: menu}">
   <h2 class="titulo">{{ section?.title || '' }}</h2>
   <p class="descripcion">{{ section?.description }}</p>
   <div>

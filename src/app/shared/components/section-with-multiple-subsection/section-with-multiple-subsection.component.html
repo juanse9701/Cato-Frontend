@@ -1,4 +1,4 @@
-<section [ngStyle]="{ background: background }">
+<section [ngStyle]="{ background: background }" [id]="section?.slug">
   <h2 class="titulo">{{ section?.title }}</h2>
   <p class="descripcion">{{ section?.description }}</p>
   <app-sector *ngFor="let post of section?.posts" [sector]="post"></app-sector>

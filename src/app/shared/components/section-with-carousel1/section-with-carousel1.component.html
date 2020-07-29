@@ -1,4 +1,4 @@
-<section [ngStyle]="style" style="background-image: url('assets/img/bg-capacidades@2x.png');">
+<section [id]="section?.slug" [ngStyle]="style" style="background-image: url('assets/img/bg-capacidades@2x.png');">
   <h2 class="titulo">{{ section?.title }}</h2>
   <div class="contenedor" [ngClass]="{menu: menu}">
     <app-carousel-with-item [posts]="section?.posts"></app-carousel-with-item>

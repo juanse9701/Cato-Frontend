@@ -1,4 +1,4 @@
-<section class="desarrollos blanco">
+<section class="desarrollos blanco" [id]="section?.slug">
   <h2 class="titulo">{{ section?.title }}</h2>
   <div class="cards doble" #cards>
     <app-development-card *ngFor="let post of section?.posts" [post]="post" [typeStyle]="'cuadrado'">

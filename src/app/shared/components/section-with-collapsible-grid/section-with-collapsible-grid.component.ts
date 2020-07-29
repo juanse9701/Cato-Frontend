@@ -11,6 +11,11 @@ import {
 } from '@angular/core';
 import { Section } from 'src/app/core/interface/page.interface';
 
+/**
+ * Componente encargado de renderizar una sección, esta se caracteriza por manejar una grilla de elementos,
+ * en caso de que sean muchos elementos el componente limitara los elementos en pantalla pero habilitara un boton
+ * para ver los que se queden ocultos.
+ */
 @Component({
   selector: 'app-section-with-collapsible-grid',
   templateUrl: './section-with-collapsible-grid.component.html',
@@ -21,6 +26,8 @@ export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewIni
 
   buttonText = 'Ver más';
   showMore = true;
+
+  /** variable que guarda el numero maximo de lineas que tendra la grilla segun la cantidad de elementos */
   lineas: number;
 
   @ViewChild('cards', { static: false }) cards: ElementRef;
@@ -33,7 +40,7 @@ export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewIni
   constructor(private renderer: Renderer2, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.lineas = this.section.posts.length > 5 ? 2 : 1;
+    this.lineas = this.section.posts.length >= 4 ? 2 : 1;
   }
 
   ngAfterViewInit() {
@@ -41,6 +48,14 @@ export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewIni
     this.cdr.detectChanges();
   }
 
+  /**
+   * @method seeMore
+   * @param element parametro de recibira un elemnto de tipo HTML
+   *
+   * Metodo encargado de mostrar los elementos que se encuentren ocultos, este sera
+   * invocado por un evento  clic que estara solo disponible si la cantidad de elementos supera
+   * las lineas de la grilla
+   */
   seeMore(element: any) {
     if (element.style.maxHeight) {
       this.renderer.setStyle(element, 'max-height', element.scrollHeight + 'px');
@@ -57,6 +72,11 @@ export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewIni
     }
   }
 
+  /**
+   * @method evaluateShowMore
+   *
+   * Método encargado de evaluar si debe o no debe aparecer el boton de mostra mas elementos.
+   */
   evaluateShowMore() {
     if (this.cards) {
       const boxes = this.cards.nativeElement.children;

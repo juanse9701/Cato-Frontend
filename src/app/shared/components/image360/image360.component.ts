@@ -4,6 +4,12 @@ import 'pannellum/build/pannellum.js';
 import { Gallery } from 'src/app/core/interface/page.interface';
 declare var pannellum: any;
 
+/**
+ * Image360
+ *
+ * Componente que renderiza una imagen 360 y le agrega controles a la misma para hacerla interactiva,
+ * para estu hace uso de [Panellum]{@link https://pannellum.org/}.
+ */
 @Component({
   selector: 'app-image360',
   templateUrl: './image360.component.html',
@@ -12,14 +18,23 @@ declare var pannellum: any;
 export class Image360Component implements AfterViewInit {
   @ViewChild('img360', { static: true }) img: ElementRef;
 
+  /** Objeto de tipo Gallery que contendra la imagen 360° */
   @Input() img360: Gallery;
 
+  /** @ignore */
   constructor() {}
 
   ngAfterViewInit() {
     this.setVrImage();
   }
 
+  /**
+   * @method setVrImage()
+   *
+   * Función que es invocada una vez que el componente ha sido renderizado,
+   * esta debe añadir la imagen 360 la cual es accedida gracias a la variable img360, para esto
+   * hace uso de panellum quien se encarga de agregar los controles y darle el comportamiento 360.
+   */
   setVrImage(): void {
     pannellum
       .viewer(this.img.nativeElement, {
