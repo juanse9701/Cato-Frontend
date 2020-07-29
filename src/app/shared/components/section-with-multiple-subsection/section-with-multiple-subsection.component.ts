@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Section } from 'src/app/core/interface/page.interface';
 /**
- * Componente que renderiza una sección la cual puede contener multiples subseecciones,
+ * Componente que renderiza una sección la cual puede contener multiples subsecciones,
  * al final por su diseño muestra solo la imagen de las publicaciones, pero cuenta con la opcion de
- * hacer una redirección. (@see section-with-multiple-subsection.component.html )
+ * hacer una redirección.
  */
 @Component({
   selector: 'app-section-with-multiple-subsection',

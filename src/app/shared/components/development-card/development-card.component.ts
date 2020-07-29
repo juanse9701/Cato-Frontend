@@ -5,7 +5,7 @@ import { Post } from 'src/app/core/interface/page.interface';
  *
  * Componente que renderizara un post en una tarjeta, la caracteristica principal es que
  * maneja dos tipos de estilos, 'cuadrado' ó 'redondo' los cuales son leidos a traves de la
- * variable @see typeStyle
+ * variable [typeStyle]{@link #typeStyle}
  */
 @Component({
   selector: 'app-development-card',

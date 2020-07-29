@@ -3,7 +3,7 @@ import { Section } from 'src/app/core/interface/page.interface';
 
 /**
  * Componente encargado de renderizar una seccion con un carousel como principal componente,
- * en este caso el carousel-with-tile [CarouselWithTileComponent]{@link }
+ * en este caso el carousel-with-tile [CarouselWithTileComponent]{@link CarouselWithTileComponent}
  */
 @Component({
   selector: 'app-section-with-carousel2',

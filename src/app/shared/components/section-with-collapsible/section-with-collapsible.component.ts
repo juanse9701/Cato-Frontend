@@ -26,14 +26,13 @@ export class SectionWithCollapsibleComponent implements OnInit {
   }
 
   /**
-   * @method seeMore
+   * Método encargado de mostrar la información de la tarjeta que ha sido solicitada, ya que por defecto se encuentra colapsada,
+   * para esto se apoya en el metodo [changeShowActual]{@link #changeShowActual} que cambia el estado
+   * (true(visualizado):false(no visualizado)), en caso de que el elemento este en un estado de true, la función afectara el
+   * tamaño del elemento HTML y mostrara el contenido.
+   *
    * @param element Parametro que contiene el elemento HTML donde sera renderizado el contenido
    * @param index Parametro que contiene el identificador númerico del elemento
-   *
-   * @description
-   * Método encargado de mostrar la información de la tarjeta que ha sido solicitada, ya que por defecto se encuentra colapsada,
-   * para esto se apoya en el metodo {@link changeShowActual} que cambia el estado (true(visualizado):false(no visualizado)),
-   * en caso de que el elemento este en un estado de true, la función afectara el tamaño del elemento HTML y mostrara el contenido.
    */
   seeMore(element: any, index: number) {
     this.changeShowActual(index);
@@ -51,12 +50,10 @@ export class SectionWithCollapsibleComponent implements OnInit {
   }
 
   /**
-   * @method changeShowActual
-   * @param index parametro de tipo number
-   *
-   * @description
    * Método encargado de cambiar el estado (true:false) de un elemento en el arreglo show haciendo uso del parametro index, a su vez asigna
-   * los nuevos valores de actualData y actualDataIndex
+   * los nuevos valores de actualData y actualDataIndex.
+   *
+   * @param index parametro de tipo number
    */
   changeShowActual(index: number) {
     this.show = this.show.map((v: boolean, i: number) => i === index ? !v : v );

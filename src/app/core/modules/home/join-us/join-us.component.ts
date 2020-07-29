@@ -1,6 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Post } from 'src/app/core/interface/page.interface';
 
+/**
+ * Componente encargado de renderizar una sección la cual se caracteriza porque las publicaciones,
+ * son visualizadas como botones o pilas.
+ */
 @Component({
   selector: 'app-join-us',
   templateUrl: './join-us.component.html',

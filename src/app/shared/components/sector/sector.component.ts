@@ -16,11 +16,10 @@ export class SectorComponent implements OnInit {
   ngOnInit() {}
 
   /**
-   * @method seeMore
-   * @param element parametro de recibira un elemnto de tipo HTML
-   *
    * Metodo encargado de mostrar los elementos que se encuentren ocultos, este sera
-   * invocado por un evento  clic que estara solo disponible si la cantidad de elementos
+   * invocado por un evento  clic que estara solo disponible si la cantidad de elementos.
+   *
+   * @param element parametro de recibira un elemnto de tipo HTML
    */
   seeMore(element: any) {
     if (element.style.maxHeight) {

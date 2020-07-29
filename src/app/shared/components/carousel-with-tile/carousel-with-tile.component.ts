@@ -20,7 +20,7 @@ export class CarouselWithTileComponent implements OnInit, AfterViewInit {
   @Input() posts: Post[];
 
   /**
-   * Variable de tipo @see NguCarouselConfig la cual permite agregar configuraciones al carousel.
+   * Variable de tipo NguCarouselConfig la cual permite agregar configuraciones al carousel.
    */
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },

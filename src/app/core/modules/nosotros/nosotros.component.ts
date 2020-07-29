@@ -5,6 +5,10 @@ import { Page } from '../../interface/page.interface';
 import { NabvarService } from 'src/app/shared/components/navbar/nabvar.service';
 import { take } from 'rxjs/operators';
 
+/**
+ * Componente encargado de renderizar la página de Nosotros, este tipo de componente
+ * es considerado módulo ya que actua como ruta principal.
+ */
 @Component({
   selector: 'app-nosotros',
   templateUrl: './nosotros.component.html',
@@ -14,11 +18,11 @@ export class NosotrosComponent implements OnInit {
   nosotros: any[];
   page: Page;
 
-  data = [
+  /* data = [
     { src: '', type: 'youtube' },
     { src: '', type: 'image' },
     { src: 'https://pannellum.org/images/alma.jpg', type: 'img360' }
-  ];
+  ]; */
 
   language: string;
 
@@ -31,6 +35,10 @@ export class NosotrosComponent implements OnInit {
     this.getPage();
   }
 
+  /**
+   * Método asincorono encargado de obtener la información de la página y asignarlo a la variable [page]{@link #page},
+   * este se ejecuta una vez la página ha iniciado la carga.
+   */
   async getPage() {
     this.page = await this.pagesService.getPage('nosotros', this.language).toPromise();
   }

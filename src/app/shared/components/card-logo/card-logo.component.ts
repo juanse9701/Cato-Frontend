@@ -2,8 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Post } from 'src/app/core/interface/page.interface';
 
 /**
- * Card Logo
- *
  * Componente de tipo tarjeta, este renderiza una imagen que le llega desde otro componente.
  */
 @Component({

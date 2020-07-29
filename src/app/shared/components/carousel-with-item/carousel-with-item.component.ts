@@ -3,8 +3,6 @@ import { NguCarouselConfig } from '@ngu/carousel';
 import 'hammerjs';
 import { Post } from 'src/app/core/interface/page.interface';
 /**
- * Carousel with item
- *
  * Componente encargado de renderizar un carousel de post, los cuales
  * son representados en forma de tarjetas que llegan en una lista de tipo {@link Post}
  */
@@ -20,7 +18,8 @@ export class CarouselWithItemComponent implements OnInit {
   @Input() posts: Post[];
 
   /**
-   * Variable de tipo @see NguCarouselConfig la cual permite agregar configuraciones al carousel.
+   * Variable de tipo  [NguCarouselConfig]{@link https://www.npmjs.com/package/@ngu/carousel} la cual permite
+   * agregar configuraciones al carousel.
    */
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },

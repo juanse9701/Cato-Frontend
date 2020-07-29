@@ -21,13 +21,12 @@ export class NabvarService {
   constructor(private apollo: Apollo) { }
 
   /**
-   * @method changeLanguage
+   * Función encargada de actualizar el idioma para la aplicación, para esto usa el parametro lang que es la información
+   * que el usuario envia y a su vez guarda dicha información en el almacenamiento local, por ultimo efectua una recarga
+   * a la aplicaión.
    *
    * @param lang parametro de tipo string que recibe el idioma seleccionado por el usuario
    *
-   * Función encargada de actualizar el idioma para la aplicación, para esto usa el parametro lang que es la información
-   * que el usuario envia y a su vez guarada dicha información en el almacenamiento local, por ultimo efectua una recarga
-   * a la aplicaión.
    */
   changeLanguage(lang: string) {
     this.lang.next(lang);
@@ -36,9 +35,6 @@ export class NabvarService {
   }
 
   /**
-   * @method getLanguages
-   *
-   * @description
    * Obtiene los idiomas que se enceuntren disponibles en la aplicacion, para esto hace uso de apollo que es una instancia
    * de Apollo, y el cual permite realizar consultas al backend usando graphql
    *
@@ -53,9 +49,6 @@ export class NabvarService {
   }
 
   /**
-   * @method getInfoGeneral
-   *
-   * @description
    * Obtiene la información del header(menú de navegacion, logos) y el footer de la aplicación.
    *
    * @param lang lenguage en el cual es solicitada la información(opcional)

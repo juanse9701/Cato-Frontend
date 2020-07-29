@@ -4,8 +4,6 @@ import { Gallery } from 'src/app/core/interface/page.interface';
 // import 'hammerjs';
 
 /**
- * Carousel Media
- *
  * Componente que renderiza un carousel, la caracteristica principal es que puede renderizar imagenes, imagenes 360 y videos de youtube.
  */
 @Component({
@@ -18,7 +16,7 @@ export class CarouselMediaComponent implements AfterViewInit {
   @Input() gallery: Gallery[];
 
   /**
-   * Variable de tipo @see NguCarouselConfig la cual permite agregar configuraciones al carousel.
+   * Variable de tipo NguCarouselConfig la cual permite agregar configuraciones al carousel.
    */
   carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },

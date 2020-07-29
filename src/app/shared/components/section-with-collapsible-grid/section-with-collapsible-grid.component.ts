@@ -49,12 +49,11 @@ export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewIni
   }
 
   /**
-   * @method seeMore
-   * @param element parametro de recibira un elemnto de tipo HTML
-   *
    * Metodo encargado de mostrar los elementos que se encuentren ocultos, este sera
    * invocado por un evento  clic que estara solo disponible si la cantidad de elementos supera
-   * las lineas de la grilla
+   * las lineas de la grilla.
+   *
+   * @param element parametro de recibira un elemnto de tipo HTML
    */
   seeMore(element: any) {
     if (element.style.maxHeight) {
@@ -73,8 +72,6 @@ export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewIni
   }
 
   /**
-   * @method evaluateShowMore
-   *
    * Método encargado de evaluar si debe o no debe aparecer el boton de mostra mas elementos.
    */
   evaluateShowMore() {

@@ -16,10 +16,10 @@ export class ContactService {
   constructor(private apollo: Apollo) { }
 
   /**
-   * @method getContactPage
-   * @param lang parametro de tipo estring que recibe el idioma en el cual se solicitara la información
-   *
    * Método encargado de solicitar la información de la página de contacto
+   *
+   * @param lang parametro de tipo string que recibe el idioma en el cual se solicitara la información
+   *
    *
    * @return devuelve un nuevo observable con la información de la pagina de contacto
    */

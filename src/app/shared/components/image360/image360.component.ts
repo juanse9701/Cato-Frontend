@@ -5,8 +5,6 @@ import { Gallery } from 'src/app/core/interface/page.interface';
 declare var pannellum: any;
 
 /**
- * Image360
- *
  * Componente que renderiza una imagen 360 y le agrega controles a la misma para hacerla interactiva,
  * para estu hace uso de [Panellum]{@link https://pannellum.org/}.
  */
@@ -29,8 +27,6 @@ export class Image360Component implements AfterViewInit {
   }
 
   /**
-   * @method setVrImage()
-   *
    * Función que es invocada una vez que el componente ha sido renderizado,
    * esta debe añadir la imagen 360 la cual es accedida gracias a la variable img360, para esto
    * hace uso de panellum quien se encarga de agregar los controles y darle el comportamiento 360.

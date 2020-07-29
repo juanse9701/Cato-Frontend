@@ -16,11 +16,10 @@ export class PagesService {
   constructor(private apollo: Apollo) {}
 
   /**
-   * @method getPage
-   * @param slug paramero de tipo string que sirve como identificador de la página
-   * @param lang parametro de tipo estring que recibe el idioma en el cual se solicitara la información
-   *
    * Método encargado de solicitar la información de una página en un idioma.
+   *
+   * @param slug paramero de tipo string que sirve como identificador de la página
+   * @param lang parametro de tipo string que recibe el idioma en el cual se solicitara la información
    *
    * @return Un nuevo observable con la información de la página en el idioma solicitado.
    */

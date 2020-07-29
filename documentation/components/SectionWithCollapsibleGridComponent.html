@@ -1,0 +1,976 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ejercicio-uno documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ejercicio-uno documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SectionWithCollapsibleGridComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente encargado de renderizar una sección, esta se caracteriza por manejar una grilla de elementos,
+en caso de que sean muchos elementos el componente limitara los elementos en pantalla pero habilitara un boton
+para ver los que se queden ocultos.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-section-with-collapsible-grid</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./section-with-collapsible-grid.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./section-with-collapsible-grid.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#buttonText">buttonText</a>
+                            </li>
+                            <li>
+                                <a href="#cards">cards</a>
+                            </li>
+                            <li>
+                                <a href="#lineas">lineas</a>
+                            </li>
+                            <li>
+                                <a href="#showMore">showMore</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#evaluateShowMore">evaluateShowMore</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#seeMore">seeMore</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#section">section</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize">window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>renderer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="section"></a>
+                        <b>section</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Section.html" target="_self" >Section</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:resize"></a>
+                    <span class="name">
+                        <b>
+                            window:resize
+                        </b>
+                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:resize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="evaluateShowMore"></a>
+                    <span class="name">
+                        <b>
+                            evaluateShowMore
+                        </b>
+                        <a href="#evaluateShowMore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>evaluateShowMore()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Método encargado de evaluar si debe o no debe aparecer el boton de mostra mas elementos.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seeMore"></a>
+                    <span class="name">
+                        <b>
+                            seeMore
+                        </b>
+                        <a href="#seeMore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>seeMore(element: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Metodo encargado de mostrar los elementos que se encuentren ocultos, este sera
+invocado por un evento  clic que estara solo disponible si la cantidad de elementos supera
+las lineas de la grilla.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>element</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>parametro de recibira un elemnto de tipo HTML</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="buttonText"></a>
+                        <span class="name">
+                            <b>
+                            buttonText</b>
+                            <a href="#buttonText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;Ver más&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cards"></a>
+                        <span class="name">
+                            <b>
+                            cards</b>
+                            <a href="#cards"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;cards&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lineas"></a>
+                        <span class="name">
+                            <b>
+                            lineas</b>
+                            <a href="#lineas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>variable que guarda el numero maximo de lineas que tendra la grilla segun la cantidad de elementos </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMore"></a>
+                        <span class="name">
+                            <b>
+                            showMore</b>
+                            <a href="#showMore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/shared/components/section-with-collapsible-grid/section-with-collapsible-grid.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  OnInit,
+  Input,
+  ElementRef,
+  ViewChild,
+  Renderer2,
+  HostListener,
+  AfterViewInit,
+  ChangeDetectorRef
+} from &#x27;@angular/core&#x27;;
+import { Section } from &#x27;src/app/core/interface/page.interface&#x27;;
+
+/**
+ * Componente encargado de renderizar una sección, esta se caracteriza por manejar una grilla de elementos,
+ * en caso de que sean muchos elementos el componente limitara los elementos en pantalla pero habilitara un boton
+ * para ver los que se queden ocultos.
+ */
+@Component({
+  selector: &#x27;app-section-with-collapsible-grid&#x27;,
+  templateUrl: &#x27;./section-with-collapsible-grid.component.html&#x27;,
+  styleUrls: [&#x27;./section-with-collapsible-grid.component.css&#x27;]
+})
+export class SectionWithCollapsibleGridComponent implements OnInit, AfterViewInit {
+  @Input() section: Section;
+
+  buttonText &#x3D; &#x27;Ver más&#x27;;
+  showMore &#x3D; true;
+
+  /** variable que guarda el numero maximo de lineas que tendra la grilla segun la cantidad de elementos */
+  lineas: number;
+
+  @ViewChild(&#x27;cards&#x27;, { static: false }) cards: ElementRef;
+
+  @HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])
+  onResize() {
+    this.evaluateShowMore();
+  }
+
+  constructor(private renderer: Renderer2, private cdr: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    this.lineas &#x3D; this.section.posts.length &gt;&#x3D; 4 ? 2 : 1;
+  }
+
+  ngAfterViewInit() {
+    this.evaluateShowMore();
+    this.cdr.detectChanges();
+  }
+
+  /**
+   * Metodo encargado de mostrar los elementos que se encuentren ocultos, este sera
+   * invocado por un evento  clic que estara solo disponible si la cantidad de elementos supera
+   * las lineas de la grilla.
+   *
+   * @param element parametro de recibira un elemnto de tipo HTML
+   */
+  seeMore(element: any) {
+    if (element.style.maxHeight) {
+      this.renderer.setStyle(element, &#x27;max-height&#x27;, element.scrollHeight + &#x27;px&#x27;);
+      setTimeout(() &#x3D;&gt; {
+        this.renderer.setStyle(element, &#x27;max-height&#x27;, null);
+      }, 20);
+      this.buttonText &#x3D; &#x27;Ver más&#x27;;
+    } else {
+      this.renderer.setStyle(element, &#x27;max-height&#x27;, element.scrollHeight + &#x27;px&#x27;);
+      setTimeout(() &#x3D;&gt; {
+        this.renderer.setStyle(element, &#x27;max-height&#x27;, &#x27;initial&#x27;);
+      }, 210);
+      this.buttonText &#x3D; &#x27;Ver menos&#x27;;
+    }
+  }
+
+  /**
+   * Método encargado de evaluar si debe o no debe aparecer el boton de mostra mas elementos.
+   */
+  evaluateShowMore() {
+    if (this.cards) {
+      const boxes &#x3D; this.cards.nativeElement.children;
+      const box1 &#x3D; boxes[0];
+      const colCnt &#x3D; Math.floor(this.cards.nativeElement.offsetWidth / box1.clientWidth); // Number of Column;
+      const rowCnt &#x3D; Math.ceil(boxes.length / colCnt); // Number of Rows
+      if (rowCnt &lt;&#x3D; this.lineas) {
+        this.showMore &#x3D; false;
+      }
+      if (rowCnt &gt; this.lineas) {
+        this.showMore &#x3D; true;
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;desarrollos blanco&quot; [id]&#x3D;&quot;section?.slug&quot;&gt;
+  &lt;h2 class&#x3D;&quot;titulo&quot;&gt;{{ section?.title }}&lt;/h2&gt;
+  &lt;div class&#x3D;&quot;cards doble&quot; #cards&gt;
+    &lt;app-development-card *ngFor&#x3D;&quot;let post of section?.posts&quot; [post]&#x3D;&quot;post&quot; [typeStyle]&#x3D;&quot;&#x27;cuadrado&#x27;&quot;&gt;
+    &lt;/app-development-card&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;showMore&quot; class&#x3D;&quot;mas-container&quot;&gt;
+    &lt;button (click)&#x3D;&quot;seeMore(cards)&quot; class&#x3D;&quot;mas&quot;&gt;{{ buttonText }}&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./section-with-collapsible-grid.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* Desarrollos */
+.desarrollos .titulo {
+  margin-bottom: 50px;
+}
+.desarrollos {
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+}
+.desarrollos.blanco {
+  background: white;
+}
+.desarrollos .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+  padding-bottom: 30px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.desarrollos .mas-container {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid lightgray;
+}
+.desarrollos .mas {
+  color: #5691c2;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+  background: none;
+  align-self: flex-end;
+  margin-top: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.desarrollos .cards.simple {
+  max-height: 254.7px;
+}
+.desarrollos .cards.doble {
+  max-height: 510px;
+}
+
+@media screen and (max-width: 1112px) {
+}
+@media screen and (max-width: 1023px) {
+}
+@media screen and (max-width: 959px) {
+}
+@media screen and (max-width: 768px) {
+  .desarrollos {
+    padding: 35px 60px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .desarrollos {
+    padding: 30px 50px;
+  }
+  .desarrollos .titulo {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .desarrollos {
+    padding: 30px 30px;
+  }
+  .desarrollos .titulo {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .desarrollos {
+    padding: 35px 20px;
+  }
+  .desarrollos .titulo {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section class="desarrollos blanco" [id]="section?.slug">  <h2 class="titulo">{{ section?.title }}</h2>  <div class="cards doble" #cards>    <app-development-card *ngFor="let post of section?.posts" [post]="post" [typeStyle]="\'cuadrado\'">    </app-development-card>  </div>  <div *ngIf="showMore" class="mas-container">    <button (click)="seeMore(cards)" class="mas">{{ buttonText }}</button>  </div></section></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardCarouselItemComponent', 'selector': 'app-card-carousel-item'},{'name': 'CardCarouselTileComponent', 'selector': 'app-card-carousel-tile'},{'name': 'CardColorComponent', 'selector': 'app-card-color'},{'name': 'CardDarkComponent', 'selector': 'app-card-dark'},{'name': 'CardLogoComponent', 'selector': 'app-card-logo'},{'name': 'CarouselMediaComponent', 'selector': 'app-carousel-media'},{'name': 'CarouselWithItemComponent', 'selector': 'app-carousel-with-item'},{'name': 'CarouselWithTileComponent', 'selector': 'app-carousel-with-tile'},{'name': 'CatoComponent', 'selector': 'app-cato'},{'name': 'CollapsibleComponent', 'selector': 'app-collapsible'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DevelopmentCardComponent', 'selector': 'app-development-card'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeroComponent', 'selector': 'app-hero'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'Image360Component', 'selector': 'app-image360'},{'name': 'JoinUsComponent', 'selector': 'app-join-us'},{'name': 'MapComponent', 'selector': 'app-map'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NosotrosComponent', 'selector': 'app-nosotros'},{'name': 'PageLayoutComponent', 'selector': 'app-page-layout'},{'name': 'SectionSimple2Component', 'selector': 'app-section-simple2'},{'name': 'SectionSimpleComponent', 'selector': 'app-section-simple'},{'name': 'SectionTextGridComponent', 'selector': 'app-section-text-grid'},{'name': 'SectionWithCarousel1Component', 'selector': 'app-section-with-carousel1'},{'name': 'SectionWithCarousel2Component', 'selector': 'app-section-with-carousel2'},{'name': 'SectionWithCollapsibleComponent', 'selector': 'app-section-with-collapsible'},{'name': 'SectionWithCollapsibleGridComponent', 'selector': 'app-section-with-collapsible-grid'},{'name': 'SectionWithMultipleSubsectionComponent', 'selector': 'app-section-with-multiple-subsection'},{'name': 'SectionWithScrollComponent', 'selector': 'app-section-with-scroll'},{'name': 'SectorComponent', 'selector': 'app-sector'},{'name': 'SelectLanguageComponent', 'selector': 'app-select-language'},{'name': 'SubMenuComponent', 'selector': 'app-sub-menu'},{'name': 'TechLinesPageComponent', 'selector': 'app-tech-lines-page'},{'name': 'YoutubeVideoComponent', 'selector': 'app-youtube-video'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SectionWithCollapsibleGridComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SectionWithCollapsibleGridComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

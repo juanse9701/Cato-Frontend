@@ -71,8 +71,6 @@ export class NavbarComponent implements OnInit {
   }
 
   /**
-   * @method openMenu()
-   *
    * método que es invocado a traves de un evento clic desde el template, su función
    * es actualizar el estado de la variable open quien efectua cambios sobre el menú de navegacion (abrir:cerrar) y
    * afecta las clases de distintos elementos que son capturados a traves del @ViewChild.

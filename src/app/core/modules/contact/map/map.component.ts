@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
+/**
+ * Componente encargado de renderizar el mapa y localizar el geopunto que le llegue desde un componente padre o que tenga
+ * por defecto.
+ */
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -13,7 +17,7 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     mapboxgl.accessToken = this.API_KEY;
-    let map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-73.6566408, 4.1565567],

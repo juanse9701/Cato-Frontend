@@ -25,11 +25,10 @@ export class SubMenuComponent implements AfterViewInit {
   }
 
   /**
-   * @method scrollToAnchor
+   * Método encargador de llevar al usuario al elemento dictado por el parametro location.
+   *
    * @param location parametro que recibe como valor el slug del elemento
    * @param wait parametro que recibe el tiempo de espera para ejecutar la función, por defecto es cero(0)
-   *
-   * Método encargador de llevar al usuario al elemento dictado por el parametro location.
    */
   scrollToAnchor(location: string, wait = 0): void {
     const element = document.querySelector('#' + location);

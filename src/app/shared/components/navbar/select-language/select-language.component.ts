@@ -29,8 +29,6 @@ export class SelectLanguageComponent implements OnInit {
   }
 
   /**
-   * @method getLanguages
-   *
    * método asincrono encargado de obtener los distintos idiomas que se encuentran disponibles para la aplicación.
    */
   async getLanguages() {
@@ -42,8 +40,6 @@ export class SelectLanguageComponent implements OnInit {
   }
 
   /**
-   * @method getLanguages
-   *
    * Método encargado de asignar un valor a la variable language el cual es un controlInput.
    */
   getLanguage() {
@@ -52,8 +48,6 @@ export class SelectLanguageComponent implements OnInit {
 
 
   /**
-   * @method setLanguages
-   *
    * Método encargado de enviar al servicio {@link navbarService} el idioma seleccionado por el usuario,
    * este se invocado cada que el usario seleciona otro idioma.
    */

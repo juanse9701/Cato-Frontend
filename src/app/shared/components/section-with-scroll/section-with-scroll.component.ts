@@ -24,11 +24,10 @@ export class SectionWithScrollComponent implements OnInit {
   }
 
   /**
-   * @method cambiarActual
-   * @param index parametro de tipo numerico que guardara el indice del post seleccionado
-   *
    * Método encargado de actualizar la seleccion del usuario apoyandose del parametro index,
-   * es invocado mediante el evento clic
+   * es invocado mediante el evento clic.
+   *
+   * @param index parametro de tipo numerico que guardara el indice del post seleccionado
    */
   cambiarActual(index: number) {
     this.itemActual = this.section.posts[index];

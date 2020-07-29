@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * Componente exclusivo de la página principal, su principal objetivo es servir como baner inicial
+ * y darle dinamismo a la pagina, cuenta con un juego de particulas que es configurado cuando va a inciar la carga de la página.
+ */
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
@@ -17,12 +20,6 @@ export class HeroComponent implements OnInit {
     this.myStyle = {
       width: '100%',
       height: '100%'
-      // position: 'fixed',
-      // 'z-index': -1,
-      // top: 0,
-      // left: 0,
-      // right: 0,
-      // bottom: 0
     };
 
     this.myParams = {
