@@ -45,7 +45,8 @@ import { SectionWithCollapsibleModule } from 'src/app/shared/components/section-
     SectionTextGridModule,
     SectionWithCollapsibleGridModule,
     SubMenuModule,
-    SectionWithCollapsibleModule
+    SectionWithCollapsibleModule,
+    HeroModule
   ]
 })
 export class CatoModule { }
