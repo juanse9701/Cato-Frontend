@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 /**
  * Componente exclusivo de la página principal, su principal objetivo es servir como baner inicial
  * y darle dinamismo a la pagina, cuenta con un juego de particulas que es configurado cuando va a inciar la carga de la página.
@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
+  @Input() title: string;
+  @Input() description: string;
+  @Input() image: string;
+
   myStyle: object = {};
   myParams: object = {};
   width = 100;
@@ -49,4 +53,5 @@ export class HeroComponent implements OnInit {
       }
     };
   }
+
 }

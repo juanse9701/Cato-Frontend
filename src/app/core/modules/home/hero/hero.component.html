@@ -1,16 +1,11 @@
 <section class="hero">
-  <img src="assets/img/hero.png" alt="" />
+  <img [src]="image" [alt]="title" />
   <div class="particulas">
     <ng-particles [style]="myStyle" [width]="width" [height]="height" [params]="myParams"></ng-particles>
   </div>
   <div class="contenido-container">
     <div class="contenido">
-      <p class="subtitulo">Contamos con más de 5 años de</p>
-      <h2 class="titulo">5 años de constitución como empresa colombiana</h2>
-      <p class="descripcion">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur unde saepe suscipit qui porro,
-        exercitationem non nobis. Officiis laboriosam tempore saepe recusandae doloremque quae rem fugiat. Quibusdam,
-        exercitationem accusantium!
+      <p [innerHTML]="description" class="descripcion">
       </p>
     </div>
   </div>
