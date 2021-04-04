@@ -7,11 +7,11 @@ import { DevelopmentCardModule } from 'src/app/shared/components/development-car
 import { HeroModule } from './hero/hero.module';
 import { CarouselWithItemModule } from 'src/app/shared/components/carousel-with-item/carousel-with-item.module';
 import { CarouselWithTileModule } from 'src/app/shared/components/carousel-with-tile/carousel-with-tile.module';
-import { SectionWithCarousel1Module } from 'src/app/shared/components/section-with-carousel1/section-with-carousel1.module';
-import { SectionWithCarousel2Module } from 'src/app/shared/components/section-with-carousel2/section-with-carousel2.module';
-import { SectionWithScrollModule } from 'src/app/shared/components/section-with-scroll/section-with-scroll.module';
-import { SectionWithMultipleSubsectionModule } from 'src/app/shared/components/section-with-multiple-subsection/section-with-multiple-subsection.module';
-import { SectionSimpleModule } from 'src/app/shared/components/section-simple/section-simple.module';
+import { SectionWithCarousel1Module } from 'src/app/shared/components/sections/section-with-carousel1/section-with-carousel1.module';
+import { SectionWithCarousel2Module } from 'src/app/shared/components/sections/section-with-carousel2/section-with-carousel2.module';
+import { SectionWithScrollModule } from 'src/app/shared/components/sections/section-with-scroll/section-with-scroll.module';
+import { SectionWithMultipleSubsectionModule } from 'src/app/shared/components/sections/section-with-multiple-subsection/section-with-multiple-subsection.module';
+import { SectionSimpleModule } from 'src/app/shared/components/sections/section-simple/section-simple.module';
 import { JoinUsModule } from './join-us/join-us.module';
 
 const routes: Routes = [

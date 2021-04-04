@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SectionWithCarousel2Component } from './section-with-carousel2.component';
-import { CarouselWithTileModule } from '../carousel-with-tile/carousel-with-tile.module';
+import { CarouselWithTileModule } from '../../carousel-with-tile/carousel-with-tile.module';
 
 @NgModule({
   declarations: [SectionWithCarousel2Component],
