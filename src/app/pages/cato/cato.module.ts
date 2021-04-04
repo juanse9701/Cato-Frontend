@@ -7,7 +7,7 @@ import { CarouselWithItemModule } from 'src/app/shared/components/carousel-with-
 import { CarouselWithTileModule } from 'src/app/shared/components/carousel-with-tile/carousel-with-tile.module';
 import { SectionSimpleModule } from 'src/app/shared/components/sections/section-simple/section-simple.module';
 import { SectorModule } from 'src/app/shared/components/sector/sector.module';
-import { DevelopmentCardModule } from 'src/app/shared/components/development-card/development-card.module';
+import { DevelopmentCardModule } from 'src/app/shared/components/cards/development-card/development-card.module';
 import { HeroModule } from '../../shared/components/sections/hero/hero.module';
 import { JoinUsModule } from '../../shared/components/sections/join-us/join-us.module';
 import { CarouselMediaModule } from 'src/app/shared/components/carousel-media/carousel-media.module';
