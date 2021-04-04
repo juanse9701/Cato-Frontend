@@ -9,21 +9,17 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'inicio',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
-  },
-  {
-    path: 'nosotros',
-    loadChildren: () => import('./pages/nosotros/nosotros.module').then(m => m.NosotrosModule)
-  },
-  {
     path: 'contacto',
     loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
   },
   {
-    path: ':techLine',
-    loadChildren: () => import('./pages/tech-lines-page/tech-lines-page.module').then(m => m.TechLinesPageModule)
+    path: ':pages',
+    loadChildren: () => import('./pages/cato/cato.module').then(m => m.CatoModule)
   },
+  // {
+  //   path: ':techLine',
+  //   loadChildren: () => import('./pages/tech-lines-page/tech-lines-page.module').then(m => m.TechLinesPageModule)
+  // },
   {
     path: 'cato',
     loadChildren: () => import('./pages/cato/cato.module').then(m => m.CatoModule)

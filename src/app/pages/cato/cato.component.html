@@ -1,5 +1,4 @@
-
-<section class="header-page">
+<section *ngIf="!hasHero" class="header-page">
         <div class="header-page-info">
           <h1>{{ page?.title | uppercase }}</h1>
           <p [innerHTML]="page?.description"></p>
@@ -19,15 +18,15 @@
                     [section]="section"
                     [background]="section?.color"
                   ></app-section-with-multiple-subsection>
-                  <app-join-us *ngSwitchCase="'section-stacks'" 
-                    [posts]="section?.posts" 
-                    [title]="section?.title" 
+                  <app-join-us *ngSwitchCase="'section-stacks'"
+                    [posts]="section?.posts"
+                    [title]="section?.title"
                     [description]="section?.description"></app-join-us>
                     <app-section-with-collapsible-grid
                     *ngSwitchCase="'section-with-collapsible-grid'"
                     [section]="section"
                   ></app-section-with-collapsible-grid>
-                  <app-section-text-grid *ngSwitchCase="'section-text-grid'" [section]="section"></app-section-text-grid> 
+                  <app-section-text-grid *ngSwitchCase="'section-text-grid'" [section]="section"></app-section-text-grid>
                   <app-section-simple2 *ngSwitchCase="'section-simple2'" [section]="section"></app-section-simple2>
                   <app-carousel-media *ngSwitchCase="'carousel-media'" [gallery]="section?.posts[0].gallery"></app-carousel-media>
                   <app-section-with-collapsible

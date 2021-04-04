@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Page } from '../../core/interface/page.interface';
+import { Page, Section } from '../../core/interface/page.interface';
 import { PagesService } from 'src/app/services/pages.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -18,14 +18,16 @@ export class CatoComponent implements OnInit {
 
   page: Page;
   language: string;
+  hasHero: boolean;
 
   constructor(private router: Router,
-              private pagesService: PagesService,
-              private title: Title,
-              private activatedRoute: ActivatedRoute,
-              private navbarService: NabvarService) {
-                this.navbarService.language$.pipe(take(1)).subscribe((language: string) => this.language = language );
-              }
+    private pagesService: PagesService,
+    private title: Title,
+    private activatedRoute: ActivatedRoute,
+    private navbarService: NabvarService) {
+    this.navbarService.language$.pipe(take(1)).subscribe((language: string) => this.language = language);
+    this.hasHero = false;
+  }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
@@ -46,5 +48,8 @@ export class CatoComponent implements OnInit {
       this.router.navigate(['']);
     }
     this.title.setTitle(this.page.title); // actualiza el nombre en la pestaña del navegador
+    this.hasHero = this.existSectionHero();
   }
+
+  existSectionHero = () => this.page.sections.filter((section: Section) => section.component === 'hero').length > 0;
 }

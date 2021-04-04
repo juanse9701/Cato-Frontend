@@ -1,7 +1,6 @@
 /* Hero */
 .hero {
   height: 100vh;
-  position: absolute;
   top: 0;
   width: 100%;
   display: grid;
@@ -21,14 +20,18 @@
   grid-column: 1/-1;
   grid-row: 1/-1;
   z-index: 3;
-  /* background: linear-gradient(
+}
+
+.hero .particulas.bg-without-image {
+  background: linear-gradient(
     to right,
     rgba(102, 125, 182, 0.8),
     rgba(0, 130, 200, 0.8),
     rgba(0, 130, 200, 0.8),
     rgba(102, 125, 182, 0.8)
-  ); */
+  );
 }
+
 .hero .contenido-container {
   grid-column: 1/-1;
   grid-row: 1/-1;

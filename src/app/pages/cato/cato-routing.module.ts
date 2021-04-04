@@ -5,6 +5,10 @@ import { CatoComponent } from './cato.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: CatoComponent
+  },
+  {
     path: ':pages',
     component: CatoComponent
   }

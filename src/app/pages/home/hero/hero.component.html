@@ -1,6 +1,6 @@
 <section class="hero">
-  <img [src]="image" [alt]="title" />
-  <div class="particulas">
+  <img *ngIf="image" [src]="image" [alt]="title" />
+  <div [ngClass]="{'bg-without-image': !image}" class="particulas">
     <ng-particles [style]="myStyle" [width]="width" [height]="height" [params]="myParams"></ng-particles>
   </div>
   <div class="contenido-container">
