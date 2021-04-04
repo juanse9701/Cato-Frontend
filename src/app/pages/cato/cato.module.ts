@@ -8,8 +8,8 @@ import { CarouselWithTileModule } from 'src/app/shared/components/carousel-with-
 import { SectionSimpleModule } from 'src/app/shared/components/sections/section-simple/section-simple.module';
 import { SectorModule } from 'src/app/shared/components/sector/sector.module';
 import { DevelopmentCardModule } from 'src/app/shared/components/development-card/development-card.module';
-import { HeroModule } from '../home/hero/hero.module';
-import { JoinUsModule } from '../home/join-us/join-us.module';
+import { HeroModule } from '../../shared/components/sections/hero/hero.module';
+import { JoinUsModule } from '../../shared/components/sections/join-us/join-us.module';
 import { CarouselMediaModule } from 'src/app/shared/components/carousel-media/carousel-media.module';
 import { Image360Module } from 'src/app/shared/components/image360/image360.module';
 import { SectionWithScrollModule } from 'src/app/shared/components/sections/section-with-scroll/section-with-scroll.module';
