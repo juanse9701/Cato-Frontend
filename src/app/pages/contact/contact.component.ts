@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NabvarService } from 'src/app/shared/components/navbar/nabvar.service';
 import { ContactService } from 'src/app/services/contact.service';
-import { Contact } from '../../interface/contact.interface';
+import { Contact } from 'src/app/core/interface/contact.interface';
 import { take } from 'rxjs/operators';
 
 /**

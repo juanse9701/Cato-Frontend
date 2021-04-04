@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Page } from '../../interface/page.interface';
+import { Page } from '../../core/interface/page.interface';
 import { PagesService } from 'src/app/services/pages.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';

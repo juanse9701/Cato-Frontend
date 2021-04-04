@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PagesService } from 'src/app/services/pages.service';
-import { Page } from '../../interface/page.interface';
+import { Page } from 'src/app/core/interface/page.interface';
 import { NabvarService } from 'src/app/shared/components/navbar/nabvar.service';
 import { take } from 'rxjs/operators';
 
